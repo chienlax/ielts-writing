@@ -1,10 +1,10 @@
-# Claude Writing Style Guide (Unified Reference)
+# Writing Style
 
-This document consolidates the writing guidelines, rules, and registers for this workspace, synthesized from `02-write.md`, `david-style-guide.md`, and `writing-rule-performative-contrast.md`.
+This document consolidates the writing guidelines, rules, and registers for this workspace.
 
 ---
 
-## 🚫 Core Banned Patterns (Global Rules)
+## Core Banned Patterns (Global Rules)
 
 ### 1. Performative Contrast (Strictly Banned)
 **Performative contrast** is the habit of stating what something is *not* before stating what it *is*, to make a point sound weightier than it needs to be. The positive claim (`Y`) almost always stands on its own. The negation (`X`) is scaffolding that must be cut.
@@ -20,12 +20,12 @@ This document consolidates the writing guidelines, rules, and registers for this
 *   *Any variant that stages the contrast as a dramatic reveal rather than stating the claim directly.*
 
 #### Examples and Fixes:
-*   ❌ *The minimal experiment is not a shortcut. Its purpose is logical.*
-    ✓ *The minimal experiment serves a logical purpose.*
-*   ❌ *Science is not just about discovery. It is an act of persuasion.*
-    ✓ *Science is as much an act of persuasion as it is an act of discovery.*
-*   ❌ *The most difficult writing skill to develop is not clarity, not structure, and not precision. It is the ability to read your own work as a hostile reviewer would.*
-    ✓ *The most difficult writing skill to develop is reading your own work as a hostile reviewer would.*
+*   [Bad] *The minimal experiment is not a shortcut. Its purpose is logical.*
+    [Fixed] *The minimal experiment serves a logical purpose.*
+*   [Bad] *Science is not just about discovery. It is an act of persuasion.*
+    [Fixed] *Science is as much an act of persuasion as it is an act of discovery.*
+*   [Bad] *The most difficult writing skill to develop is not clarity, not structure, and not precision. It is the ability to read your own work as a hostile reviewer would.*
+    [Fixed] *The most difficult writing skill to develop is reading your own work as a hostile reviewer would.*
 
 #### The One-Sentence Test:
 Remove the negation sentence/clause. If the meaning is preserved, the negation was doing nothing. **Cut it.**
@@ -55,7 +55,7 @@ If negation is genuinely necessary to qualify, keep it integrated and minimal wi
 
 ---
 
-## 📈 Academic & IELTS Register
+## Academic & IELTS Register
 
 ### 1. Tone and Vocabulary Standard
 *   **Target Level:** Clear, precise, well-structured, but not artificially elevated. Write at a natural, precise level without "cosplaying" at a higher level with inflated synonyms.
@@ -87,12 +87,12 @@ Confidence must match the strength of the evidence. Definitions, mathematical id
 
 ---
 
-## 💻 Technical & Documentation Style (OR Papers / Specs)
+## Technical & Documentation Style (OR Papers / Specs)
 
 ### 1. Explaining the Mechanism
 Every technical claim needs its mechanism explained: not just *what* is true, but *why* it is true, and *what breaks* if you ignore it.
-*   ❌ *K-Means fails on hard instances.*
-*   ✓ *K-Means fails on hard instances because it is a distance-based heuristic with no awareness of combinatorial thresholds. If a cluster of students collectively takes ≥ T unique external exams, that sub-exam forms an infeasible clique, variance reduction does not prevent this.*
+*   [Bad] *K-Means fails on hard instances.*
+*   [Good] *K-Means fails on hard instances because it is a distance-based heuristic with no awareness of combinatorial thresholds. If a cluster of students collectively takes ≥ T unique external exams, that sub-exam forms an infeasible clique, variance reduction does not prevent this.*
 
 ### 2. Math & Formulas
 *   Use LaTeX for formal expressions.
@@ -118,7 +118,7 @@ Start with why the problem is hard before proposing solutions. Document the fail
 
 ---
 
-## 💬 Personal & Casual Register
+## Personal & Casual Register
 
 ### 1. Voice and Rhythm
 *   **Aesthetic:** Lowercase, conversational, first-person. Conversational flow marked by contractions (*gonna, kinda*), conversational pivots (*well, i mean, like*), and functional (non-decorative) profanity.
