@@ -1,1060 +1,1425 @@
 <!DOCTYPE html>
 <html lang="en-GB">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IELTS Writing Task 2: Argument Templates</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    /* Fonts */
-    --font-display: 'Fraunces', Georgia, serif; /* Exclusively for H1 */
-    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-mono: 'JetBrains Mono', Consolas, monospace;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 2: Templates</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      /* Fonts */
+      --font-display: 'Fraunces', Georgia, serif;
+      /* Exclusively for H1 */
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', Consolas, monospace;
 
-    /* Base Colors */
-    --bg-page: #fafaf7;
-    --bg-card: #ffffff;
-    --text-main: #1a1a1a;
-    --text-muted: #555555;
-    --border-color: #d8d4c8;
-    
-    /* UI Accent Colors */
-    --accent-primary: #2a5a78;   /* Deep Blue for primary structural accents */
-    --accent-hover: #1d4056;
+      /* Base Colors */
+      --bg-page: #fafaf7;
+      --bg-card: #ffffff;
+      --text-main: #1a1a1a;
+      --text-muted: #555555;
+      --border-color: #d8d4c8;
 
-    /* Semantic Callout Colors */
-    --box-example-bg: #eef3f7;
-    --box-example-border: #7ca0c0;
-    
-    --box-note-bg: #fdf6e3;
-    --box-note-border: #d4a05d;
-    
-    --box-tip-bg: #e9efe9;
-    --box-tip-border: #3d6e3e;
-    
-    --box-warning-bg: #fcf3e3;
-    --box-warning-border: #b3372a;
-  }
+      /* UI Accent Colors */
+      --accent-primary: #2a5a78;
+      /* Deep Blue for primary structural accents */
+      --accent-hover: #1d4056;
 
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+      /* Semantic Callout Colors */
+      --box-example-bg: #eef3f7;
+      --box-example-border: #7ca0c0;
 
-  /* Base Typography & Sizing (17px base) */
-  body {
-    margin: 0;
-    font-family: var(--font-sans);
-    background: var(--bg-page);
-    color: var(--text-main);
-    line-height: 1.7;
-    font-size: 17px; 
-    -webkit-font-smoothing: antialiased;
-  }
+      --box-note-bg: #fdf6e3;
+      --box-note-border: #d4a05d;
 
-  /* Structural Layout */
-  .layout {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    max-width: 1400px;
-    margin: 0 auto;
-  }
+      --box-tip-bg: #e9efe9;
+      --box-tip-border: #3d6e3e;
 
-  /* Sidebar Navigation */
-  nav.sidebar {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow-y: auto;
-    padding: 2.5rem 1.75rem;
-    border-right: 1px solid var(--border-color);
-    background: var(--bg-page);
-  }
-
-  .nav-title {
-    font-family: var(--font-sans);
-    font-weight: 700;
-    font-size: 1.25rem;
-    margin-bottom: 0.25rem;
-    color: var(--text-main);
-    letter-spacing: -0.01em;
-  }
-
-  .nav-sub {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 2rem;
-  }
-
-  .nav-group-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--text-muted);
-    margin-top: 1.75rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-  }
-
-  nav.sidebar a {
-    display: block;
-    color: var(--text-main);
-    text-decoration: none;
-    padding: 0.4rem 0 0.4rem 0.85rem;
-    border-left: 3px solid transparent;
-    font-size: 0.95rem;
-    transition: all 0.2s ease;
-    border-radius: 0 4px 4px 0;
-  }
-
-  nav.sidebar a:hover {
-    border-left-color: var(--accent-primary);
-    background: var(--box-example-bg);
-    color: var(--accent-hover);
-  }
-
-  /* Main Content Area */
-  main {
-    padding: 3.5rem 4rem 6rem;
-    max-width: 900px;
-  }
-
-  h1 {
-    font-family: var(--font-display);
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin: 0 0 0.5rem 0;
-    letter-spacing: -0.01em;
-    line-height: 1.2;
-  }
-
-  .subtitle {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    margin-bottom: 3.5rem;
-    max-width: 700px;
-  }
-
-  h2 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    margin: 4rem 0 1rem 0;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--border-color);
-    letter-spacing: -0.01em;
-  }
-  
-  h2 .type-num {
-    color: var(--accent-primary);
-    margin-right: 0.5rem;
-  }
-
-  h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin: 2.5rem 0 0.75rem 0;
-    color: var(--accent-primary);
-  }
-
-  h4 {
-    font-size: 0.9rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin: 1.5rem 0 0.5rem 0;
-    color: var(--text-muted);
-  }
-
-  p { margin: 0.8rem 0; }
-  
-  p.lede {
-    font-size: 1rem;
-    color: var(--text-main);
-    margin-bottom: 1.5rem;
-  }
-
-  ul, ol { 
-    padding-left: 1.5rem; 
-    margin: 0.8rem 0; 
-  }
-  
-  li { margin-bottom: 0.4rem; }
-
-  /* Callout Boxes (Unified styling system) */
-  .callout {
-    padding: 1.15rem 1.4rem;
-    margin: 1.5rem 0;
-    border-radius: 6px;
-    font-size: 0.95rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
-  }
-
-  .callout-label {
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-  }
-
-  /* Specific Callout Variants */
-  .callout.example {
-    background: var(--box-example-bg);
-    border-left: 4px solid var(--box-example-border);
-  }
-  .callout.example .callout-label { color: var(--accent-primary); }
-
-  .callout.note {
-    background: var(--box-note-bg);
-    border-left: 4px solid var(--box-note-border);
-  }
-  .callout.note .callout-label { color: #8a5a1f; }
-
-  .callout.tip {
-    background: var(--box-tip-bg);
-    border-left: 4px solid var(--box-tip-border);
-  }
-  .callout.tip .callout-label { color: var(--box-tip-border); }
-
-  .callout.warning {
-    background: var(--box-warning-bg);
-    border-left: 4px solid var(--box-warning-border);
-  }
-  .callout.warning .callout-label { color: var(--box-warning-border); }
-
-  /* Task 2 Specific Components adapted to Unified Style */
-  .principle {
-    margin: 1.25rem 0;
-    padding: 0.8rem 1.25rem;
-    border-left: 4px solid var(--accent-primary);
-    background: var(--box-example-bg);
-    font-size: 0.98rem;
-    border-radius: 0 4px 4px 0;
-  }
-  .principle strong { color: var(--accent-primary); }
-
-  .template {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    padding: 1.5rem;
-    margin: 1.25rem 0;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
-  }
-  .template ol { margin: 0; padding-left: 1.2rem; }
-  .template li { margin-bottom: 0.75rem; line-height: 1.6; }
-  .template li strong { color: var(--accent-primary); }
-
-  /* Inline Code & Chips */
-  .placeholder {
-    font-family: var(--font-mono);
-    background: #e2e8f0;
-    color: var(--accent-primary);
-    padding: 0.15em 0.4em;
-    border-radius: 4px;
-    font-size: 0.85em;
-    font-weight: 500;
-    white-space: nowrap;
-  }
-
-  .phrase, .chip-list span {
-    font-family: var(--font-mono);
-    background: #ebe8de;
-    padding: 0.2em 0.5em;
-    border-radius: 4px;
-    font-size: 0.85em;
-    color: var(--text-main);
-    display: inline-block;
-    margin: 0.25em 0.25em 0.25em 0;
-    border: 1px solid var(--border-color);
-  }
-
-  .connectors { margin: 1.5rem 0; }
-  .connectors h4 { margin-top: 0; color: var(--accent-primary); }
-
-  /* Tables */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1.5rem 0;
-    font-size: 0.95rem;
-    background: var(--bg-card);
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 0 0 1px var(--border-color);
-  }
-
-  th, td {
-    padding: 0.8rem 1rem;
-    text-align: left;
-    vertical-align: top;
-    border-bottom: 1px solid var(--border-color);
-  }
-
-  th {
-    background: var(--bg-page);
-    font-weight: 600;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  tbody tr:last-child td { border-bottom: none; }
-  tbody tr:hover { background: var(--bg-page); }
-
-  /* Footer */
-  footer {
-    margin-top: 5rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-color);
-    font-size: 0.9rem;
-    color: var(--text-muted);
-  }
-
-  /* Responsive Design */
-  @media (max-width: 900px) {
-    .layout { grid-template-columns: 1fr; }
-    nav.sidebar {
-      position: static;
-      height: auto;
-      border-right: 0;
-      border-bottom: 1px solid var(--border-color);
-      padding: 1.5rem;
+      --box-warning-bg: #fcf3e3;
+      --box-warning-border: #b3372a;
     }
-    main { padding: 2rem 1.5rem 4rem; }
-    h1 { font-size: 2.2rem; }
-    h2 { font-size: 1.4rem; margin-top: 3rem; }
-  }
-</style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 1.5rem;
+    }
+
+    /* Base Typography & Sizing (17px base) */
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      background: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.7;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Structural Layout */
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* Sidebar Navigation */
+    nav.sidebar {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2.5rem 1.75rem;
+      border-right: 1px solid var(--border-color);
+      background: var(--bg-page);
+    }
+
+    .nav-title {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 0.25rem;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+
+    .nav-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 2rem;
+    }
+
+    .nav-group-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-top: 1.75rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    nav.sidebar a {
+      display: block;
+      color: var(--text-main);
+      text-decoration: none;
+      padding: 0.4rem 0 0.4rem 0.85rem;
+      border-left: 3px solid transparent;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      border-radius: 0 4px 4px 0;
+    }
+
+    nav.sidebar a:hover {
+      border-left-color: var(--accent-primary);
+      background: var(--box-example-bg);
+      color: var(--accent-hover);
+    }
+
+    /* Main Content Area */
+    main {
+      padding: 3.5rem 4rem 6rem;
+      max-width: 900px;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem 0;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 3.5rem;
+      max-width: 700px;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 4rem 0 1rem 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border-color);
+      letter-spacing: -0.01em;
+    }
+
+    h2 .type-num {
+      color: var(--accent-primary);
+      margin-right: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 2.5rem 0 0.75rem 0;
+      color: var(--accent-primary);
+    }
+
+    h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 1.5rem 0 0.5rem 0;
+      color: var(--text-muted);
+    }
+
+    p {
+      margin: 0.8rem 0;
+    }
+
+    p.lede {
+      font-size: 1rem;
+      color: var(--text-main);
+      margin-bottom: 1.5rem;
+    }
+
+    ul,
+    ol {
+      padding-left: 1.5rem;
+      margin: 0.8rem 0;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* Callout Boxes (Unified styling system) */
+    .callout {
+      padding: 1.15rem 1.4rem;
+      margin: 1.5rem 0;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .callout-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* Specific Callout Variants */
+    .callout.example {
+      background: var(--box-example-bg);
+      border-left: 4px solid var(--box-example-border);
+    }
+
+    .callout.example .callout-label {
+      color: var(--accent-primary);
+    }
+
+    .callout.note {
+      background: var(--box-note-bg);
+      border-left: 4px solid var(--box-note-border);
+    }
+
+    .callout.note .callout-label {
+      color: #8a5a1f;
+    }
+
+    .callout.tip {
+      background: var(--box-tip-bg);
+      border-left: 4px solid var(--box-tip-border);
+    }
+
+    .callout.tip .callout-label {
+      color: var(--box-tip-border);
+    }
+
+    .callout.warning {
+      background: var(--box-warning-bg);
+      border-left: 4px solid var(--box-warning-border);
+    }
+
+    .callout.warning .callout-label {
+      color: var(--box-warning-border);
+    }
+
+    /* Task 2 Specific Components adapted to Unified Style */
+    .principle {
+      margin: 1.25rem 0;
+      padding: 0.8rem 1.25rem;
+      border-left: 4px solid var(--accent-primary);
+      background: var(--box-example-bg);
+      font-size: 0.98rem;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .principle strong {
+      color: var(--accent-primary);
+    }
+
+    .template {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin: 1.25rem 0;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .template ol {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    .template li {
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+    }
+
+    .template li strong {
+      color: var(--accent-primary);
+    }
+
+    /* Inline Code & Chips */
+    .placeholder {
+      font-family: var(--font-mono);
+      background: #e2e8f0;
+      color: var(--accent-primary);
+      padding: 0.15em 0.4em;
+      border-radius: 4px;
+      font-size: 0.85em;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .phrase,
+    .chip-list span {
+      font-family: var(--font-mono);
+      background: #ebe8de;
+      padding: 0.2em 0.5em;
+      border-radius: 4px;
+      font-size: 0.85em;
+      color: var(--text-main);
+      display: inline-block;
+      margin: 0.25em 0.25em 0.25em 0;
+      border: 1px solid var(--border-color);
+    }
+
+    .connectors {
+      margin: 1.5rem 0;
+    }
+
+    .connectors h4 {
+      margin-top: 0;
+      color: var(--accent-primary);
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+      background: var(--bg-card);
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 0 0 1px var(--border-color);
+    }
+
+    th,
+    td {
+      padding: 0.8rem 1rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    th {
+      background: var(--bg-page);
+      font-weight: 600;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:hover {
+      background: var(--bg-page);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      nav.sidebar {
+        position: static;
+        height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--border-color);
+        padding: 1.5rem;
+      }
+
+      main {
+        padding: 2rem 1.5rem 4rem;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+        margin-top: 3rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div class="layout">
+  <div class="layout">
 
-<nav class="sidebar">
-  <div class="nav-title">Task 2 Templates</div>
-  <div class="nav-sub">IELTS Writing</div>
+    <nav class="sidebar">
+      <div class="nav-title">Writing Task 2</div>
+      <div class="nav-sub">Templates</div>
 
-  <div class="nav-group-label">Foundations</div>
-  <a href="#principles">Universal principles</a>
-  <a href="#categorisation">Question categorisation</a>
+      <div class="nav-group-label">Foundations</div>
+      <a href="#principles">Universal principles</a>
+      <a href="#categorisation">Question categorisation</a>
 
-  <div class="nav-group-label">Question Types</div>
-  <a href="#type-1">1. Agree / Disagree</a>
-  <a href="#type-2">2. Discuss both views</a>
-  <a href="#type-3">3. Adv. outweigh disadv.?</a>
-  <a href="#type-4">4. Adv. and disadv. (descriptive)</a>
-  <a href="#type-5">5. Positive / negative dev.</a>
-  <a href="#type-6">6. Problem &amp; solution / cause &amp; effect</a>
-  <a href="#type-7">7. Two-part question</a>
-  <a href="#type-8">8. Direct question</a>
+      <div class="nav-group-label">Question Types</div>
+      <a href="#type-1">1. Agree / Disagree</a>
+      <a href="#type-2">2. Discuss both views</a>
+      <a href="#type-3">3. Adv. outweigh disadv.?</a>
+      <a href="#type-4">4. Adv. and disadv. (descriptive)</a>
+      <a href="#type-5">5. Positive / negative dev.</a>
+      <a href="#type-6">6. Problem &amp; solution / cause &amp; effect</a>
+      <a href="#type-7">7. Two-part question</a>
+      <a href="#type-8">8. Direct question</a>
 
-  <div class="nav-group-label">Reference</div>
-  <a href="#hedging">Hedging language bank</a>
-  <a href="#connectors-bank">Connector bank</a>
-  <a href="#planning-symbols">Planning symbols</a>
-</nav>
+      <div class="nav-group-label">Reference</div>
+      <a href="#hedging">Hedging language bank</a>
+      <a href="#connectors-bank">Connector bank</a>
+      <a href="#planning-symbols">Planning symbols</a>
+    </nav>
 
-<main>
+    <main>
 
-<header>
-  <h1>Writing Task 2 — Templates</h1>
-  <p class="subtitle">Argument skeletons for the eight question types in the forecast. Skeletons, not scripts. The lessons are clear that ideas shape language, not the other way round, so treat these as a frame for your thinking, not a fill-in-the-blank machine.</p>
-</header>
+      <header>
+        <h1>Writing Task 2 — Templates</h1>
+        <p class="subtitle">Argument skeletons for the eight question types in the forecast. Skeletons, not scripts. The
+          lessons are clear that ideas shape language, not the other way round, so treat these as a frame for your
+          thinking, not a fill-in-the-blank machine.</p>
+      </header>
 
-<!-- ============ PRINCIPLES ============ -->
-<section id="principles">
-<h2>Universal principles</h2>
-<p class="lede">Before any template, the rules these skeletons rest on. Drawn from the seven lessons.</p>
+      <!-- ============ PRINCIPLES ============ -->
+      <section id="principles">
+        <h2>Universal principles</h2>
+        <p class="lede">Before any template, the rules these skeletons rest on. Drawn from the seven lessons.</p>
 
-<div class="principle">
-<strong>An argument is a claim plus a reason.</strong> Every main idea in every paragraph needs both. A position without a reason is not an argument; a reason that does not logically support the position is not one either.
-</div>
-<div class="principle">
-<strong>Your position is shown by your reasoning, not by the phrase "in my view".</strong> Sprinkling <span class="phrase">I believe</span> through the essay does nothing if the logic underneath drifts. The examiner reads the reasoning, not the labels.
-</div>
-<div class="principle">
-<strong>Signpost ruthlessly.</strong> The examiner is not sitting your reading test. If the link between two ideas is implicit, make it explicit. <span class="phrase">Firstly</span>, <span class="phrase">However</span>, <span class="phrase">As a result</span> are tools, not clichés.
-</div>
-<div class="principle">
-<strong>Supporting evidence is reasoning, not invented statistics.</strong> "According to a BBC documentary, 85% of people..." tells the examiner you panicked. Use logical, specific, plausible evidence drawn from how the world actually works.
-</div>
-<div class="principle">
-<strong>Hedge claims that are not certain.</strong> <span class="phrase">may</span>, <span class="phrase">could</span>, <span class="phrase">tend to</span>, <span class="phrase">in many cases</span>. Predicting that a single policy <span class="phrase">will solve all the problems</span> is rarely defensible.
-</div>
-<div class="principle">
-<strong>Explain perspective when it matters.</strong> If your argument depends on conditions in your country, say so. The examiner cannot see Ho Chi Minh City traffic from their desk, and your context is not universal.
-</div>
-<div class="principle">
-<strong>Do not jump to a conclusion.</strong> A fact that John arrives late does not by itself prove he is uncommitted. Gather the reasoning before you commit to the claim. The same applies to interpreting the question.
-</div>
-<div class="principle">
-<strong>Complexity comes from the argument, not from the grammar.</strong> A long sentence does not make you sound clever; it makes a confused argument harder to follow. Reach for complex structures when the idea genuinely requires them.
-</div>
-</section>
+        <div class="principle">
+          <strong>An argument is a claim plus a reason.</strong> Every main idea in every paragraph needs both. A
+          position without a reason is not an argument; a reason that does not logically support the position is not one
+          either.
+        </div>
+        <div class="principle">
+          <strong>Your position is shown by your reasoning, not by the phrase "in my view".</strong> Sprinkling <span
+            class="phrase">I believe</span> through the essay does nothing if the logic underneath drifts. The examiner
+          reads the reasoning, not the labels.
+        </div>
+        <div class="principle">
+          <strong>Signpost ruthlessly.</strong> The examiner is not sitting your reading test. If the link between two
+          ideas is implicit, make it explicit. <span class="phrase">Firstly</span>, <span class="phrase">However</span>,
+          <span class="phrase">As a result</span> are tools, not clichés.
+        </div>
+        <div class="principle">
+          <strong>Supporting evidence is reasoning, not invented statistics.</strong> "According to a BBC documentary,
+          85% of people..." tells the examiner you panicked. Use logical, specific, plausible evidence drawn from how
+          the world actually works.
+        </div>
+        <div class="principle">
+          <strong>Hedge claims that are not certain.</strong> <span class="phrase">may</span>, <span
+            class="phrase">could</span>, <span class="phrase">tend to</span>, <span class="phrase">in many cases</span>.
+          Predicting that a single policy <span class="phrase">will solve all the problems</span> is rarely defensible.
+        </div>
+        <div class="principle">
+          <strong>Explain perspective when it matters.</strong> If your argument depends on conditions in your country,
+          say so. The examiner cannot see Ho Chi Minh City traffic from their desk, and your context is not universal.
+        </div>
+        <div class="principle">
+          <strong>Do not jump to a conclusion.</strong> A fact that John arrives late does not by itself prove he is
+          uncommitted. Gather the reasoning before you commit to the claim. The same applies to interpreting the
+          question.
+        </div>
+        <div class="principle">
+          <strong>Complexity comes from the argument, not from the grammar.</strong> A long sentence does not make you
+          sound clever; it makes a confused argument harder to follow. Reach for complex structures when the idea
+          genuinely requires them.
+        </div>
+      </section>
 
-<!-- ============ CATEGORISATION ============ -->
-<section id="categorisation">
-<h2>Question categorisation</h2>
-<p class="lede">Map the wording to the type. The forecast questions cluster cleanly into eight patterns.</p>
+      <!-- ============ CATEGORISATION ============ -->
+      <section id="categorisation">
+        <h2>Question categorisation</h2>
+        <p class="lede">Map the wording to the type. The forecast questions cluster cleanly into eight patterns.</p>
 
-<table>
-<thead>
-<tr><th style="width:55%">Wording in the prompt</th><th>Type</th></tr>
-</thead>
-<tbody>
-<tr><td><em>To what extent do you agree or disagree?</em> / <em>Do you agree or disagree?</em></td><td>1. Agree / Disagree</td></tr>
-<tr><td><em>Discuss both these views and give your own opinion.</em></td><td>2. Discuss both views</td></tr>
-<tr><td><em>Do the advantages outweigh the disadvantages?</em></td><td>3. Adv. outweigh disadv.</td></tr>
-<tr><td><em>What are the advantages and disadvantages?</em></td><td>4. Adv. and disadv. (descriptive)</td></tr>
-<tr><td><em>Is this a positive or negative development?</em></td><td>5. Positive / negative dev.</td></tr>
-<tr><td><em>What are the reasons / causes / problems?</em> <strong>+</strong> <em>What can be done / what are the effects / what solutions?</em></td><td>6. Problem &amp; solution / cause &amp; effect</td></tr>
-<tr><td>Two distinct questions, e.g. <em>Why? Is it positive or negative?</em></td><td>7. Two-part question</td></tr>
-<tr><td>A single open question, e.g. <em>Who should fund this?</em> / <em>Why is this important?</em></td><td>8. Direct question</td></tr>
-</tbody>
-</table>
+        <table>
+          <thead>
+            <tr>
+              <th style="width:55%">Wording in the prompt</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><em>To what extent do you agree or disagree?</em> / <em>Do you agree or disagree?</em></td>
+              <td>1. Agree / Disagree</td>
+            </tr>
+            <tr>
+              <td><em>Discuss both these views and give your own opinion.</em></td>
+              <td>2. Discuss both views</td>
+            </tr>
+            <tr>
+              <td><em>Do the advantages outweigh the disadvantages?</em></td>
+              <td>3. Adv. outweigh disadv.</td>
+            </tr>
+            <tr>
+              <td><em>What are the advantages and disadvantages?</em></td>
+              <td>4. Adv. and disadv. (descriptive)</td>
+            </tr>
+            <tr>
+              <td><em>Is this a positive or negative development?</em></td>
+              <td>5. Positive / negative dev.</td>
+            </tr>
+            <tr>
+              <td><em>What are the reasons / causes / problems?</em> <strong>+</strong> <em>What can be done / what are
+                  the effects / what solutions?</em></td>
+              <td>6. Problem &amp; solution / cause &amp; effect</td>
+            </tr>
+            <tr>
+              <td>Two distinct questions, e.g. <em>Why? Is it positive or negative?</em></td>
+              <td>7. Two-part question</td>
+            </tr>
+            <tr>
+              <td>A single open question, e.g. <em>Who should fund this?</em> / <em>Why is this important?</em></td>
+              <td>8. Direct question</td>
+            </tr>
+          </tbody>
+        </table>
 
-<div class="callout tip">
-  <div class="callout-label">Sanity check before you write</div>
-  <p style="margin: 0;">Underline the actual instruction in the prompt. Most band-6.5 scripts answer a question that is adjacent to the one asked but not the one asked. <em>"What are the reasons?"</em> is not <em>"Is it positive or negative?"</em>, and <em>"Discuss both views"</em> is not <em>"Argue for the one you like"</em>.</p>
-</div>
-</section>
+        <div class="callout tip">
+          <div class="callout-label">Sanity check before you write</div>
+          <p style="margin: 0;">Underline the actual instruction in the prompt. Most band-6.5 scripts answer a question
+            that is adjacent to the one asked but not the one asked. <em>"What are the reasons?"</em> is not <em>"Is it
+              positive or negative?"</em>, and <em>"Discuss both views"</em> is not <em>"Argue for the one you
+              like"</em>.</p>
+        </div>
+      </section>
 
-<!-- ============ TYPE 1 ============ -->
-<section id="type-1">
-<h2><span class="type-num">1.</span>Agree / Disagree</h2>
+      <!-- ============ TYPE 1 ============ -->
+      <section id="type-1">
+        <h2><span class="type-num">1.</span>Agree / Disagree</h2>
 
-<div class="callout note">
-  <div class="callout-label">Question signal</div>
-  <p style="margin: 0;"><em>To what extent do you agree or disagree?</em> &nbsp;&nbsp; <em>Do you agree or disagree?</em></p>
-</div>
+        <div class="callout note">
+          <div class="callout-label">Question signal</div>
+          <p style="margin: 0;"><em>To what extent do you agree or disagree?</em> &nbsp;&nbsp; <em>Do you agree or
+              disagree?</em></p>
+        </div>
 
-<div class="callout tip">
-  <div class="callout-label">Recommended approach (from Lesson 7)</div>
-  <p style="margin: 0;">Use the balanced approach: acknowledge the opposing view, concede a specific point, then refute it. The one-sided approach is technically allowed but tends to keep candidates at 6.5 through repetition and weakened task response. Pick a position that is not "completely agree" or "completely disagree" unless you genuinely hold it, because total positions are harder to defend.</p>
-</div>
+        <div class="callout tip">
+          <div class="callout-label">Recommended approach (from Lesson 7)</div>
+          <p style="margin: 0;">Use the balanced approach: acknowledge the opposing view, concede a specific point, then
+            refute it. The one-sided approach is technically allowed but tends to keep candidates at 6.5 through
+            repetition and weakened task response. Pick a position that is not "completely agree" or "completely
+            disagree" unless you genuinely hold it, because total positions are harder to defend.</p>
+        </div>
 
-<h3>Introduction (three sentences)</h3>
-<div class="template">
-<ol>
-<li><strong>Context.</strong> <span class="placeholder">[TOPIC]</span> has become an increasingly debated issue in <span class="placeholder">[CONTEXT: many countries / contemporary society / the workplace, etc.]</span>.</li>
-<li><strong>Restate the claim in the question.</strong> It is sometimes argued that <span class="placeholder">[PARAPHRASED CLAIM FROM PROMPT]</span>.</li>
-<li><strong>Thesis with position.</strong> While I accept that <span class="placeholder">[BRIEF CONCESSION TO OTHER SIDE]</span>, I largely <span class="placeholder">[agree / disagree]</span> that <span class="placeholder">[YOUR POSITION]</span>, because <span class="placeholder">[REASON 1 IN SUMMARY]</span> and <span class="placeholder">[REASON 2 IN SUMMARY]</span>.</li>
-</ol>
-</div>
+        <h3>Introduction (three sentences)</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Context.</strong> <span class="placeholder">[TOPIC]</span> has become an increasingly debated
+              issue in <span class="placeholder">[CONTEXT: many countries / contemporary society / the workplace,
+                etc.]</span>.</li>
+            <li><strong>Restate the claim in the question.</strong> It is sometimes argued that <span
+                class="placeholder">[PARAPHRASED CLAIM FROM PROMPT]</span>.</li>
+            <li><strong>Thesis with position.</strong> While I accept that <span class="placeholder">[BRIEF CONCESSION
+                TO OTHER SIDE]</span>, I largely <span class="placeholder">[agree / disagree]</span> that <span
+                class="placeholder">[YOUR POSITION]</span>, because <span class="placeholder">[REASON 1 IN
+                SUMMARY]</span> and <span class="placeholder">[REASON 2 IN SUMMARY]</span>.</li>
+          </ol>
+        </div>
 
-<h3>Body 1. The opposing view, with concession then refutation</h3>
-<div class="template">
-<ol>
-<li><strong>Topic sentence.</strong> Some people argue that <span class="placeholder">[OPPOSING POSITION]</span>.</li>
-<li><strong>Develop their reasoning.</strong> Their argument generally rests on the idea that <span class="placeholder">[THEIR REASON]</span>. This is because <span class="placeholder">[EXPLANATION OR CAUSE/EFFECT]</span>.</li>
-<li><strong>Concede a specific point.</strong> Admittedly, <span class="placeholder">[POINT WHERE THEY HAVE A CASE]</span>.</li>
-<li><strong>Refute (the pivot).</strong> However, this view <span class="placeholder">[overlooks / underestimates / does not account for]</span> <span class="placeholder">[LIMITATION]</span>.</li>
-<li><strong>Explain why your refutation matters.</strong> <span class="placeholder">[EXPLANATION, LINKING BACK TO YOUR POSITION]</span>.</li>
-</ol>
-</div>
+        <h3>Body 1. The opposing view, with concession then refutation</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Topic sentence.</strong> Some people argue that <span class="placeholder">[OPPOSING
+                POSITION]</span>.</li>
+            <li><strong>Develop their reasoning.</strong> Their argument generally rests on the idea that <span
+                class="placeholder">[THEIR REASON]</span>. This is because <span class="placeholder">[EXPLANATION OR
+                CAUSE/EFFECT]</span>.</li>
+            <li><strong>Concede a specific point.</strong> Admittedly, <span class="placeholder">[POINT WHERE THEY HAVE
+                A CASE]</span>.</li>
+            <li><strong>Refute (the pivot).</strong> However, this view <span class="placeholder">[overlooks /
+                underestimates / does not account for]</span> <span class="placeholder">[LIMITATION]</span>.</li>
+            <li><strong>Explain why your refutation matters.</strong> <span class="placeholder">[EXPLANATION, LINKING
+                BACK TO YOUR POSITION]</span>.</li>
+          </ol>
+        </div>
 
-<h3>Body 2. Your main argument</h3>
-<div class="template">
-<ol>
-<li><strong>Topic sentence.</strong> More importantly, <span class="placeholder">[YOUR POSITION RESTATED AS A CLAIM]</span>.</li>
-<li><strong>Reason 1 + development.</strong> Firstly, <span class="placeholder">[REASON 1]</span>. This means that <span class="placeholder">[EXPLANATION]</span>. As a result, <span class="placeholder">[LOGICAL CONSEQUENCE]</span>.</li>
-<li><strong>Reason 2 + supporting evidence.</strong> Furthermore, <span class="placeholder">[REASON 2]</span>. <span class="placeholder">[DEVELOPMENT or CHAIN OF CAUSE AND EFFECT]</span>. This suggests that <span class="placeholder">[LINK BACK TO POSITION]</span>.</li>
-<li><strong>Mini-conclusion.</strong> Thus, <span class="placeholder">[POSITION REINFORCED IN ONE LINE]</span>.</li>
-</ol>
-</div>
+        <h3>Body 2. Your main argument</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Topic sentence.</strong> More importantly, <span class="placeholder">[YOUR POSITION RESTATED AS
+                A CLAIM]</span>.</li>
+            <li><strong>Reason 1 + development.</strong> Firstly, <span class="placeholder">[REASON 1]</span>. This
+              means that <span class="placeholder">[EXPLANATION]</span>. As a result, <span class="placeholder">[LOGICAL
+                CONSEQUENCE]</span>.</li>
+            <li><strong>Reason 2 + supporting evidence.</strong> Furthermore, <span class="placeholder">[REASON
+                2]</span>. <span class="placeholder">[DEVELOPMENT or CHAIN OF CAUSE AND EFFECT]</span>. This suggests
+              that <span class="placeholder">[LINK BACK TO POSITION]</span>.</li>
+            <li><strong>Mini-conclusion.</strong> Thus, <span class="placeholder">[POSITION REINFORCED IN ONE
+                LINE]</span>.</li>
+          </ol>
+        </div>
 
-<h3>Conclusion</h3>
-<div class="template">
-<ol>
-<li>In conclusion, although <span class="placeholder">[BRIEF NOD TO OTHER SIDE]</span>, I am convinced that <span class="placeholder">[POSITION]</span>, because <span class="placeholder">[ONE-LINE SUMMARY OF THE STRONGEST REASON]</span>.</li>
-</ol>
-</div>
+        <h3>Conclusion</h3>
+        <div class="template">
+          <ol>
+            <li>In conclusion, although <span class="placeholder">[BRIEF NOD TO OTHER SIDE]</span>, I am convinced that
+              <span class="placeholder">[POSITION]</span>, because <span class="placeholder">[ONE-LINE SUMMARY OF THE
+                STRONGEST REASON]</span>.</li>
+          </ol>
+        </div>
 
-<div class="connectors">
-  <h4>Useful connectors for this type</h4>
-  <div class="chip-list">
-    <span>Some people argue</span><span>Admittedly</span><span>While</span><span>On the one hand</span><span>However</span><span>Nevertheless</span><span>This view overlooks</span><span>More importantly</span><span>Furthermore</span><span>As a result</span><span>Thus</span><span>In conclusion</span>
+        <div class="connectors">
+          <h4>Useful connectors for this type</h4>
+          <div class="chip-list">
+            <span>Some people argue</span><span>Admittedly</span><span>While</span><span>On the one
+              hand</span><span>However</span><span>Nevertheless</span><span>This view overlooks</span><span>More
+              importantly</span><span>Furthermore</span><span>As a result</span><span>Thus</span><span>In
+              conclusion</span>
+          </div>
+        </div>
+
+        <div class="callout warning">
+          <div class="callout-label">Common pitfalls</div>
+          <ul style="margin: 0.2rem 0 0 0;">
+            <li>Presenting the opposing view as if you agree with it (the band-6.5 trap from Lesson 7).</li>
+            <li>Repeating the same idea in different words across both body paragraphs.</li>
+            <li>Stating "in my view X" in the introduction then arguing "Y" in body 1.</li>
+            <li>Inflating the topic with words like <em>catastrophic</em>, <em>disastrous</em>, <em>calamitous</em> when
+              the topic is mundane.</li>
+            <li>Slotting in a final-line "example" that is a clearly invented statistic.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ TYPE 2 ============ -->
+      <section id="type-2">
+        <h2><span class="type-num">2.</span>Discuss both views and give your opinion</h2>
+
+        <div class="callout note">
+          <div class="callout-label">Question signal</div>
+          <p style="margin: 0;"><em>Discuss both these views and give your own opinion.</em></p>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-label">What this question actually demands</div>
+          <p style="margin: 0;">Both views must be discussed, with roughly equal development. Your opinion must be
+            stated and must remain clear throughout, not parachuted in at the end. The safest structure is: one body
+            paragraph per view, with your stance woven in. The view you side with should receive slightly fuller
+            development.</p>
+        </div>
+
+        <h3>Introduction</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Context.</strong> The question of <span class="placeholder">[TOPIC]</span> divides opinion in
+              <span class="placeholder">[CONTEXT]</span>.</li>
+            <li><strong>State both views.</strong> While some hold that <span class="placeholder">[VIEW A]</span>,
+              others maintain that <span class="placeholder">[VIEW B]</span>.</li>
+            <li><strong>State your opinion.</strong> In my view, <span class="placeholder">[VIEW X]</span> is the more
+              convincing position because <span class="placeholder">[BRIEF REASON]</span>.</li>
+          </ol>
+        </div>
+
+        <h3>Body 1. The view you find less convincing</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Topic.</strong> Those who advocate <span class="placeholder">[VIEW A]</span> tend to argue that
+              <span class="placeholder">[THEIR CORE REASON]</span>.</li>
+            <li><strong>Develop.</strong> <span class="placeholder">[EXPANSION]</span>. This is because <span
+                class="placeholder">[EXPLANATION]</span>.</li>
+            <li><strong>Acknowledge merit.</strong> There is some force in this argument, particularly <span
+                class="placeholder">[SPECIFIC POINT]</span>.</li>
+            <li><strong>Limit it.</strong> Yet this view <span class="placeholder">[overlooks / understates]</span>
+              <span class="placeholder">[LIMITATION]</span>, which is why I find it less convincing overall.</li>
+          </ol>
+        </div>
+
+        <h3>Body 2. The view you side with (developed more fully)</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Topic.</strong> The argument for <span class="placeholder">[VIEW B]</span> is, in my opinion,
+              stronger for several reasons.</li>
+            <li><strong>Reason 1 + explanation.</strong> Firstly, <span class="placeholder">[REASON 1]</span>. <span
+                class="placeholder">[DEVELOPMENT]</span>.</li>
+            <li><strong>Reason 2 + supporting logic.</strong> More importantly, <span class="placeholder">[REASON
+                2]</span>. <span class="placeholder">[LOGICAL EVIDENCE OR CAUSE/EFFECT]</span>.</li>
+            <li><strong>Synthesis.</strong> Together, these factors suggest that <span class="placeholder">[POSITION
+                RESTATED]</span>.</li>
+          </ol>
+        </div>
+
+        <h3>Conclusion</h3>
+        <div class="template">
+          <ol>
+            <li>In conclusion, although <span class="placeholder">[VIEW A]</span> has some merit, <span
+                class="placeholder">[VIEW B]</span> is the more compelling position, principally because <span
+                class="placeholder">[STRONGEST REASON]</span>.</li>
+          </ol>
+        </div>
+
+        <div class="connectors">
+          <h4>Useful connectors for this type</h4>
+          <div class="chip-list">
+            <span>While some hold</span><span>Others maintain</span><span>Those who advocate</span><span>There is some
+              force in</span><span>Yet this view</span><span>On the other hand</span><span>In my
+              opinion</span><span>More importantly</span><span>Together, these factors</span><span>In conclusion</span>
+          </div>
+        </div>
+
+        <div class="callout warning">
+          <div class="callout-label">Common pitfalls</div>
+          <ul style="margin: 0.2rem 0 0 0;">
+            <li>Treating the two views unequally. If view A gets a paragraph and view B gets two sentences, task
+              response drops.</li>
+            <li>Failing to state an opinion. The prompt explicitly demands one.</li>
+            <li>Hiding the opinion until the conclusion. It needs to be visible from the introduction.</li>
+            <li>Agreeing with both views. That is fence-sitting, and it confuses the reader about where you actually
+              stand.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ TYPE 3 ============ -->
+      <section id="type-3">
+        <h2><span class="type-num">3.</span>Do the advantages outweigh the disadvantages?</h2>
+
+        <div class="callout note">
+          <div class="callout-label">Question signal</div>
+          <p style="margin: 0;"><em>Do the advantages outweigh the disadvantages?</em> &nbsp;&nbsp; <em>Do the
+              advantages of X outweigh its disadvantages?</em></p>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-label">What this question actually demands</div>
+          <p style="margin: 0;">This is an opinion question wearing different clothes. You must take a side.
+            <em>Outweigh</em> is a comparative verb, so you must address both sides and then claim that one is heavier.
+            The side you favour gets the fuller treatment.</p>
+        </div>
+
+        <h3>Introduction</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Context.</strong> <span class="placeholder">[TREND OR DEVELOPMENT]</span> has become
+              increasingly common in <span class="placeholder">[CONTEXT]</span>.</li>
+            <li><strong>Acknowledge both sides exist.</strong> This brings notable benefits but is not without
+              significant drawbacks.</li>
+            <li><strong>Position.</strong> On balance, I believe the <span class="placeholder">[advantages /
+                disadvantages]</span> clearly outweigh the <span class="placeholder">[other side]</span>, because <span
+                class="placeholder">[BRIEF REASON]</span>.</li>
+          </ol>
+        </div>
+
+        <h3>Body 1. The weaker side (the one you don't side with)</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Topic.</strong> Admittedly, there are several <span class="placeholder">[disadvantages /
+                advantages]</span> worth acknowledging.</li>
+            <li><strong>Point 1 + explanation.</strong> Firstly, <span class="placeholder">[POINT]</span>. <span
+                class="placeholder">[EXPLANATION]</span>.</li>
+            <li><strong>Point 2 + explanation.</strong> In addition, <span class="placeholder">[POINT]</span>. <span
+                class="placeholder">[EXPLANATION]</span>.</li>
+            <li><strong>Limit / pivot.</strong> However, these concerns are <span class="placeholder">[outweighed /
+                mitigated / context-specific]</span> for reasons set out below.</li>
+          </ol>
+        </div>
+
+        <h3>Body 2. The stronger side (your position)</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Topic.</strong> The <span class="placeholder">[advantages / disadvantages]</span>, by contrast,
+              are far more significant.</li>
+            <li><strong>Reason 1 + cause-effect chain.</strong> The most important benefit is that <span
+                class="placeholder">[POINT]</span>. This means <span class="placeholder">[EFFECT 1]</span>, which in
+              turn <span class="placeholder">[EFFECT 2]</span>.</li>
+            <li><strong>Reason 2 + supporting evidence.</strong> Furthermore, <span class="placeholder">[POINT]</span>.
+              <span class="placeholder">[DEVELOPMENT]</span>.</li>
+            <li><strong>Mini-conclusion.</strong> These benefits affect a far broader range of people than the drawbacks
+              identified earlier.</li>
+          </ol>
+        </div>
+
+        <h3>Conclusion</h3>
+        <div class="template">
+          <ol>
+            <li>In conclusion, while <span class="placeholder">[WEAKER SIDE]</span> cannot be dismissed entirely, the
+              <span class="placeholder">[STRONGER SIDE]</span> clearly outweigh them, because <span
+                class="placeholder">[ONE-LINE SUMMARY]</span>.</li>
+          </ol>
+        </div>
+
+        <div class="connectors">
+          <h4>Useful connectors for this type</h4>
+          <div class="chip-list">
+            <span>Admittedly</span><span>Firstly</span><span>In addition</span><span>However</span><span>By
+              contrast</span><span>The most important benefit</span><span>Furthermore</span><span>This
+              means</span><span>Which in turn</span><span>On balance</span><span>Clearly outweigh</span>
+          </div>
+        </div>
+
+        <div class="callout warning">
+          <div class="callout-label">Common pitfalls</div>
+          <ul style="margin: 0.2rem 0 0 0;">
+            <li>Listing four advantages and four disadvantages with no claim about which is heavier. That answers a
+              different question.</li>
+            <li>Hedging into invisibility ("there are advantages and disadvantages, so it depends"). Take a side.</li>
+            <li>Choosing the side you can't actually defend because it sounds smarter.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ TYPE 4 ============ -->
+      <section id="type-4">
+        <h2><span class="type-num">4.</span>What are the advantages and disadvantages?</h2>
+
+        <div class="callout note">
+          <div class="callout-label">Question signal</div>
+          <p style="margin: 0;"><em>What are the advantages and disadvantages?</em> &nbsp;&nbsp; <em>Discuss the
+              benefits and the drawbacks of this phenomenon.</em></p>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-label">What this question actually demands</div>
+          <p style="margin: 0;">Descriptive. No opinion is required, although a balanced closing thought is fine. Treat
+            the two sides with equal weight. The skill being tested here is whether you can develop both fairly and
+            connect ideas inside each side cleanly.</p>
+        </div>
+
+        <h3>Introduction</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Context.</strong> <span class="placeholder">[TREND OR DEVELOPMENT]</span> has become
+              increasingly visible in <span class="placeholder">[CONTEXT]</span>.</li>
+            <li><strong>Acknowledge complexity.</strong> Like many such developments, it carries clear advantages but
+              also notable drawbacks.</li>
+            <li><strong>Brief preview.</strong> Both will be examined in turn.</li>
+          </ol>
+        </div>
+
+        <h3>Body 1. Advantages</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Topic.</strong> The most evident advantages of <span class="placeholder">[TREND]</span> relate
+              to <span class="placeholder">[BROAD AREA]</span>.</li>
+            <li><strong>Advantage 1 + explanation.</strong> Firstly, <span class="placeholder">[POINT]</span>. This is
+              because <span class="placeholder">[REASON]</span>, which means <span
+                class="placeholder">[CONSEQUENCE]</span>.</li>
+            <li><strong>Advantage 2 + supporting evidence.</strong> A further benefit is that <span
+                class="placeholder">[POINT]</span>. <span class="placeholder">[LOGICAL EVIDENCE]</span>.</li>
+          </ol>
+        </div>
+
+        <h3>Body 2. Disadvantages</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Topic.</strong> On the other hand, there are also significant drawbacks.</li>
+            <li><strong>Disadvantage 1 + explanation.</strong> One concern is that <span
+                class="placeholder">[POINT]</span>. <span class="placeholder">[EXPLANATION OR CAUSE/EFFECT]</span>.</li>
+            <li><strong>Disadvantage 2 + supporting evidence.</strong> Another issue is that <span
+                class="placeholder">[POINT]</span>. <span class="placeholder">[DEVELOPMENT]</span>.</li>
+          </ol>
+        </div>
+
+        <h3>Conclusion</h3>
+        <div class="template">
+          <ol>
+            <li>In conclusion, <span class="placeholder">[TREND]</span> offers <span class="placeholder">[BRIEF SUMMARY
+                OF ADVANTAGES]</span> but also brings <span class="placeholder">[BRIEF SUMMARY OF DISADVANTAGES]</span>.
+              Whether the trend is welcome may ultimately depend on <span class="placeholder">[CONTEXT-DEPENDENT
+                FACTOR]</span>.</li>
+          </ol>
+        </div>
+
+        <div class="connectors">
+          <h4>Useful connectors for this type</h4>
+          <div class="chip-list">
+            <span>The most evident advantages</span><span>Firstly</span><span>This is because</span><span>A further
+              benefit</span><span>On the other hand</span><span>One concern</span><span>Another
+              issue</span><span>Whether the trend is welcome</span>
+          </div>
+        </div>
+
+        <div class="callout warning">
+          <div class="callout-label">Common pitfalls</div>
+          <ul style="margin: 0.2rem 0 0 0;">
+            <li>Drifting into opinion when none is asked for. State both sides cleanly.</li>
+            <li>Treating one side as a stub. Equal development matters.</li>
+            <li>Listing without explanation. An "advantage" is only an advantage once you say why it matters.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ TYPE 5 ============ -->
+      <section id="type-5">
+        <h2><span class="type-num">5.</span>Is this a positive or negative development?</h2>
+
+        <div class="callout note">
+          <div class="callout-label">Question signal</div>
+          <p style="margin: 0;"><em>Is this a positive or negative development?</em> &nbsp;&nbsp; <em>Do you think this
+              is a positive or negative development?</em></p>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-label">What this question actually demands</div>
+          <p style="margin: 0;">Functionally identical to agree/disagree. You evaluate a trend and take a position.
+            Treat it like Type 1: acknowledge the side you reject, concede a point, then build the case for your view.
+          </p>
+        </div>
+
+        <h3>Introduction</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Context.</strong> <span class="placeholder">[TREND]</span> has become an increasingly defining
+              feature of <span class="placeholder">[CONTEXT]</span>.</li>
+            <li><strong>Acknowledge complexity.</strong> Whether this development is welcome remains a matter of debate.
+            </li>
+            <li><strong>Position.</strong> Although it has some <span class="placeholder">[negative / positive]</span>
+              aspects, I regard it as a largely <span class="placeholder">[positive / negative]</span> development,
+              because <span class="placeholder">[REASON 1]</span> and <span class="placeholder">[REASON 2]</span>.</li>
+          </ol>
+        </div>
+
+        <h3>Body 1. The opposing evaluation (with concession + refutation)</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Topic.</strong> Some people argue that this trend is a <span class="placeholder">[negative /
+                positive]</span> development.</li>
+            <li><strong>Their reasoning.</strong> They point out that <span class="placeholder">[OPPOSING
+                REASON]</span>. This is because <span class="placeholder">[EXPLANATION]</span>.</li>
+            <li><strong>Concede.</strong> Admittedly, <span class="placeholder">[POINT WORTH ACKNOWLEDGING]</span>.</li>
+            <li><strong>Refute.</strong> However, this view <span class="placeholder">[overlooks / overstates]</span>
+              <span class="placeholder">[LIMITATION]</span>, which is significant because <span
+                class="placeholder">[EXPLANATION]</span>.</li>
+          </ol>
+        </div>
+
+        <h3>Body 2. Your evaluation</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Topic.</strong> On balance, this development is <span class="placeholder">[positive /
+                negative]</span> because <span class="placeholder">[REASON HEADLINE]</span>.</li>
+            <li><strong>Reason 1 + chain.</strong> <span class="placeholder">[POINT]</span> means <span
+                class="placeholder">[EFFECT 1]</span>, which in turn <span class="placeholder">[EFFECT 2]</span>.</li>
+            <li><strong>Reason 2 + supporting evidence.</strong> Furthermore, <span class="placeholder">[POINT]</span>.
+              <span class="placeholder">[DEVELOPMENT]</span>.</li>
+            <li><strong>Mini-conclusion.</strong> The benefits of this trend reach a broader population than its costs.
+            </li>
+          </ol>
+        </div>
+
+        <h3>Conclusion</h3>
+        <div class="template">
+          <ol>
+            <li>In conclusion, although <span class="placeholder">[BRIEF NOD TO OTHER SIDE]</span>, this trend is, in my
+              view, a largely <span class="placeholder">[positive / negative]</span> development, primarily because
+              <span class="placeholder">[SUMMARY]</span>.</li>
+          </ol>
+        </div>
+
+        <div class="connectors">
+          <h4>Useful connectors for this type</h4>
+          <div class="chip-list">
+            <span>It is increasingly common for</span><span>Some people argue</span><span>They point out
+              that</span><span>Admittedly</span><span>This view overlooks</span><span>On balance</span><span>Which in
+              turn</span><span>Furthermore</span><span>Primarily because</span>
+          </div>
+        </div>
+
+        <div class="callout warning">
+          <div class="callout-label">Common pitfalls</div>
+          <ul style="margin: 0.2rem 0 0 0;">
+            <li>Treating it as "advantages and disadvantages" with no evaluative claim. The question asks
+              <em>which</em>, not <em>both</em>.</li>
+            <li>Predicting extreme outcomes ("this will destroy society") without the reasoning to support them.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ TYPE 6 ============ -->
+      <section id="type-6">
+        <h2><span class="type-num">6.</span>Problem &amp; solution / cause &amp; effect</h2>
+
+        <div class="callout note">
+          <div class="callout-label">Question signal</div>
+          <p style="margin: 0;"><em>What are the reasons? What can be done?</em> &nbsp;&nbsp; <em>What problems does
+              this cause? What measures can be taken?</em> &nbsp;&nbsp; <em>What are the causes? What are the
+              effects?</em></p>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-label">What this question actually demands</div>
+          <p style="margin: 0;">A two-part structure: diagnose, then prescribe. The two halves should be visibly
+            connected. Solutions should target the causes you identified, not float free of them. This is the question
+            type where cause-effect chains earn their keep, so plan with arrows: <span class="phrase">A → B → C</span>.
+          </p>
+        </div>
+
+        <h3>Introduction</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Context.</strong> <span class="placeholder">[ISSUE]</span> has become an increasingly pressing
+              concern in <span class="placeholder">[CONTEXT]</span>.</li>
+            <li><strong>Frame the question.</strong> The reasons behind this trend are complex, and any meaningful
+              response must address them at their source.</li>
+            <li><strong>Brief preview.</strong> This essay examines the principal <span class="placeholder">[causes /
+                problems]</span> and proposes <span class="placeholder">[solutions / measures]</span> that target them
+              directly.</li>
+          </ol>
+        </div>
+
+        <h3>Body 1. Causes / problems</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Topic.</strong> There are several reasons why <span class="placeholder">[ISSUE]</span> has
+              become so widespread.</li>
+            <li><strong>Cause 1 + chain.</strong> The most significant is <span class="placeholder">[CAUSE 1]</span>.
+              This means that <span class="placeholder">[EFFECT 1]</span>, which can in turn lead to <span
+                class="placeholder">[FURTHER EFFECT]</span>.</li>
+            <li><strong>Cause 2 + chain.</strong> A second factor is <span class="placeholder">[CAUSE 2]</span>. As a
+              result, <span class="placeholder">[EFFECT]</span>.</li>
+            <li><strong>Mini-conclusion.</strong> These causes are interconnected, which is why <span
+                class="placeholder">[ISSUE]</span> rarely responds to a single, isolated intervention.</li>
+          </ol>
+        </div>
+
+        <h3>Body 2. Solutions / measures (or effects)</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Topic.</strong> Addressing this will require <span class="placeholder">[broad approach]</span>,
+              with measures aimed at each of the causes above.</li>
+            <li><strong>Solution 1.</strong> Firstly, if <span class="placeholder">[AUTHORITY: governments / schools /
+                employers]</span> were to <span class="placeholder">[ACTION]</span>, this could <span
+                class="placeholder">[EXPECTED RESULT]</span>. This would directly address <span
+                class="placeholder">[CAUSE 1]</span>.</li>
+            <li><strong>Solution 2.</strong> A further step would be to <span class="placeholder">[ACTION]</span>. By
+              doing so, <span class="placeholder">[BENEFIT]</span>, which would help to mitigate <span
+                class="placeholder">[CAUSE 2]</span>.</li>
+            <li><strong>Hedged caveat.</strong> These measures are unlikely to eliminate the problem entirely, but they
+              could meaningfully reduce its scale.</li>
+          </ol>
+        </div>
+
+        <h3>Conclusion</h3>
+        <div class="template">
+          <ol>
+            <li>In conclusion, <span class="placeholder">[ISSUE]</span> stems largely from <span
+                class="placeholder">[CAUSES SUMMARY]</span>. Effective responses must therefore include <span
+                class="placeholder">[SOLUTIONS SUMMARY]</span>, applied with care to local conditions.</li>
+          </ol>
+        </div>
+
+        <div class="connectors">
+          <h4>Useful connectors for this type</h4>
+          <div class="chip-list">
+            <span>The most significant is</span><span>This means that</span><span>Which can in turn lead
+              to</span><span>As a result</span><span>These causes are interconnected</span><span>If X were
+              to</span><span>This could</span><span>By doing so</span><span>Help to mitigate</span><span>Unlikely to
+              eliminate entirely</span>
+          </div>
+        </div>
+
+        <div class="callout warning">
+          <div class="callout-label">Common pitfalls</div>
+          <ul style="margin: 0.2rem 0 0 0;">
+            <li>Solutions that bear no relation to the causes you just diagnosed. Match them explicitly.</li>
+            <li>Overconfident predictions about solutions: <em>"this will eradicate poverty"</em>. Use <span
+                class="phrase">could</span>, <span class="phrase">may</span>, <span class="phrase">would help to</span>.
+            </li>
+            <li>Stacking conditional clauses so long that the reader loses the thread. One cause-effect chain per
+              sentence.</li>
+            <li>Forgetting one of the two parts. If the prompt asks for problems <em>and</em> solutions, you need both.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ TYPE 7 ============ -->
+      <section id="type-7">
+        <h2><span class="type-num">7.</span>Two-part question</h2>
+
+        <div class="callout note">
+          <div class="callout-label">Question signal</div>
+          <p style="margin: 0;">Two distinct questions in the prompt, often: <em>What are the reasons? Is this a
+              positive or negative development?</em> &nbsp;&nbsp; <em>Why? How can we encourage them?</em></p>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-label">What this question actually demands</div>
+          <p style="margin: 0;">Both questions must be answered. Each gets its own body paragraph. The opinion-style
+            second half (positive/negative, advantages/disadvantages, agree/disagree) still requires a clear position.
+            Many candidates lose marks here by answering only the first question well.</p>
+        </div>
+
+        <h3>Introduction</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Context.</strong> <span class="placeholder">[PHENOMENON]</span> is increasingly common in <span
+                class="placeholder">[CONTEXT]</span>.</li>
+            <li><strong>Frame both parts.</strong> The reasons for this trend are several, and its consequences for
+              individuals and society are mixed.</li>
+            <li><strong>Thesis answering both briefly.</strong> This essay argues that <span class="placeholder">[BRIEF
+                ANSWER TO PART 1]</span>, and that the development is, on balance, <span class="placeholder">[BRIEF
+                ANSWER TO PART 2]</span>.</li>
+          </ol>
+        </div>
+
+        <h3>Body 1. Part 1 (reasons / causes / why)</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Topic.</strong> Several factors explain why <span class="placeholder">[PHENOMENON]</span>.</li>
+            <li><strong>Reason 1 + explanation.</strong> Firstly, <span class="placeholder">[REASON]</span>. <span
+                class="placeholder">[DEVELOPMENT]</span>.</li>
+            <li><strong>Reason 2 + explanation.</strong> A further factor is <span class="placeholder">[REASON]</span>.
+              <span class="placeholder">[DEVELOPMENT]</span>.</li>
+            <li><strong>Mini-conclusion.</strong> These factors together help to explain the scale of the trend.</li>
+          </ol>
+        </div>
+
+        <h3>Body 2. Part 2 (evaluation / opinion)</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Topic + position.</strong> Whether this is a <span class="placeholder">[positive /
+                negative]</span> development is more contested, but I view it as largely <span class="placeholder">[YOUR
+                POSITION]</span>.</li>
+            <li><strong>Reason for position 1.</strong> The most important reason is that <span
+                class="placeholder">[REASON 1]</span>. <span class="placeholder">[EXPLANATION]</span>.</li>
+            <li><strong>Reason for position 2 + brief acknowledgement.</strong> While <span class="placeholder">[BRIEF
+                CONCESSION]</span>, the broader effect of <span class="placeholder">[POINT]</span> is more significant.
+            </li>
+            <li><strong>Mini-conclusion.</strong> On balance, the trend is therefore better understood as <span
+                class="placeholder">[POSITION RESTATED]</span>.</li>
+          </ol>
+        </div>
+
+        <h3>Conclusion</h3>
+        <div class="template">
+          <ol>
+            <li>In conclusion, <span class="placeholder">[PHENOMENON]</span> has arisen primarily because <span
+                class="placeholder">[REASONS IN ONE LINE]</span>, and although it brings some drawbacks, it is on
+              balance a <span class="placeholder">[POSITION]</span> development.</li>
+          </ol>
+        </div>
+
+        <div class="connectors">
+          <h4>Useful connectors for this type</h4>
+          <div class="chip-list">
+            <span>Several factors explain</span><span>Firstly</span><span>A further factor</span><span>Whether this
+              is</span><span>The most important reason</span><span>While</span><span>The broader effect</span><span>On
+              balance</span><span>Has arisen primarily because</span>
+          </div>
+        </div>
+
+        <div class="callout warning">
+          <div class="callout-label">Common pitfalls</div>
+          <ul style="margin: 0.2rem 0 0 0;">
+            <li>Answering only part 1 in depth and tacking part 2 onto the conclusion. Both parts need their own
+              paragraph.</li>
+            <li>Missing the opinion in part 2 if it is framed as an evaluation.</li>
+            <li>Forcing part 2 to be the same scale as part 1. The reasons may be many, the evaluation may be simple.
+              That is fine.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ TYPE 8 ============ -->
+      <section id="type-8">
+        <h2><span class="type-num">8.</span>Direct question</h2>
+
+        <div class="callout note">
+          <div class="callout-label">Question signal</div>
+          <p style="margin: 0;">A single open question, e.g. <em>Who should fund medical research?</em> &nbsp;&nbsp;
+            <em>What can arts tell us that science cannot?</em> &nbsp;&nbsp; <em>How can older people be encouraged to
+              use new technologies?</em></p>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-label">What this question actually demands</div>
+          <p style="margin: 0;">A direct, defended answer. No two-sided structure is required, but the answer must be
+            developed across two body paragraphs with distinct reasons or aspects. Avoid trying to retrofit this into an
+            agree/disagree shape.</p>
+        </div>
+
+        <h3>Introduction</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Context.</strong> <span class="placeholder">[TOPIC]</span> raises an important question for
+              <span class="placeholder">[STAKEHOLDERS]</span>.</li>
+            <li><strong>Restate the question.</strong> The issue of <span class="placeholder">[PARAPHRASED
+                QUESTION]</span> has no single, obvious answer.</li>
+            <li><strong>Thesis.</strong> In my view, <span class="placeholder">[YOUR ANSWER]</span>, primarily because
+              <span class="placeholder">[REASON 1 SUMMARY]</span> and <span class="placeholder">[REASON 2
+                SUMMARY]</span>.</li>
+          </ol>
+        </div>
+
+        <h3>Body 1. First reason or aspect</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Topic.</strong> The first reason for this position is <span class="placeholder">[REASON
+                1]</span>.</li>
+            <li><strong>Explanation.</strong> <span class="placeholder">[DEVELOPMENT]</span>. This means <span
+                class="placeholder">[CONSEQUENCE]</span>.</li>
+            <li><strong>Supporting evidence.</strong> For instance, <span class="placeholder">[SPECIFIC LOGICAL EVIDENCE
+                OR ILLUSTRATION]</span>.</li>
+            <li><strong>Mini-conclusion.</strong> Thus, <span class="placeholder">[LINK BACK TO ANSWER]</span>.</li>
+          </ol>
+        </div>
+
+        <h3>Body 2. Second reason (typically the stronger one)</h3>
+        <div class="template">
+          <ol>
+            <li><strong>Topic.</strong> Even more importantly, <span class="placeholder">[REASON 2]</span>.</li>
+            <li><strong>Explanation + chain.</strong> <span class="placeholder">[DEVELOPMENT]</span>. As a result, <span
+                class="placeholder">[OUTCOME]</span>.</li>
+            <li><strong>Supporting evidence.</strong> <span class="placeholder">[LOGICAL EVIDENCE]</span>.</li>
+            <li><strong>Mini-conclusion.</strong> This consideration is decisive because <span class="placeholder">[WHY
+                IT MATTERS]</span>.</li>
+          </ol>
+        </div>
+
+        <h3>Conclusion</h3>
+        <div class="template">
+          <ol>
+            <li>In conclusion, <span class="placeholder">[YOUR ANSWER RESTATED]</span>, because <span
+                class="placeholder">[REASON 1 + REASON 2 IN ONE SENTENCE]</span>.</li>
+          </ol>
+        </div>
+
+        <div class="connectors">
+          <h4>Useful connectors for this type</h4>
+          <div class="chip-list">
+            <span>Has no single answer</span><span>The first reason</span><span>For instance</span><span>Even more
+              importantly</span><span>As a result</span><span>This consideration is decisive</span><span>Because</span>
+          </div>
+        </div>
+
+        <div class="callout warning">
+          <div class="callout-label">Common pitfalls</div>
+          <ul style="margin: 0.2rem 0 0 0;">
+            <li>Not actually answering the question. <em>"Who should fund medical research?"</em> needs a who, not a
+              meditation on whether medical research is important.</li>
+            <li>Listing too many shallow reasons. Two reasons developed deeply beat five reasons stated and dropped.
+            </li>
+            <li>Drifting into a different question (one of the band-6.5 errors from Lesson 5).</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ HEDGING ============ -->
+      <section id="hedging">
+        <h2>Hedging language bank</h2>
+        <p class="lede">Hedging makes a claim more cautious and therefore more defensible. The lessons emphasise that
+          overclaiming flattens an argument; this bank is the antidote. Use it for any claim that is interpretation,
+          generalisation or prediction.</p>
+
+        <h3>To weaken a claim (most useful when introducing a counterargument)</h3>
+        <div class="connectors">
+          <div class="chip-list">
+            <span>may</span><span>might</span><span>could</span><span>can</span><span>possibly</span><span>perhaps</span><span>arguably</span><span>presumably</span><span>seemingly</span><span>tend
+              to</span><span>appear to</span><span>seem
+              to</span><span>some</span><span>few</span><span>little</span><span>sometimes</span><span>in many
+              cases</span><span>for some people</span><span>under these conditions</span>
+          </div>
+        </div>
+
+        <h3>To strengthen a claim (use sparingly and only when justified)</h3>
+        <div class="connectors">
+          <div class="chip-list">
+            <span>will</span><span>would</span><span>should</span><span>must</span><span>ought to</span><span>is likely
+              to</span><span>probably</span><span>clearly</span><span>generally</span><span>often</span><span>most</span><span>many</span><span>it
+              is clear that</span>
+          </div>
+        </div>
+
+        <h3>Attribution hedges (useful in evidence-based claims)</h3>
+        <div class="connectors">
+          <div class="chip-list">
+            <span>the evidence suggests</span><span>the results indicate</span><span>this may imply</span><span>one
+              possible interpretation is</span><span>research tends to show</span>
+          </div>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-label">The rule</div>
+          <p style="margin: 0;">Do not hedge definitions or verified facts. Hedge interpretations, generalisations,
+            causal claims and predictions. <em>"If governments were to invest in public transport, this <span
+                class="phrase">could</span> reduce congestion"</em> is defensible. <em>"This <span
+                class="phrase">will</span> solve all traffic problems"</em> is not.</p>
+        </div>
+      </section>
+
+      <!-- ============ CONNECTORS ============ -->
+      <section id="connectors-bank">
+        <h2>Connector bank</h2>
+        <p class="lede">Grouped by function. Use them because they fit, not because the slot needs filling.</p>
+
+        <h3>Adding information</h3>
+        <div class="connectors">
+          <div class="chip-list">
+            <span>Firstly</span><span>Secondly</span><span>Thirdly</span><span>In
+              addition</span><span>Furthermore</span><span>Moreover</span><span>What is more</span><span>Even more
+              importantly</span><span>Similarly</span><span>Also</span>
+          </div>
+        </div>
+
+        <h3>Cause and effect</h3>
+        <div class="connectors">
+          <div class="chip-list">
+            <span>This means that</span><span>This causes</span><span>This can lead to</span><span>As a
+              result</span><span>Consequently</span><span>In turn</span><span>Result in</span><span>Result
+              from</span><span>If ... then ...</span>
+          </div>
+        </div>
+
+        <h3>Contrast and concession</h3>
+        <div class="connectors">
+          <div class="chip-list">
+            <span>However</span><span>Nevertheless</span><span>While</span><span>Although</span><span>Despite</span><span>In
+              contrast</span><span>On the other hand</span><span>Having said that</span><span>Admittedly</span>
+          </div>
+        </div>
+
+        <h3>Counterargument signposts</h3>
+        <div class="connectors">
+          <div class="chip-list">
+            <span>Some people may argue</span><span>Some people might say</span><span>It could be
+              argued</span><span>Those who hold the opposing view</span><span>Critics may point out</span>
+          </div>
+        </div>
+
+        <h3>Conclusion / synthesis</h3>
+        <div class="connectors">
+          <div class="chip-list">
+            <span>Thus</span><span>Therefore</span><span>In conclusion</span><span>On
+              balance</span><span>Overall</span><span>To sum up</span>
+          </div>
+        </div>
+
+        <h3>Rephrasing or showing equivalence</h3>
+        <div class="connectors">
+          <div class="chip-list">
+            <span>This means</span><span>Which means</span><span>In other words</span><span>That is to say</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SYMBOLS ============ -->
+      <section id="planning-symbols">
+        <h2>Planning symbols</h2>
+        <p class="lede">Useful during the planning minutes. If your plan contains a mix of these symbols, the argument
+          is complex and the connectors in the writing need to be especially clear.</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Symbol</th>
+              <th>Meaning</th>
+              <th>When to use</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="phrase">+</span></td>
+              <td>and / in addition</td>
+              <td>Independent reasons combining to support a conclusion</td>
+            </tr>
+            <tr>
+              <td><span class="phrase">→</span></td>
+              <td>leads to / causes</td>
+              <td>Cause-and-effect chains</td>
+            </tr>
+            <tr>
+              <td><span class="phrase">=</span></td>
+              <td>equals / in other words</td>
+              <td>Rephrasing for clarity</td>
+            </tr>
+            <tr>
+              <td><span class="phrase">∴</span></td>
+              <td>therefore / thus</td>
+              <td>Drawing a conclusion from evidence</td>
+            </tr>
+            <tr>
+              <td><span class="phrase">↑</span></td>
+              <td>rises / increases</td>
+              <td>Trends moving up</td>
+            </tr>
+            <tr>
+              <td><span class="phrase">↓</span></td>
+              <td>falls / decreases</td>
+              <td>Trends moving down</td>
+            </tr>
+            <tr>
+              <td><span class="phrase">vs</span></td>
+              <td>contrast</td>
+              <td>Marking where the counterargument sits</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout tip">
+          <div class="callout-label">A reminder, not a substitute</div>
+          <p style="margin: 0;">These templates exist so you can stop spending planning minutes worrying about shape and
+            start spending them on ideas. The shape is the cheapest part of the essay. The thinking is the part the
+            examiner is actually paying for.</p>
+        </div>
+      </section>
+
+      <footer>
+        <p>Built from the seven writing lessons. Templates are scaffolding for thinking, not a script. The argument you
+          make has to fit the question in front of you, and no skeleton can do that work for you.</p>
+      </footer>
+
+    </main>
   </div>
-</div>
-
-<div class="callout warning">
-  <div class="callout-label">Common pitfalls</div>
-  <ul style="margin: 0.2rem 0 0 0;">
-    <li>Presenting the opposing view as if you agree with it (the band-6.5 trap from Lesson 7).</li>
-    <li>Repeating the same idea in different words across both body paragraphs.</li>
-    <li>Stating "in my view X" in the introduction then arguing "Y" in body 1.</li>
-    <li>Inflating the topic with words like <em>catastrophic</em>, <em>disastrous</em>, <em>calamitous</em> when the topic is mundane.</li>
-    <li>Slotting in a final-line "example" that is a clearly invented statistic.</li>
-  </ul>
-</div>
-</section>
-
-<!-- ============ TYPE 2 ============ -->
-<section id="type-2">
-<h2><span class="type-num">2.</span>Discuss both views and give your opinion</h2>
-
-<div class="callout note">
-  <div class="callout-label">Question signal</div>
-  <p style="margin: 0;"><em>Discuss both these views and give your own opinion.</em></p>
-</div>
-
-<div class="callout tip">
-  <div class="callout-label">What this question actually demands</div>
-  <p style="margin: 0;">Both views must be discussed, with roughly equal development. Your opinion must be stated and must remain clear throughout, not parachuted in at the end. The safest structure is: one body paragraph per view, with your stance woven in. The view you side with should receive slightly fuller development.</p>
-</div>
-
-<h3>Introduction</h3>
-<div class="template">
-<ol>
-<li><strong>Context.</strong> The question of <span class="placeholder">[TOPIC]</span> divides opinion in <span class="placeholder">[CONTEXT]</span>.</li>
-<li><strong>State both views.</strong> While some hold that <span class="placeholder">[VIEW A]</span>, others maintain that <span class="placeholder">[VIEW B]</span>.</li>
-<li><strong>State your opinion.</strong> In my view, <span class="placeholder">[VIEW X]</span> is the more convincing position because <span class="placeholder">[BRIEF REASON]</span>.</li>
-</ol>
-</div>
-
-<h3>Body 1. The view you find less convincing</h3>
-<div class="template">
-<ol>
-<li><strong>Topic.</strong> Those who advocate <span class="placeholder">[VIEW A]</span> tend to argue that <span class="placeholder">[THEIR CORE REASON]</span>.</li>
-<li><strong>Develop.</strong> <span class="placeholder">[EXPANSION]</span>. This is because <span class="placeholder">[EXPLANATION]</span>.</li>
-<li><strong>Acknowledge merit.</strong> There is some force in this argument, particularly <span class="placeholder">[SPECIFIC POINT]</span>.</li>
-<li><strong>Limit it.</strong> Yet this view <span class="placeholder">[overlooks / understates]</span> <span class="placeholder">[LIMITATION]</span>, which is why I find it less convincing overall.</li>
-</ol>
-</div>
-
-<h3>Body 2. The view you side with (developed more fully)</h3>
-<div class="template">
-<ol>
-<li><strong>Topic.</strong> The argument for <span class="placeholder">[VIEW B]</span> is, in my opinion, stronger for several reasons.</li>
-<li><strong>Reason 1 + explanation.</strong> Firstly, <span class="placeholder">[REASON 1]</span>. <span class="placeholder">[DEVELOPMENT]</span>.</li>
-<li><strong>Reason 2 + supporting logic.</strong> More importantly, <span class="placeholder">[REASON 2]</span>. <span class="placeholder">[LOGICAL EVIDENCE OR CAUSE/EFFECT]</span>.</li>
-<li><strong>Synthesis.</strong> Together, these factors suggest that <span class="placeholder">[POSITION RESTATED]</span>.</li>
-</ol>
-</div>
-
-<h3>Conclusion</h3>
-<div class="template">
-<ol>
-<li>In conclusion, although <span class="placeholder">[VIEW A]</span> has some merit, <span class="placeholder">[VIEW B]</span> is the more compelling position, principally because <span class="placeholder">[STRONGEST REASON]</span>.</li>
-</ol>
-</div>
-
-<div class="connectors">
-  <h4>Useful connectors for this type</h4>
-  <div class="chip-list">
-    <span>While some hold</span><span>Others maintain</span><span>Those who advocate</span><span>There is some force in</span><span>Yet this view</span><span>On the other hand</span><span>In my opinion</span><span>More importantly</span><span>Together, these factors</span><span>In conclusion</span>
-  </div>
-</div>
-
-<div class="callout warning">
-  <div class="callout-label">Common pitfalls</div>
-  <ul style="margin: 0.2rem 0 0 0;">
-    <li>Treating the two views unequally. If view A gets a paragraph and view B gets two sentences, task response drops.</li>
-    <li>Failing to state an opinion. The prompt explicitly demands one.</li>
-    <li>Hiding the opinion until the conclusion. It needs to be visible from the introduction.</li>
-    <li>Agreeing with both views. That is fence-sitting, and it confuses the reader about where you actually stand.</li>
-  </ul>
-</div>
-</section>
-
-<!-- ============ TYPE 3 ============ -->
-<section id="type-3">
-<h2><span class="type-num">3.</span>Do the advantages outweigh the disadvantages?</h2>
-
-<div class="callout note">
-  <div class="callout-label">Question signal</div>
-  <p style="margin: 0;"><em>Do the advantages outweigh the disadvantages?</em> &nbsp;&nbsp; <em>Do the advantages of X outweigh its disadvantages?</em></p>
-</div>
-
-<div class="callout tip">
-  <div class="callout-label">What this question actually demands</div>
-  <p style="margin: 0;">This is an opinion question wearing different clothes. You must take a side. <em>Outweigh</em> is a comparative verb, so you must address both sides and then claim that one is heavier. The side you favour gets the fuller treatment.</p>
-</div>
-
-<h3>Introduction</h3>
-<div class="template">
-<ol>
-<li><strong>Context.</strong> <span class="placeholder">[TREND OR DEVELOPMENT]</span> has become increasingly common in <span class="placeholder">[CONTEXT]</span>.</li>
-<li><strong>Acknowledge both sides exist.</strong> This brings notable benefits but is not without significant drawbacks.</li>
-<li><strong>Position.</strong> On balance, I believe the <span class="placeholder">[advantages / disadvantages]</span> clearly outweigh the <span class="placeholder">[other side]</span>, because <span class="placeholder">[BRIEF REASON]</span>.</li>
-</ol>
-</div>
-
-<h3>Body 1. The weaker side (the one you don't side with)</h3>
-<div class="template">
-<ol>
-<li><strong>Topic.</strong> Admittedly, there are several <span class="placeholder">[disadvantages / advantages]</span> worth acknowledging.</li>
-<li><strong>Point 1 + explanation.</strong> Firstly, <span class="placeholder">[POINT]</span>. <span class="placeholder">[EXPLANATION]</span>.</li>
-<li><strong>Point 2 + explanation.</strong> In addition, <span class="placeholder">[POINT]</span>. <span class="placeholder">[EXPLANATION]</span>.</li>
-<li><strong>Limit / pivot.</strong> However, these concerns are <span class="placeholder">[outweighed / mitigated / context-specific]</span> for reasons set out below.</li>
-</ol>
-</div>
-
-<h3>Body 2. The stronger side (your position)</h3>
-<div class="template">
-<ol>
-<li><strong>Topic.</strong> The <span class="placeholder">[advantages / disadvantages]</span>, by contrast, are far more significant.</li>
-<li><strong>Reason 1 + cause-effect chain.</strong> The most important benefit is that <span class="placeholder">[POINT]</span>. This means <span class="placeholder">[EFFECT 1]</span>, which in turn <span class="placeholder">[EFFECT 2]</span>.</li>
-<li><strong>Reason 2 + supporting evidence.</strong> Furthermore, <span class="placeholder">[POINT]</span>. <span class="placeholder">[DEVELOPMENT]</span>.</li>
-<li><strong>Mini-conclusion.</strong> These benefits affect a far broader range of people than the drawbacks identified earlier.</li>
-</ol>
-</div>
-
-<h3>Conclusion</h3>
-<div class="template">
-<ol>
-<li>In conclusion, while <span class="placeholder">[WEAKER SIDE]</span> cannot be dismissed entirely, the <span class="placeholder">[STRONGER SIDE]</span> clearly outweigh them, because <span class="placeholder">[ONE-LINE SUMMARY]</span>.</li>
-</ol>
-</div>
-
-<div class="connectors">
-  <h4>Useful connectors for this type</h4>
-  <div class="chip-list">
-    <span>Admittedly</span><span>Firstly</span><span>In addition</span><span>However</span><span>By contrast</span><span>The most important benefit</span><span>Furthermore</span><span>This means</span><span>Which in turn</span><span>On balance</span><span>Clearly outweigh</span>
-  </div>
-</div>
-
-<div class="callout warning">
-  <div class="callout-label">Common pitfalls</div>
-  <ul style="margin: 0.2rem 0 0 0;">
-    <li>Listing four advantages and four disadvantages with no claim about which is heavier. That answers a different question.</li>
-    <li>Hedging into invisibility ("there are advantages and disadvantages, so it depends"). Take a side.</li>
-    <li>Choosing the side you can't actually defend because it sounds smarter.</li>
-  </ul>
-</div>
-</section>
-
-<!-- ============ TYPE 4 ============ -->
-<section id="type-4">
-<h2><span class="type-num">4.</span>What are the advantages and disadvantages?</h2>
-
-<div class="callout note">
-  <div class="callout-label">Question signal</div>
-  <p style="margin: 0;"><em>What are the advantages and disadvantages?</em> &nbsp;&nbsp; <em>Discuss the benefits and the drawbacks of this phenomenon.</em></p>
-</div>
-
-<div class="callout tip">
-  <div class="callout-label">What this question actually demands</div>
-  <p style="margin: 0;">Descriptive. No opinion is required, although a balanced closing thought is fine. Treat the two sides with equal weight. The skill being tested here is whether you can develop both fairly and connect ideas inside each side cleanly.</p>
-</div>
-
-<h3>Introduction</h3>
-<div class="template">
-<ol>
-<li><strong>Context.</strong> <span class="placeholder">[TREND OR DEVELOPMENT]</span> has become increasingly visible in <span class="placeholder">[CONTEXT]</span>.</li>
-<li><strong>Acknowledge complexity.</strong> Like many such developments, it carries clear advantages but also notable drawbacks.</li>
-<li><strong>Brief preview.</strong> Both will be examined in turn.</li>
-</ol>
-</div>
-
-<h3>Body 1. Advantages</h3>
-<div class="template">
-<ol>
-<li><strong>Topic.</strong> The most evident advantages of <span class="placeholder">[TREND]</span> relate to <span class="placeholder">[BROAD AREA]</span>.</li>
-<li><strong>Advantage 1 + explanation.</strong> Firstly, <span class="placeholder">[POINT]</span>. This is because <span class="placeholder">[REASON]</span>, which means <span class="placeholder">[CONSEQUENCE]</span>.</li>
-<li><strong>Advantage 2 + supporting evidence.</strong> A further benefit is that <span class="placeholder">[POINT]</span>. <span class="placeholder">[LOGICAL EVIDENCE]</span>.</li>
-</ol>
-</div>
-
-<h3>Body 2. Disadvantages</h3>
-<div class="template">
-<ol>
-<li><strong>Topic.</strong> On the other hand, there are also significant drawbacks.</li>
-<li><strong>Disadvantage 1 + explanation.</strong> One concern is that <span class="placeholder">[POINT]</span>. <span class="placeholder">[EXPLANATION OR CAUSE/EFFECT]</span>.</li>
-<li><strong>Disadvantage 2 + supporting evidence.</strong> Another issue is that <span class="placeholder">[POINT]</span>. <span class="placeholder">[DEVELOPMENT]</span>.</li>
-</ol>
-</div>
-
-<h3>Conclusion</h3>
-<div class="template">
-<ol>
-<li>In conclusion, <span class="placeholder">[TREND]</span> offers <span class="placeholder">[BRIEF SUMMARY OF ADVANTAGES]</span> but also brings <span class="placeholder">[BRIEF SUMMARY OF DISADVANTAGES]</span>. Whether the trend is welcome may ultimately depend on <span class="placeholder">[CONTEXT-DEPENDENT FACTOR]</span>.</li>
-</ol>
-</div>
-
-<div class="connectors">
-  <h4>Useful connectors for this type</h4>
-  <div class="chip-list">
-    <span>The most evident advantages</span><span>Firstly</span><span>This is because</span><span>A further benefit</span><span>On the other hand</span><span>One concern</span><span>Another issue</span><span>Whether the trend is welcome</span>
-  </div>
-</div>
-
-<div class="callout warning">
-  <div class="callout-label">Common pitfalls</div>
-  <ul style="margin: 0.2rem 0 0 0;">
-    <li>Drifting into opinion when none is asked for. State both sides cleanly.</li>
-    <li>Treating one side as a stub. Equal development matters.</li>
-    <li>Listing without explanation. An "advantage" is only an advantage once you say why it matters.</li>
-  </ul>
-</div>
-</section>
-
-<!-- ============ TYPE 5 ============ -->
-<section id="type-5">
-<h2><span class="type-num">5.</span>Is this a positive or negative development?</h2>
-
-<div class="callout note">
-  <div class="callout-label">Question signal</div>
-  <p style="margin: 0;"><em>Is this a positive or negative development?</em> &nbsp;&nbsp; <em>Do you think this is a positive or negative development?</em></p>
-</div>
-
-<div class="callout tip">
-  <div class="callout-label">What this question actually demands</div>
-  <p style="margin: 0;">Functionally identical to agree/disagree. You evaluate a trend and take a position. Treat it like Type 1: acknowledge the side you reject, concede a point, then build the case for your view.</p>
-</div>
-
-<h3>Introduction</h3>
-<div class="template">
-<ol>
-<li><strong>Context.</strong> <span class="placeholder">[TREND]</span> has become an increasingly defining feature of <span class="placeholder">[CONTEXT]</span>.</li>
-<li><strong>Acknowledge complexity.</strong> Whether this development is welcome remains a matter of debate.</li>
-<li><strong>Position.</strong> Although it has some <span class="placeholder">[negative / positive]</span> aspects, I regard it as a largely <span class="placeholder">[positive / negative]</span> development, because <span class="placeholder">[REASON 1]</span> and <span class="placeholder">[REASON 2]</span>.</li>
-</ol>
-</div>
-
-<h3>Body 1. The opposing evaluation (with concession + refutation)</h3>
-<div class="template">
-<ol>
-<li><strong>Topic.</strong> Some people argue that this trend is a <span class="placeholder">[negative / positive]</span> development.</li>
-<li><strong>Their reasoning.</strong> They point out that <span class="placeholder">[OPPOSING REASON]</span>. This is because <span class="placeholder">[EXPLANATION]</span>.</li>
-<li><strong>Concede.</strong> Admittedly, <span class="placeholder">[POINT WORTH ACKNOWLEDGING]</span>.</li>
-<li><strong>Refute.</strong> However, this view <span class="placeholder">[overlooks / overstates]</span> <span class="placeholder">[LIMITATION]</span>, which is significant because <span class="placeholder">[EXPLANATION]</span>.</li>
-</ol>
-</div>
-
-<h3>Body 2. Your evaluation</h3>
-<div class="template">
-<ol>
-<li><strong>Topic.</strong> On balance, this development is <span class="placeholder">[positive / negative]</span> because <span class="placeholder">[REASON HEADLINE]</span>.</li>
-<li><strong>Reason 1 + chain.</strong> <span class="placeholder">[POINT]</span> means <span class="placeholder">[EFFECT 1]</span>, which in turn <span class="placeholder">[EFFECT 2]</span>.</li>
-<li><strong>Reason 2 + supporting evidence.</strong> Furthermore, <span class="placeholder">[POINT]</span>. <span class="placeholder">[DEVELOPMENT]</span>.</li>
-<li><strong>Mini-conclusion.</strong> The benefits of this trend reach a broader population than its costs.</li>
-</ol>
-</div>
-
-<h3>Conclusion</h3>
-<div class="template">
-<ol>
-<li>In conclusion, although <span class="placeholder">[BRIEF NOD TO OTHER SIDE]</span>, this trend is, in my view, a largely <span class="placeholder">[positive / negative]</span> development, primarily because <span class="placeholder">[SUMMARY]</span>.</li>
-</ol>
-</div>
-
-<div class="connectors">
-  <h4>Useful connectors for this type</h4>
-  <div class="chip-list">
-    <span>It is increasingly common for</span><span>Some people argue</span><span>They point out that</span><span>Admittedly</span><span>This view overlooks</span><span>On balance</span><span>Which in turn</span><span>Furthermore</span><span>Primarily because</span>
-  </div>
-</div>
-
-<div class="callout warning">
-  <div class="callout-label">Common pitfalls</div>
-  <ul style="margin: 0.2rem 0 0 0;">
-    <li>Treating it as "advantages and disadvantages" with no evaluative claim. The question asks <em>which</em>, not <em>both</em>.</li>
-    <li>Predicting extreme outcomes ("this will destroy society") without the reasoning to support them.</li>
-  </ul>
-</div>
-</section>
-
-<!-- ============ TYPE 6 ============ -->
-<section id="type-6">
-<h2><span class="type-num">6.</span>Problem &amp; solution / cause &amp; effect</h2>
-
-<div class="callout note">
-  <div class="callout-label">Question signal</div>
-  <p style="margin: 0;"><em>What are the reasons? What can be done?</em> &nbsp;&nbsp; <em>What problems does this cause? What measures can be taken?</em> &nbsp;&nbsp; <em>What are the causes? What are the effects?</em></p>
-</div>
-
-<div class="callout tip">
-  <div class="callout-label">What this question actually demands</div>
-  <p style="margin: 0;">A two-part structure: diagnose, then prescribe. The two halves should be visibly connected. Solutions should target the causes you identified, not float free of them. This is the question type where cause-effect chains earn their keep, so plan with arrows: <span class="phrase">A → B → C</span>.</p>
-</div>
-
-<h3>Introduction</h3>
-<div class="template">
-<ol>
-<li><strong>Context.</strong> <span class="placeholder">[ISSUE]</span> has become an increasingly pressing concern in <span class="placeholder">[CONTEXT]</span>.</li>
-<li><strong>Frame the question.</strong> The reasons behind this trend are complex, and any meaningful response must address them at their source.</li>
-<li><strong>Brief preview.</strong> This essay examines the principal <span class="placeholder">[causes / problems]</span> and proposes <span class="placeholder">[solutions / measures]</span> that target them directly.</li>
-</ol>
-</div>
-
-<h3>Body 1. Causes / problems</h3>
-<div class="template">
-<ol>
-<li><strong>Topic.</strong> There are several reasons why <span class="placeholder">[ISSUE]</span> has become so widespread.</li>
-<li><strong>Cause 1 + chain.</strong> The most significant is <span class="placeholder">[CAUSE 1]</span>. This means that <span class="placeholder">[EFFECT 1]</span>, which can in turn lead to <span class="placeholder">[FURTHER EFFECT]</span>.</li>
-<li><strong>Cause 2 + chain.</strong> A second factor is <span class="placeholder">[CAUSE 2]</span>. As a result, <span class="placeholder">[EFFECT]</span>.</li>
-<li><strong>Mini-conclusion.</strong> These causes are interconnected, which is why <span class="placeholder">[ISSUE]</span> rarely responds to a single, isolated intervention.</li>
-</ol>
-</div>
-
-<h3>Body 2. Solutions / measures (or effects)</h3>
-<div class="template">
-<ol>
-<li><strong>Topic.</strong> Addressing this will require <span class="placeholder">[broad approach]</span>, with measures aimed at each of the causes above.</li>
-<li><strong>Solution 1.</strong> Firstly, if <span class="placeholder">[AUTHORITY: governments / schools / employers]</span> were to <span class="placeholder">[ACTION]</span>, this could <span class="placeholder">[EXPECTED RESULT]</span>. This would directly address <span class="placeholder">[CAUSE 1]</span>.</li>
-<li><strong>Solution 2.</strong> A further step would be to <span class="placeholder">[ACTION]</span>. By doing so, <span class="placeholder">[BENEFIT]</span>, which would help to mitigate <span class="placeholder">[CAUSE 2]</span>.</li>
-<li><strong>Hedged caveat.</strong> These measures are unlikely to eliminate the problem entirely, but they could meaningfully reduce its scale.</li>
-</ol>
-</div>
-
-<h3>Conclusion</h3>
-<div class="template">
-<ol>
-<li>In conclusion, <span class="placeholder">[ISSUE]</span> stems largely from <span class="placeholder">[CAUSES SUMMARY]</span>. Effective responses must therefore include <span class="placeholder">[SOLUTIONS SUMMARY]</span>, applied with care to local conditions.</li>
-</ol>
-</div>
-
-<div class="connectors">
-  <h4>Useful connectors for this type</h4>
-  <div class="chip-list">
-    <span>The most significant is</span><span>This means that</span><span>Which can in turn lead to</span><span>As a result</span><span>These causes are interconnected</span><span>If X were to</span><span>This could</span><span>By doing so</span><span>Help to mitigate</span><span>Unlikely to eliminate entirely</span>
-  </div>
-</div>
-
-<div class="callout warning">
-  <div class="callout-label">Common pitfalls</div>
-  <ul style="margin: 0.2rem 0 0 0;">
-    <li>Solutions that bear no relation to the causes you just diagnosed. Match them explicitly.</li>
-    <li>Overconfident predictions about solutions: <em>"this will eradicate poverty"</em>. Use <span class="phrase">could</span>, <span class="phrase">may</span>, <span class="phrase">would help to</span>.</li>
-    <li>Stacking conditional clauses so long that the reader loses the thread. One cause-effect chain per sentence.</li>
-    <li>Forgetting one of the two parts. If the prompt asks for problems <em>and</em> solutions, you need both.</li>
-  </ul>
-</div>
-</section>
-
-<!-- ============ TYPE 7 ============ -->
-<section id="type-7">
-<h2><span class="type-num">7.</span>Two-part question</h2>
-
-<div class="callout note">
-  <div class="callout-label">Question signal</div>
-  <p style="margin: 0;">Two distinct questions in the prompt, often: <em>What are the reasons? Is this a positive or negative development?</em> &nbsp;&nbsp; <em>Why? How can we encourage them?</em></p>
-</div>
-
-<div class="callout tip">
-  <div class="callout-label">What this question actually demands</div>
-  <p style="margin: 0;">Both questions must be answered. Each gets its own body paragraph. The opinion-style second half (positive/negative, advantages/disadvantages, agree/disagree) still requires a clear position. Many candidates lose marks here by answering only the first question well.</p>
-</div>
-
-<h3>Introduction</h3>
-<div class="template">
-<ol>
-<li><strong>Context.</strong> <span class="placeholder">[PHENOMENON]</span> is increasingly common in <span class="placeholder">[CONTEXT]</span>.</li>
-<li><strong>Frame both parts.</strong> The reasons for this trend are several, and its consequences for individuals and society are mixed.</li>
-<li><strong>Thesis answering both briefly.</strong> This essay argues that <span class="placeholder">[BRIEF ANSWER TO PART 1]</span>, and that the development is, on balance, <span class="placeholder">[BRIEF ANSWER TO PART 2]</span>.</li>
-</ol>
-</div>
-
-<h3>Body 1. Part 1 (reasons / causes / why)</h3>
-<div class="template">
-<ol>
-<li><strong>Topic.</strong> Several factors explain why <span class="placeholder">[PHENOMENON]</span>.</li>
-<li><strong>Reason 1 + explanation.</strong> Firstly, <span class="placeholder">[REASON]</span>. <span class="placeholder">[DEVELOPMENT]</span>.</li>
-<li><strong>Reason 2 + explanation.</strong> A further factor is <span class="placeholder">[REASON]</span>. <span class="placeholder">[DEVELOPMENT]</span>.</li>
-<li><strong>Mini-conclusion.</strong> These factors together help to explain the scale of the trend.</li>
-</ol>
-</div>
-
-<h3>Body 2. Part 2 (evaluation / opinion)</h3>
-<div class="template">
-<ol>
-<li><strong>Topic + position.</strong> Whether this is a <span class="placeholder">[positive / negative]</span> development is more contested, but I view it as largely <span class="placeholder">[YOUR POSITION]</span>.</li>
-<li><strong>Reason for position 1.</strong> The most important reason is that <span class="placeholder">[REASON 1]</span>. <span class="placeholder">[EXPLANATION]</span>.</li>
-<li><strong>Reason for position 2 + brief acknowledgement.</strong> While <span class="placeholder">[BRIEF CONCESSION]</span>, the broader effect of <span class="placeholder">[POINT]</span> is more significant.</li>
-<li><strong>Mini-conclusion.</strong> On balance, the trend is therefore better understood as <span class="placeholder">[POSITION RESTATED]</span>.</li>
-</ol>
-</div>
-
-<h3>Conclusion</h3>
-<div class="template">
-<ol>
-<li>In conclusion, <span class="placeholder">[PHENOMENON]</span> has arisen primarily because <span class="placeholder">[REASONS IN ONE LINE]</span>, and although it brings some drawbacks, it is on balance a <span class="placeholder">[POSITION]</span> development.</li>
-</ol>
-</div>
-
-<div class="connectors">
-  <h4>Useful connectors for this type</h4>
-  <div class="chip-list">
-    <span>Several factors explain</span><span>Firstly</span><span>A further factor</span><span>Whether this is</span><span>The most important reason</span><span>While</span><span>The broader effect</span><span>On balance</span><span>Has arisen primarily because</span>
-  </div>
-</div>
-
-<div class="callout warning">
-  <div class="callout-label">Common pitfalls</div>
-  <ul style="margin: 0.2rem 0 0 0;">
-    <li>Answering only part 1 in depth and tacking part 2 onto the conclusion. Both parts need their own paragraph.</li>
-    <li>Missing the opinion in part 2 if it is framed as an evaluation.</li>
-    <li>Forcing part 2 to be the same scale as part 1. The reasons may be many, the evaluation may be simple. That is fine.</li>
-  </ul>
-</div>
-</section>
-
-<!-- ============ TYPE 8 ============ -->
-<section id="type-8">
-<h2><span class="type-num">8.</span>Direct question</h2>
-
-<div class="callout note">
-  <div class="callout-label">Question signal</div>
-  <p style="margin: 0;">A single open question, e.g. <em>Who should fund medical research?</em> &nbsp;&nbsp; <em>What can arts tell us that science cannot?</em> &nbsp;&nbsp; <em>How can older people be encouraged to use new technologies?</em></p>
-</div>
-
-<div class="callout tip">
-  <div class="callout-label">What this question actually demands</div>
-  <p style="margin: 0;">A direct, defended answer. No two-sided structure is required, but the answer must be developed across two body paragraphs with distinct reasons or aspects. Avoid trying to retrofit this into an agree/disagree shape.</p>
-</div>
-
-<h3>Introduction</h3>
-<div class="template">
-<ol>
-<li><strong>Context.</strong> <span class="placeholder">[TOPIC]</span> raises an important question for <span class="placeholder">[STAKEHOLDERS]</span>.</li>
-<li><strong>Restate the question.</strong> The issue of <span class="placeholder">[PARAPHRASED QUESTION]</span> has no single, obvious answer.</li>
-<li><strong>Thesis.</strong> In my view, <span class="placeholder">[YOUR ANSWER]</span>, primarily because <span class="placeholder">[REASON 1 SUMMARY]</span> and <span class="placeholder">[REASON 2 SUMMARY]</span>.</li>
-</ol>
-</div>
-
-<h3>Body 1. First reason or aspect</h3>
-<div class="template">
-<ol>
-<li><strong>Topic.</strong> The first reason for this position is <span class="placeholder">[REASON 1]</span>.</li>
-<li><strong>Explanation.</strong> <span class="placeholder">[DEVELOPMENT]</span>. This means <span class="placeholder">[CONSEQUENCE]</span>.</li>
-<li><strong>Supporting evidence.</strong> For instance, <span class="placeholder">[SPECIFIC LOGICAL EVIDENCE OR ILLUSTRATION]</span>.</li>
-<li><strong>Mini-conclusion.</strong> Thus, <span class="placeholder">[LINK BACK TO ANSWER]</span>.</li>
-</ol>
-</div>
-
-<h3>Body 2. Second reason (typically the stronger one)</h3>
-<div class="template">
-<ol>
-<li><strong>Topic.</strong> Even more importantly, <span class="placeholder">[REASON 2]</span>.</li>
-<li><strong>Explanation + chain.</strong> <span class="placeholder">[DEVELOPMENT]</span>. As a result, <span class="placeholder">[OUTCOME]</span>.</li>
-<li><strong>Supporting evidence.</strong> <span class="placeholder">[LOGICAL EVIDENCE]</span>.</li>
-<li><strong>Mini-conclusion.</strong> This consideration is decisive because <span class="placeholder">[WHY IT MATTERS]</span>.</li>
-</ol>
-</div>
-
-<h3>Conclusion</h3>
-<div class="template">
-<ol>
-<li>In conclusion, <span class="placeholder">[YOUR ANSWER RESTATED]</span>, because <span class="placeholder">[REASON 1 + REASON 2 IN ONE SENTENCE]</span>.</li>
-</ol>
-</div>
-
-<div class="connectors">
-  <h4>Useful connectors for this type</h4>
-  <div class="chip-list">
-    <span>Has no single answer</span><span>The first reason</span><span>For instance</span><span>Even more importantly</span><span>As a result</span><span>This consideration is decisive</span><span>Because</span>
-  </div>
-</div>
-
-<div class="callout warning">
-  <div class="callout-label">Common pitfalls</div>
-  <ul style="margin: 0.2rem 0 0 0;">
-    <li>Not actually answering the question. <em>"Who should fund medical research?"</em> needs a who, not a meditation on whether medical research is important.</li>
-    <li>Listing too many shallow reasons. Two reasons developed deeply beat five reasons stated and dropped.</li>
-    <li>Drifting into a different question (one of the band-6.5 errors from Lesson 5).</li>
-  </ul>
-</div>
-</section>
-
-<!-- ============ HEDGING ============ -->
-<section id="hedging">
-<h2>Hedging language bank</h2>
-<p class="lede">Hedging makes a claim more cautious and therefore more defensible. The lessons emphasise that overclaiming flattens an argument; this bank is the antidote. Use it for any claim that is interpretation, generalisation or prediction.</p>
-
-<h3>To weaken a claim (most useful when introducing a counterargument)</h3>
-<div class="connectors"><div class="chip-list">
-  <span>may</span><span>might</span><span>could</span><span>can</span><span>possibly</span><span>perhaps</span><span>arguably</span><span>presumably</span><span>seemingly</span><span>tend to</span><span>appear to</span><span>seem to</span><span>some</span><span>few</span><span>little</span><span>sometimes</span><span>in many cases</span><span>for some people</span><span>under these conditions</span>
-</div></div>
-
-<h3>To strengthen a claim (use sparingly and only when justified)</h3>
-<div class="connectors"><div class="chip-list">
-  <span>will</span><span>would</span><span>should</span><span>must</span><span>ought to</span><span>is likely to</span><span>probably</span><span>clearly</span><span>generally</span><span>often</span><span>most</span><span>many</span><span>it is clear that</span>
-</div></div>
-
-<h3>Attribution hedges (useful in evidence-based claims)</h3>
-<div class="connectors"><div class="chip-list">
-  <span>the evidence suggests</span><span>the results indicate</span><span>this may imply</span><span>one possible interpretation is</span><span>research tends to show</span>
-</div></div>
-
-<div class="callout tip">
-  <div class="callout-label">The rule</div>
-  <p style="margin: 0;">Do not hedge definitions or verified facts. Hedge interpretations, generalisations, causal claims and predictions. <em>"If governments were to invest in public transport, this <span class="phrase">could</span> reduce congestion"</em> is defensible. <em>"This <span class="phrase">will</span> solve all traffic problems"</em> is not.</p>
-</div>
-</section>
-
-<!-- ============ CONNECTORS ============ -->
-<section id="connectors-bank">
-<h2>Connector bank</h2>
-<p class="lede">Grouped by function. Use them because they fit, not because the slot needs filling.</p>
-
-<h3>Adding information</h3>
-<div class="connectors"><div class="chip-list">
-  <span>Firstly</span><span>Secondly</span><span>Thirdly</span><span>In addition</span><span>Furthermore</span><span>Moreover</span><span>What is more</span><span>Even more importantly</span><span>Similarly</span><span>Also</span>
-</div></div>
-
-<h3>Cause and effect</h3>
-<div class="connectors"><div class="chip-list">
-  <span>This means that</span><span>This causes</span><span>This can lead to</span><span>As a result</span><span>Consequently</span><span>In turn</span><span>Result in</span><span>Result from</span><span>If ... then ...</span>
-</div></div>
-
-<h3>Contrast and concession</h3>
-<div class="connectors"><div class="chip-list">
-  <span>However</span><span>Nevertheless</span><span>While</span><span>Although</span><span>Despite</span><span>In contrast</span><span>On the other hand</span><span>Having said that</span><span>Admittedly</span>
-</div></div>
-
-<h3>Counterargument signposts</h3>
-<div class="connectors"><div class="chip-list">
-  <span>Some people may argue</span><span>Some people might say</span><span>It could be argued</span><span>Those who hold the opposing view</span><span>Critics may point out</span>
-</div></div>
-
-<h3>Conclusion / synthesis</h3>
-<div class="connectors"><div class="chip-list">
-  <span>Thus</span><span>Therefore</span><span>In conclusion</span><span>On balance</span><span>Overall</span><span>To sum up</span>
-</div></div>
-
-<h3>Rephrasing or showing equivalence</h3>
-<div class="connectors"><div class="chip-list">
-  <span>This means</span><span>Which means</span><span>In other words</span><span>That is to say</span>
-</div></div>
-</section>
-
-<!-- ============ SYMBOLS ============ -->
-<section id="planning-symbols">
-<h2>Planning symbols</h2>
-<p class="lede">Useful during the planning minutes. If your plan contains a mix of these symbols, the argument is complex and the connectors in the writing need to be especially clear.</p>
-
-<table>
-<thead><tr><th>Symbol</th><th>Meaning</th><th>When to use</th></tr></thead>
-<tbody>
-<tr><td><span class="phrase">+</span></td><td>and / in addition</td><td>Independent reasons combining to support a conclusion</td></tr>
-<tr><td><span class="phrase">→</span></td><td>leads to / causes</td><td>Cause-and-effect chains</td></tr>
-<tr><td><span class="phrase">=</span></td><td>equals / in other words</td><td>Rephrasing for clarity</td></tr>
-<tr><td><span class="phrase">∴</span></td><td>therefore / thus</td><td>Drawing a conclusion from evidence</td></tr>
-<tr><td><span class="phrase">↑</span></td><td>rises / increases</td><td>Trends moving up</td></tr>
-<tr><td><span class="phrase">↓</span></td><td>falls / decreases</td><td>Trends moving down</td></tr>
-<tr><td><span class="phrase">vs</span></td><td>contrast</td><td>Marking where the counterargument sits</td></tr>
-</tbody>
-</table>
-
-<div class="callout tip">
-  <div class="callout-label">A reminder, not a substitute</div>
-  <p style="margin: 0;">These templates exist so you can stop spending planning minutes worrying about shape and start spending them on ideas. The shape is the cheapest part of the essay. The thinking is the part the examiner is actually paying for.</p>
-</div>
-</section>
-
-<footer>
-<p>Built from the seven writing lessons. Templates are scaffolding for thinking, not a script. The argument you make has to fit the question in front of you, and no skeleton can do that work for you.</p>
-</footer>
-
-</main>
-</div>
 </body>
+
 </html>
