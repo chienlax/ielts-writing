@@ -55,6 +55,11 @@ If negation is genuinely necessary to qualify, keep it integrated and minimal wi
 
 ---
 
+### 4. Emoji Use
+*   **No Emoji**: Do NOT use any emoji, unless stated otherwise.
+
+---
+
 ## Academic & IELTS Register
 
 ### 1. Tone and Vocabulary Standard
