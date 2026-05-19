@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Task 1 Skeleton Templates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Fonts */
+    --font-display: 'Fraunces', Georgia, serif; /* Exclusively for H1 */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', Consolas, monospace;
+
+    /* Base Colors */
+    --bg-page: #fafaf7;
+    --bg-card: #ffffff;
+    --text-main: #1a1a1a;
+    --text-muted: #555555;
+    --border-color: #d8d4c8;
+    
+    /* UI Accent Colors */
+    --accent-primary: #2a5a78;   /* Deep Blue for primary structural accents */
+    --accent-hover: #1d4056;
+
+    /* Semantic Callout Colors */
+    --box-example-bg: #eef3f7;
+    --box-example-border: #7ca0c0;
+    
+    --box-note-bg: #fdf6e3;
+    --box-note-border: #d4a05d;
+    
+    --box-tip-bg: #e9efe9;
+    --box-tip-border: #3d6e3e;
+    
+    --box-warning-bg: #fcf3e3;
+    --box-warning-border: #b3372a;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+
+  /* Base Typography & Sizing (17px base) */
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.7;
+    font-size: 17px; 
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Structural Layout */
+  .layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* Sidebar Navigation */
+  nav.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 2.5rem 1.75rem;
+    border-right: 1px solid var(--border-color);
+    background: var(--bg-page);
+  }
+
+  .nav-title {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-main);
+    letter-spacing: -0.01em;
+  }
+
+  .nav-sub {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 2rem;
+  }
+
+  .nav-group-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  nav.sidebar a {
+    display: block;
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 0.4rem 0 0.4rem 0.85rem;
+    border-left: 3px solid transparent;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    border-radius: 0 4px 4px 0;
+  }
+
+  nav.sidebar a:hover {
+    border-left-color: var(--accent-primary);
+    background: var(--box-example-bg);
+    color: var(--accent-hover);
+  }
+
+  /* Main Content Area */
+  main {
+    padding: 3.5rem 4rem 6rem;
+    max-width: 900px;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    font-feature-settings: "ss01" on;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 3.5rem;
+    max-width: 700px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 4rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: baseline;
+  }
+  
+  h2 .type-num {
+    color: var(--accent-primary);
+    margin-right: 0.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 2.5rem 0 0.75rem 0;
+    color: var(--accent-primary);
+  }
+
+  h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 1.5rem 0 0.5rem 0;
+    color: var(--text-muted);
+  }
+
+  p { margin: 0.8rem 0; }
+  
+  p.lede {
+    font-size: 1rem;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+  }
+
+  ul, ol { 
+    padding-left: 1.5rem; 
+    margin: 0.8rem 0; 
+  }
+  
+  li { margin-bottom: 0.4rem; }
+
+  /* Callout Boxes (Unified styling system) */
+  .callout {
+    padding: 1.15rem 1.4rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  }
+
+  .callout-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  /* Specific Callout Variants */
+  .callout.example {
+    background: var(--box-example-bg);
+    border-left: 4px solid var(--box-example-border);
+  }
+  .callout.example .callout-label { color: var(--accent-primary); }
+
+  .callout.note {
+    background: var(--box-note-bg);
+    border-left: 4px solid var(--box-note-border);
+  }
+  .callout.note .callout-label { color: #8a5a1f; }
+
+  .callout.tip {
+    background: var(--box-tip-bg);
+    border-left: 4px solid var(--box-tip-border);
+  }
+  .callout.tip .callout-label { color: var(--box-tip-border); }
+
+  .callout.warning {
+    background: var(--box-warning-bg);
+    border-left: 4px solid var(--box-warning-border);
+  }
+  .callout.warning .callout-label { color: var(--box-warning-border); }
+
+  /* Skeletons */
+  .skeleton {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  }
+  
+  .skeleton .label {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-primary);
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+  
+  .skeleton p { margin: 0; line-height: 1.6; }
+  .skeleton p + p { margin-top: 0.75rem; }
+
+  /* Tags */
+  .tag {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--accent-primary);
+    color: white;
+    padding: 0.2em 0.6em;
+    border-radius: 3px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+  .tag.muted { background: var(--text-muted); }
+
+  /* Vocab Lists */
+  dl.vocab {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 0.75rem 1.5rem;
+    margin: 1.25rem 0;
+    font-size: 0.95rem;
+  }
+  dl.vocab dt {
+    font-weight: 600;
+    color: var(--text-muted);
+    padding-top: 0.2rem;
+  }
+  dl.vocab dd { margin: 0; }
+  
+  /* Inline Code & Placeholders */
+  .placeholder {
+    font-family: var(--font-mono);
+    background: #e2e8f0;
+    color: var(--accent-primary);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  code {
+    font-family: var(--font-mono);
+    background: #ebe8de;
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+    font-size: 0.85em;
+    color: var(--text-main);
+    display: inline-block;
+    margin: 0.15em 0.25em 0.15em 0;
+    border: 1px solid var(--border-color);
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    background: var(--bg-card);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px var(--border-color);
+  }
+
+  th, td {
+    padding: 0.8rem 1rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  th {
+    background: var(--bg-page);
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: var(--bg-page); }
+
+  /* Footer */
+  footer {
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; }
+    nav.sidebar {
+      position: static;
+      height: auto;
+      border-right: 0;
+      border-bottom: 1px solid var(--border-color);
+      padding: 1.5rem;
+    }
+    main { padding: 2rem 1.5rem 4rem; }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.4rem; margin-top: 3rem; }
+    dl.vocab { grid-template-columns: 1fr; gap: 0.25rem 0; }
+    dl.vocab dt { padding-top: 1rem; }
+    dl.vocab dt:first-child { padding-top: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+<nav class="sidebar">
+  <div class="nav-title">Task 1 Templates</div>
+  <div class="nav-sub">IELTS Writing</div>
+
+  <div class="nav-group-label">Contents</div>
+  <a href="#universal">00. Universal rules</a>
+  <a href="#line">01. Line graph</a>
+  <a href="#bar">02. Bar chart</a>
+  <a href="#pie">03. Pie chart</a>
+  <a href="#table">04. Table</a>
+  <a href="#process">05. Process / diagram</a>
+  <a href="#map">06. Map / plan</a>
+  <a href="#kit">07. Universal vocabulary kit</a>
+</nav>
+
+<main>
+
+<header>
+  <h1>IELTS Task 1 Skeleton Templates</h1>
+  <p class="subtitle">Plug-and-play scaffolds for every chart type. Distilled from a Band 8+ model corpus. Replace the bracketed placeholders, keep the connective tissue.</p>
+</header>
+
+<!-- ============================================== -->
+<!-- 00 UNIVERSAL RULES -->
+<!-- ============================================== -->
+<section id="universal">
+  <h2><span class="type-num">00.</span> Universal rules</h2>
+  <p class="lede">These apply to every task type. Install them once, they carry across.</p>
+
+  <h3>Macro structure</h3>
+  <ol>
+    <li>One-sentence intro that paraphrases the prompt.</li>
+    <li>One-paragraph overview opening with <code>Overall,</code>, containing at least two key features, no specific figures.</li>
+    <li>Two or three body paragraphs, each grouped by a logical category.</li>
+    <li>No conclusion. The essay ends on the final body paragraph's last sentence.</li>
+  </ol>
+
+  <h3>Body paragraph openers</h3>
+  <p>Lead each body paragraph with a fronted adverbial, not the subject. Four types cover almost every case:</p>
+  <dl class="vocab">
+    <dt>Time-fronted</dt>
+    <dd><code>In 1995,</code> <code>From 1979 to 1989,</code> <code>By 2050,</code> <code>Over the next five years,</code></dd>
+    <dt>Category-fronted</dt>
+    <dd><code>In terms of energy use,</code> <code>With exports,</code> <code>For Fairtrade bananas,</code></dd>
+    <dt>Contrast-fronted</dt>
+    <dd><code>In contrast,</code> <code>In comparison,</code> <code>Conversely,</code></dd>
+    <dt>Process-fronted</dt>
+    <dd><code>Prior to development,</code> <code>Following construction,</code> <code>At the end of this stage,</code> <code>Above ground,</code></dd>
+  </dl>
+
+  <h3>The reusable moves</h3>
+  <dl class="vocab">
+    <dt>Participle clause</dt>
+    <dd>Compresses a follow-up clause into a modifier. <code>..., reaching 25 million by 2010.</code> <code>..., overtaking computers to become the second most owned category.</code></dd>
+    <dt>Concessive structure</dt>
+    <dd>Acknowledges a counter-point inside one sentence. <code>Despite [NP], [main clause].</code> <code>Although [clause], [main clause].</code> <code>[clause], albeit [adv/adj].</code></dd>
+    <dt>Past perfect for end state</dt>
+    <dd>Frames the closing figure as the outcome of a sequence. <code>By 2010, X had become...</code> <code>By the end of the period, X had fallen to...</code></dd>
+    <dt>Respectively</dt>
+    <dd>Attaches two paired figures to two paired items in one go. <code>...reaching 80% and 70% respectively by 1999.</code></dd>
+    <dt>Notably / Interestingly</dt>
+    <dd>Flags the single most important wrinkle. One use per essay maximum.</dd>
+  </dl>
+
+  <h3>The four-error checklist</h3>
+  <p>Run these before submitting any essay:</p>
+  <ol>
+    <li>Every singular countable noun has an article, or is pluralised. <span class="placeholder">washing machine</span> &rarr; <span class="placeholder">the washing machine</span> or <span class="placeholder">washing machines</span>.</li>
+    <li><code>Million</code> following a numeral takes no <code>-s</code>. <span class="placeholder">25 millions</span> &rarr; <span class="placeholder">25 million</span>.</li>
+    <li><code>with + noun</code> takes <code>-ing</code>, not a past participle. <span class="placeholder">with X recorded</span> &rarr; <span class="placeholder">with X recording</span>.</li>
+    <li><code>In the end</code> &rarr; <code>by the end of the period</code> or <code>by [year]</code>.</li>
+  </ol>
+
+  <div class="callout warning">
+    <div class="callout-label">Banned</div>
+    <p>No em-dashes, anywhere. No <code>In conclusion,</code>. No <code>Furthermore,</code> or <code>Moreover,</code> (essentially absent from the model corpus). No bullet points inside the essay. No <code>I think,</code> or personal opinion. No restating the overview at the end. No <code>spike</code> for a sustained rise.</p>
+  </div>
+</section>
+
+<!-- ============================================== -->
+<!-- 01 LINE GRAPH -->
+<!-- ============================================== -->
+<section id="line">
+  <h2><span class="type-num">01.</span> Line graph</h2>
+  <p class="lede">Trends over time. Look for starting positions, ending positions, ranking shifts, peaks and troughs, rate-of-change differences, and crossovers between lines.</p>
+
+  <h3>Skeleton</h3>
+
+  <div class="skeleton">
+    <span class="label">Intro</span>
+    <p>The line graph shows <span class="placeholder">[DATA DESCRIPTION]</span> in <span class="placeholder">[PLACE]</span> from <span class="placeholder">[YEAR_START]</span> to <span class="placeholder">[YEAR_END]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Overview</span>
+    <p>Overall, <span class="placeholder">[TREND DIRECTION]</span> across all <span class="placeholder">[N]</span> categories during this period, although <span class="placeholder">[PACE OR RANKING CONTRAST]</span>. Notably, <span class="placeholder">[HEADLINE FEATURE: crossover, surge, dip, etc.]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Body 1: top tier / starting state</span>
+    <p>In <span class="placeholder">[YEAR_START]</span>, <span class="placeholder">[LEADING CATEGORY]</span> was already the most <span class="placeholder">[ADJ]</span> at <span class="placeholder">[FIGURE]</span>, followed by <span class="placeholder">[SECOND CATEGORY]</span> at <span class="placeholder">[FIGURE]</span>. Both continued to <span class="placeholder">[CLIMB / FALL / FLUCTUATE]</span> steadily, reaching <span class="placeholder">[FIGURE_A]</span> and <span class="placeholder">[FIGURE_B]</span> respectively by <span class="placeholder">[YEAR_END]</span>, with <span class="placeholder">[LEADING CATEGORY]</span> remaining the leader throughout.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Body 2: middle / contrasting group</span>
+    <p>In contrast, the remaining <span class="placeholder">[N]</span> categories began from a considerably lower base. <span class="placeholder">[CATEGORY]</span> started at approximately <span class="placeholder">[FIGURE]</span> and increased only <span class="placeholder">[PACE]</span> until <span class="placeholder">[YEAR]</span>, before climbing sharply to around <span class="placeholder">[FIGURE]</span> by <span class="placeholder">[YEAR_END]</span>, overtaking <span class="placeholder">[CATEGORY]</span> to become the <span class="placeholder">[NEW RANK]</span>. <span class="placeholder">[OTHER CATEGORY]</span> followed a similar but less dramatic path, rising from <span class="placeholder">[FIGURE]</span> to <span class="placeholder">[FIGURE]</span> over the same period.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Body 3: outlier (optional)</span>
+    <p><span class="placeholder">[CATEGORY]</span> was the exception. Despite starting at <span class="placeholder">[FIGURE]</span> in <span class="placeholder">[YEAR_START]</span>, the figure dropped to approximately <span class="placeholder">[FIGURE]</span> by <span class="placeholder">[YEAR]</span>, before recovering steadily to <span class="placeholder">[FIGURE]</span> by <span class="placeholder">[YEAR_END]</span>. By this point, <span class="placeholder">[CATEGORY]</span> had become the <span class="placeholder">[FINAL RANK]</span>.</p>
+  </div>
+
+  <h3>Vocabulary kit</h3>
+  <dl class="vocab">
+    <dt>Direction verbs (up)</dt>
+    <dd><code>rose</code> <code>climbed</code> <code>increased</code> <code>grew</code> <code>gained</code> <code>surged</code> <code>soared</code></dd>
+    <dt>Direction verbs (down)</dt>
+    <dd><code>fell</code> <code>declined</code> <code>dropped</code> <code>dipped</code> <code>sank</code> <code>plummeted</code></dd>
+    <dt>Stable / mixed</dt>
+    <dd><code>remained stable</code> <code>levelled off</code> <code>stabilised</code> <code>fluctuated</code> <code>varied</code></dd>
+    <dt>Pace adverbs</dt>
+    <dd><code>sharply</code> <code>dramatically</code> <code>steeply</code> <code>steadily</code> <code>gradually</code> <code>modestly</code> <code>marginally</code> <code>slightly</code></dd>
+    <dt>Crossover language</dt>
+    <dd><code>overtook</code> <code>surpassed</code> <code>drew level with</code> <code>was overtaken by</code> <code>moved ahead of</code></dd>
+    <dt>Peak / trough</dt>
+    <dd><code>peaked at</code> <code>reached a peak of</code> <code>hit a trough at</code> <code>bottomed out at</code> <code>a low of</code></dd>
+    <dt>Recovery</dt>
+    <dd><code>before recovering to</code> <code>then rebounded to</code> <code>climbed back to</code></dd>
+  </dl>
+
+  <div class="callout warning">
+    <div class="callout-label">Pitfalls</div>
+    <p>Don't use <code>spike</code> for sustained rises (a spike is brief and returns to baseline). If the overall trend is upward but one segment dipped, frame it as <code>registered an initial decline before recovering</code> rather than <code>only X declined</code>. Whenever a clean crossover exists between two lines, it belongs in the overview, not buried in a body paragraph.</p>
+  </div>
+</section>
+
+<!-- ============================================== -->
+<!-- 02 BAR CHART -->
+<!-- ============================================== -->
+<section id="bar">
+  <h2><span class="type-num">02.</span> Bar chart</h2>
+  <p class="lede">Bar charts come in two flavours. <strong>Time-based</strong> bar charts behave like line graphs, use the line graph skeleton. <strong>Categorical</strong> bar charts are snapshot comparisons across groups, use the skeleton below.</p>
+
+  <h3>Skeleton <span class="tag">categorical</span></h3>
+
+  <div class="skeleton">
+    <span class="label">Intro</span>
+    <p>The bar chart shows <span class="placeholder">[DATA]</span> across <span class="placeholder">[CATEGORIES]</span> in <span class="placeholder">[PLACE / YEAR]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Overview</span>
+    <p>Overall, <span class="placeholder">[DOMINANT PATTERN OR ABSENCE OF ONE]</span>, with <span class="placeholder">[HIGHEST GROUP]</span> <span class="placeholder">[DESCRIPTION]</span> and <span class="placeholder">[LOWEST GROUP]</span> <span class="placeholder">[DESCRIPTION]</span>. Notably, <span class="placeholder">[HEADLINE OBSERVATION]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Body 1: first logical group</span>
+    <p>In <span class="placeholder">[CATEGORY A]</span> and <span class="placeholder">[CATEGORY B]</span>, <span class="placeholder">[SIMILAR PATTERN]</span>. In <span class="placeholder">[CATEGORY A]</span>, around <span class="placeholder">[FIGURE]</span> of <span class="placeholder">[GROUP]</span> were <span class="placeholder">[PROPERTY]</span>. In <span class="placeholder">[CATEGORY B]</span>, slightly <span class="placeholder">[MORE / FEWER]</span> at <span class="placeholder">[FIGURE]</span>. However, <span class="placeholder">[FURTHER DETAIL OR PEAK]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Body 2: contrasting group</span>
+    <p><span class="placeholder">[OTHER CATEGORIES]</span> followed a similar pattern albeit in reverse. In both, <span class="placeholder">[OBSERVATION]</span>, though <span class="placeholder">[DIFFERENCE BETWEEN THEM]</span>. In contrast, in <span class="placeholder">[CATEGORY]</span>, <span class="placeholder">[OPPOSITE PATTERN]</span>, again making up <span class="placeholder">[FIGURE]</span> of <span class="placeholder">[GROUP]</span>. Notably, the lowest figure occurred in <span class="placeholder">[SPECIFIC SUBGROUP]</span>, with only <span class="placeholder">[FIGURE]</span>.</p>
+  </div>
+
+  <h3>Skeleton <span class="tag muted">time-based</span></h3>
+  <p>Use the line graph skeleton (Section 01). Bar charts plotted across years are read the same way as line graphs: starting position, trend, end position, ranking shifts.</p>
+
+  <h3>Vocabulary kit</h3>
+  <dl class="vocab">
+    <dt>Quantifying groups</dt>
+    <dd><code>outnumbered</code> <code>accounted for</code> <code>made up</code> <code>represented</code> <code>exceeded</code> <code>were equivalent to</code></dd>
+    <dt>Comparison</dt>
+    <dd><code>considerably higher than</code> <code>significantly higher than</code> <code>only marginally above</code> <code>near parity</code> <code>almost double</code> <code>twice as much as</code></dd>
+    <dt>Ranking</dt>
+    <dd><code>the highest</code> <code>the second highest</code> <code>the lowest</code> <code>dominated</code> <code>led the table</code> <code>topped</code></dd>
+    <dt>Concessive markers</dt>
+    <dd><code>albeit in reverse</code> <code>though</code> <code>although</code> <code>despite</code> <code>while</code></dd>
+  </dl>
+
+  <div class="callout warning">
+    <div class="callout-label">Pitfalls</div>
+    <p>Don't recite bars in chart order. Group them by logical pattern (similar shapes, similar magnitudes, opposite trends), even if that means jumping around the x-axis. Use <code>respectively</code> aggressively when paired figures appear.</p>
+  </div>
+</section>
+
+<!-- ============================================== -->
+<!-- 03 PIE CHART -->
+<!-- ============================================== -->
+<section id="pie">
+  <h2><span class="type-num">03.</span> Pie chart</h2>
+  <p class="lede">Proportional snapshots. Look for the largest and smallest slices, near-equal pairs, and dramatic disparities. For multiple pies, look for shifts between them.</p>
+
+  <h3>Skeleton <span class="tag">single pie</span></h3>
+
+  <div class="skeleton">
+    <span class="label">Intro</span>
+    <p>The pie chart shows the breakdown of <span class="placeholder">[TOPIC]</span> in <span class="placeholder">[PLACE / YEAR]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Overview</span>
+    <p>Overall, <span class="placeholder">[LARGEST CATEGORY]</span> accounts for the largest share, while <span class="placeholder">[SMALLEST OR NOTABLE OBSERVATION]</span>. Notably, <span class="placeholder">[INTERESTING FEATURE OR DISPARITY]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Body 1: largest segments</span>
+    <p>In terms of <span class="placeholder">[DIMENSION]</span>, <span class="placeholder">[LARGEST CATEGORY]</span> accounts for <span class="placeholder">[PERCENTAGE]</span>, followed closely by <span class="placeholder">[SECOND CATEGORY]</span> at <span class="placeholder">[PERCENTAGE]</span>. Together, these two categories make up <span class="placeholder">[TOTAL]</span> of the total. <span class="placeholder">[THIRD CATEGORY]</span> represents a further <span class="placeholder">[PERCENTAGE]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Body 2: smaller segments</span>
+    <p>At the other end of the scale, <span class="placeholder">[SMALLEST CATEGORIES]</span> account for only <span class="placeholder">[PERCENTAGE_A]</span> and <span class="placeholder">[PERCENTAGE_B]</span> respectively. Notably, <span class="placeholder">[STANDOUT OBSERVATION OR PROPORTIONAL CONTRAST]</span>.</p>
+  </div>
+
+  <h3>Skeleton <span class="tag">paired pies</span></h3>
+
+  <div class="skeleton">
+    <span class="label">Intro</span>
+    <p>The two pie charts compare <span class="placeholder">[TOPIC]</span> in <span class="placeholder">[YEAR_A / PLACE_A]</span> and <span class="placeholder">[YEAR_B / PLACE_B]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Overview</span>
+    <p>Overall, <span class="placeholder">[PRIMARY DIFFERENCE BETWEEN THE TWO PIES]</span>. Nevertheless, <span class="placeholder">[SHARED FEATURE OR FORECAST]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Body 1: first pie</span>
+    <p>Looking at the data for <span class="placeholder">[YEAR_A / PLACE_A]</span> in more detail, <span class="placeholder">[LARGEST CATEGORY]</span> accounted for <span class="placeholder">[PERCENTAGE]</span>, while <span class="placeholder">[SECOND CATEGORY]</span> made up another <span class="placeholder">[PERCENTAGE]</span>, and <span class="placeholder">[SMALLEST]</span> constituted only <span class="placeholder">[PERCENTAGE]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Body 2: second pie</span>
+    <p>In contrast, in <span class="placeholder">[YEAR_B / PLACE_B]</span>, <span class="placeholder">[CONFIGURATION SUMMARY]</span>. The <span class="placeholder">[CATEGORY]</span> is predicted to <span class="placeholder">[CHANGE]</span>, falling from <span class="placeholder">[PERCENTAGE_A]</span> to <span class="placeholder">[PERCENTAGE_B]</span>, while <span class="placeholder">[OTHER CATEGORY]</span> will <span class="placeholder">[INVERSE CHANGE]</span>. Conversely, <span class="placeholder">[CONTRAST WITH OTHER PIE]</span>.</p>
+  </div>
+
+  <h3>Vocabulary kit</h3>
+  <dl class="vocab">
+    <dt>Proportion verbs</dt>
+    <dd><code>accounted for</code> <code>constituted</code> <code>made up</code> <code>represented</code> <code>comprised</code> <code>was responsible for</code></dd>
+    <dt>Fraction phrases</dt>
+    <dd><code>almost half</code> <code>just over half</code> <code>two-thirds</code> <code>a quarter</code> <code>a fifth</code> <code>a tenth</code> <code>the bulk of</code> <code>the lion's share of</code></dd>
+    <dt>Approximators</dt>
+    <dd><code>approximately</code> <code>around</code> <code>roughly</code> <code>just under</code> <code>just over</code> <code>nearly</code> <code>almost</code></dd>
+    <dt>Magnitude framing</dt>
+    <dd><code>dominated</code> <code>the largest share</code> <code>the bulk of</code> <code>only</code> <code>a mere</code> <code>barely</code></dd>
+    <dt>Forecast hedges</dt>
+    <dd><code>is predicted to</code> <code>is expected to</code> <code>is anticipated</code> <code>is projected to</code> <code>is likely to</code> <code>could</code></dd>
+  </dl>
+
+  <div class="callout warning">
+    <div class="callout-label">Pitfalls</div>
+    <p>Don't list every slice mechanically. Group them: largest two, smallest two, the surprising middle. Use <code>percentage</code>, <code>proportion</code>, and <code>share</code> interchangeably to avoid repetition. For paired pies, the overview's job is to capture the <em>most striking difference</em> between them, not just describe each pie separately. Stacked bar charts of proportional data follow the same template.</p>
+  </div>
+</section>
+
+<!-- ============================================== -->
+<!-- 04 TABLE -->
+<!-- ============================================== -->
+<section id="table">
+  <h2><span class="type-num">04.</span> Table</h2>
+  <p class="lede">Categorical data in a matrix. Look for the highest and lowest cells, dramatic differences across rows or columns, and year-over-year changes for multi-year tables.</p>
+
+  <h3>Skeleton</h3>
+
+  <div class="skeleton">
+    <span class="label">Intro</span>
+    <p>The table compares <span class="placeholder">[DATA]</span> for <span class="placeholder">[CATEGORIES]</span> in <span class="placeholder">[TIMEFRAME / PLACES]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Overview</span>
+    <p>Overall, <span class="placeholder">[DOMINANT PATTERN]</span>, with <span class="placeholder">[LEADER]</span> <span class="placeholder">[DESCRIPTION]</span>, while <span class="placeholder">[CONTRAST]</span>. Notably, <span class="placeholder">[HEADLINE FEATURE OR DISPARITY]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Body 1: the leader or first period</span>
+    <p><span class="placeholder">[CATEGORY / PERIOD]</span> <span class="placeholder">[CONTEXT]</span>. <span class="placeholder">[LEADER]</span> dominated with <span class="placeholder">[FIGURE]</span>, considerably higher than <span class="placeholder">[NEXT CATEGORY]</span> at <span class="placeholder">[FIGURE]</span>. <span class="placeholder">[FURTHER DETAIL OR COMPARISON]</span>, with <span class="placeholder">[CATEGORIES]</span> reaching <span class="placeholder">[FIGURE_A]</span> and <span class="placeholder">[FIGURE_B]</span> respectively.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Body 2: contrasting segment or second period</span>
+    <p>In contrast, <span class="placeholder">[OTHER GROUP / PERIOD]</span> showed <span class="placeholder">[DIFFERENT PATTERN]</span>. <span class="placeholder">[SPECIFIC FIGURES AND RELATIONSHIPS]</span>. Despite <span class="placeholder">[OBSERVATION]</span>, <span class="placeholder">[OUTCOME]</span>, reaching a striking <span class="placeholder">[FIGURE]</span> by <span class="placeholder">[YEAR]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Body 3: outlier or smallest figures (optional)</span>
+    <p><span class="placeholder">[CATEGORY]</span> was continually <span class="placeholder">[VERB]</span> in relatively small amounts, beginning at only <span class="placeholder">[FIGURE]</span>. Although it did <span class="placeholder">[VERB]</span>, reaching a peak of <span class="placeholder">[FIGURE]</span> in <span class="placeholder">[YEAR]</span>, this level was short-lived, and by <span class="placeholder">[YEAR_END]</span> it had fallen to <span class="placeholder">[FIGURE]</span>.</p>
+  </div>
+
+  <h3>Vocabulary kit</h3>
+  <dl class="vocab">
+    <dt>Dominance</dt>
+    <dd><code>dominated</code> <code>led the table</code> <code>headed the list</code> <code>the leading</code> <code>topped</code></dd>
+    <dt>Comparison ratios</dt>
+    <dd><code>considerably higher than</code> <code>in stark contrast to</code> <code>almost ten times greater than</code> <code>double</code> <code>half</code> <code>five times its 1999 figure</code></dd>
+    <dt>Multi-year change</dt>
+    <dd><code>rose from X to Y</code> <code>fell from X to Y</code> <code>more than doubled</code> <code>halved</code> <code>increased exponentially</code> <code>almost the same as</code></dd>
+    <dt>Highlighting</dt>
+    <dd><code>Notably</code> <code>Interestingly</code> <code>In fact</code> <code>a striking</code></dd>
+  </dl>
+
+  <div class="callout warning">
+    <div class="callout-label">Pitfalls</div>
+    <p>Don't recite every cell. Select. Decide whether to group by <em>row</em> (one category across time / place) or by <em>column</em> (one period across categories), and pick whichever makes the comparison cleaner. <code>Respectively</code> is your friend wherever paired figures appear.</p>
+  </div>
+</section>
+
+<!-- ============================================== -->
+<!-- 05 PROCESS / DIAGRAM -->
+<!-- ============================================== -->
+<section id="process">
+  <h2><span class="type-num">05.</span> Process / diagram</h2>
+  <p class="lede">Sequential or cyclical stages. Look for the number of stages, time spans, environment shifts, inputs and outputs, and transformations between forms.</p>
+
+  <h3>Skeleton <span class="tag">linear process</span></h3>
+
+  <div class="skeleton">
+    <span class="label">Intro</span>
+    <p>The diagram shows the <span class="placeholder">[PROCESS / STAGES INVOLVED IN]</span> <span class="placeholder">[TOPIC]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Overview</span>
+    <p>Overall, <span class="placeholder">[the process]</span> comprises <span class="placeholder">[N]</span> main stages, <span class="placeholder">[GENERAL CHARACTERISTIC: time span, environment, key transformation]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Body 1: early stages</span>
+    <p>The process begins when <span class="placeholder">[INPUT]</span> is <span class="placeholder">[PASSIVE VERB]</span> <span class="placeholder">[HOW / WHERE]</span>. Next, <span class="placeholder">[STAGE 2 DESCRIPTION]</span>, where they are <span class="placeholder">[VERB PASSIVE]</span>. The <span class="placeholder">[MATERIAL]</span> is then <span class="placeholder">[VERB PASSIVE]</span>, forming <span class="placeholder">[OUTPUT_A]</span>, which can now be transported to <span class="placeholder">[NEXT LOCATION]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Body 2: later stages and final output</span>
+    <p>At <span class="placeholder">[LOCATION / STAGE]</span>, the <span class="placeholder">[MATERIAL]</span> is <span class="placeholder">[VERB PASSIVE]</span> by <span class="placeholder">[METHOD]</span>. <span class="placeholder">[MATERIAL]</span> is then <span class="placeholder">[VERB PASSIVE]</span>, after which it can be <span class="placeholder">[SEPARATED / COMBINED / USED]</span>. In the final stage, <span class="placeholder">[FINAL OUTPUT]</span> is <span class="placeholder">[VERB]</span> for <span class="placeholder">[PURPOSE]</span>.</p>
+  </div>
+
+  <h3>Skeleton <span class="tag">life cycle</span></h3>
+
+  <div class="skeleton">
+    <span class="label">Intro</span>
+    <p>The diagram shows the different stages in the life cycle of <span class="placeholder">[ORGANISM]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Overview</span>
+    <p>Overall, the cycle takes <span class="placeholder">[TIMEFRAME]</span> and comprises <span class="placeholder">[N]</span> main stages, each of which takes place in <span class="placeholder">[A DIFFERENT ENVIRONMENT / WITH A KEY TRANSFORMATION]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Body 1: early life</span>
+    <p>The <span class="placeholder">[ORGANISM]</span> begins life as <span class="placeholder">[STAGE 1 FORM]</span>, in <span class="placeholder">[ENVIRONMENT]</span>, <span class="placeholder">[PROTECTIVE FEATURE / LOCATION]</span>. Over a period of <span class="placeholder">[TIMEFRAME]</span>, the <span class="placeholder">[STAGE 1]</span> hatches / develops into <span class="placeholder">[STAGE 2 FORM]</span>, which can <span class="placeholder">[NEW ABILITY]</span> and is now known as <span class="placeholder">[NAME]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Body 2: later life and cycle closure</span>
+    <p>At the end of this stage, the <span class="placeholder">[STAGE 2]</span> <span class="placeholder">[ACTION]</span>, where it remains for <span class="placeholder">[TIMEFRAME]</span>. It is in this <span class="placeholder">[ENVIRONMENT]</span> that the <span class="placeholder">[ORGANISM]</span> develops its <span class="placeholder">[CHARACTERISTIC]</span> and reaches its full <span class="placeholder">[SIZE / FORM]</span>. Finally, the adult <span class="placeholder">[ORGANISM]</span> will return to <span class="placeholder">[ORIGINAL ENVIRONMENT]</span> to <span class="placeholder">[REPRODUCTIVE ACT]</span>, and the cycle begins again.</p>
+  </div>
+
+  <h3>Vocabulary kit</h3>
+  <dl class="vocab">
+    <dt>Sequential adverbs</dt>
+    <dd><code>First,</code> <code>Next,</code> <code>Then,</code> <code>After this,</code> <code>Following this,</code> <code>At this point,</code> <code>Subsequently,</code> <code>Finally,</code></dd>
+    <dt>Passive transformations</dt>
+    <dd><code>is + [past participle]</code> <code>are + [past participle]</code> <code>has been + [past participle]</code> <code>can now be</code></dd>
+    <dt>Process verbs</dt>
+    <dd><code>undergoes</code> <code>is transformed into</code> <code>develops into</code> <code>hatches into</code> <code>emerges as</code> <code>produces</code> <code>results in</code> <code>gives off</code> <code>yields</code></dd>
+    <dt>Time spans</dt>
+    <dd><code>over a period of [TIME]</code> <code>for [TIME]</code> <code>for the next [TIME]</code> <code>between [TIME_A] and [TIME_B]</code></dd>
+    <dt>Cycle closure</dt>
+    <dd><code>and the cycle begins again</code> <code>completing the cycle</code> <code>returning to its original [ENV]</code></dd>
+    <dt>Structural words</dt>
+    <dd><code>comprises</code> <code>consists of</code> <code>is composed of</code> <code>involves</code> <code>includes</code></dd>
+  </dl>
+
+  <div class="callout warning">
+    <div class="callout-label">Pitfalls</div>
+    <p>Use the present simple throughout (<code>is heated</code>, not <code>was heated</code>). Use passive voice for impersonal industrial processes; active is fine for life cycles where the organism is the agent. Include every time span the diagram gives you. Don't invent details that aren't shown. For cycles, close with <code>and the cycle begins again</code>.</p>
+  </div>
+</section>
+
+<!-- ============================================== -->
+<!-- 06 MAP / PLAN -->
+<!-- ============================================== -->
+<section id="map">
+  <h2><span class="type-num">06.</span> Map / plan</h2>
+  <p class="lede">Spatial change. Look for added structures, removed structures, modified ones, preserved features, and the directional layout. For building plans: rooms, facilities, expansions.</p>
+
+  <h3>Skeleton <span class="tag">two maps, before / after</span></h3>
+
+  <div class="skeleton">
+    <span class="label">Intro</span>
+    <p>The two maps show <span class="placeholder">[PLACE]</span> <span class="placeholder">[BEFORE / AS IT WAS IN YEAR_A]</span> and <span class="placeholder">[AFTER / AS IT IS NOW IN YEAR_B]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Overview</span>
+    <p>Overall, <span class="placeholder">[PRIMARY CHANGE DIRECTION]</span>, with <span class="placeholder">[WHAT IS NEW]</span> and <span class="placeholder">[WHAT WAS REMOVED OR MODIFIED]</span>, although <span class="placeholder">[WHAT REMAINED UNCHANGED]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Body 1: before state</span>
+    <p>Prior to <span class="placeholder">[DEVELOPMENT / CHANGE]</span>, this <span class="placeholder">[PLACE]</span> was <span class="placeholder">[GENERAL DESCRIPTION]</span>. In terms of <span class="placeholder">[NATURAL / EXISTING FEATURES]</span>, there was <span class="placeholder">[FEATURE]</span> on the <span class="placeholder">[DIRECTION]</span>, and <span class="placeholder">[OTHER FEATURE]</span>, with <span class="placeholder">[DETAIL]</span>. <span class="placeholder">[ADDITIONAL OBSERVATION about what was absent / what existed]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Body 2: after state</span>
+    <p>Following <span class="placeholder">[DEVELOPMENT / CONSTRUCTION]</span>, although the <span class="placeholder">[PLACE]</span> is now more <span class="placeholder">[DESCRIPTOR]</span>, <span class="placeholder">[OVERALL CHARACTER]</span>. The main structures are <span class="placeholder">[KEY ADDITIONS]</span>. <span class="placeholder">[VISITORS / RESIDENTS]</span> can <span class="placeholder">[NEW ACTIVITY]</span>, which is <span class="placeholder">[LOCATION]</span>. In terms of access, <span class="placeholder">[TRANSPORT / PATHWAYS]</span>, while <span class="placeholder">[OTHER ACCESS DETAIL]</span>.</p>
+  </div>
+
+  <h3>Skeleton <span class="tag">building / facility plan</span></h3>
+
+  <div class="skeleton">
+    <span class="label">Intro</span>
+    <p>The two plans show <span class="placeholder">[BUILDING / FACILITY]</span> as it is now and the proposed redevelopment / the new layout following its <span class="placeholder">[CHANGE]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Overview</span>
+    <p>Overall, while <span class="placeholder">[WHAT WILL BE LOST]</span>, the new <span class="placeholder">[FACILITY]</span> will be <span class="placeholder">[LARGER / MODIFIED]</span> and will <span class="placeholder">[NEW CAPABILITY]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Body 1: current state</span>
+    <p>The current <span class="placeholder">[FACILITY]</span> consists of <span class="placeholder">[GENERAL DESCRIPTION]</span>. The building houses <span class="placeholder">[KEY FEATURES]</span>, with a <span class="placeholder">[ROOM]</span> to the <span class="placeholder">[DIRECTION]</span> and a <span class="placeholder">[ROOM]</span> to the <span class="placeholder">[DIRECTION]</span>.</p>
+  </div>
+
+  <div class="skeleton">
+    <span class="label">Body 2: proposed / new state</span>
+    <p>Following the <span class="placeholder">[RENOVATION / REDEVELOPMENT]</span>, only <span class="placeholder">[WHAT REMAINS]</span> will stay the same. The building will be expanded to the <span class="placeholder">[DIRECTIONS]</span>, removing <span class="placeholder">[OLD FEATURES]</span> and making way for <span class="placeholder">[NEW FEATURES]</span>. These include <span class="placeholder">[NEW FACILITY_A]</span> on the <span class="placeholder">[DIRECTION]</span> side, and on the <span class="placeholder">[OTHER DIRECTION]</span>, <span class="placeholder">[NEW FACILITY_B]</span>. The <span class="placeholder">[EXISTING FEATURE]</span> will be <span class="placeholder">[MODIFICATION]</span>. On arrival, visitors will benefit from <span class="placeholder">[NEW AMENITIES]</span>.</p>
+  </div>
+
+  <h3>Vocabulary kit</h3>
+  <dl class="vocab">
+    <dt>Directional</dt>
+    <dd><code>to the north / south / east / west of</code> <code>on the [SIDE] side of</code> <code>opposite</code> <code>adjacent to</code> <code>alongside</code> <code>in the front</code> <code>to the rear of</code> <code>in the corner</code></dd>
+    <dt>Change verbs (completed)</dt>
+    <dd><code>has been replaced with</code> <code>has been removed</code> <code>has been demolished</code> <code>has been added</code> <code>has been built</code> <code>has been expanded</code> <code>has been widened</code> <code>has been lengthened</code> <code>has been converted into</code></dd>
+    <dt>Change verbs (planned)</dt>
+    <dd><code>will be added</code> <code>will replace</code> <code>is to be built</code> <code>will cater for</code> <code>will be expanded to</code> <code>will be removed</code></dd>
+    <dt>Preservation</dt>
+    <dd><code>remains unchanged</code> <code>has been retained</code> <code>has been preserved</code> <code>is still in place</code> <code>has not been altered</code></dd>
+    <dt>Replacement formula</dt>
+    <dd><code>where there was once [X], there is now [Y]</code></dd>
+    <dt>Style and character</dt>
+    <dd><code>sympathetic to the natural environment</code> <code>single-storey</code> <code>two-storey</code> <code>hut-style</code> <code>untouched</code> <code>relatively simple</code></dd>
+  </dl>
+
+  <div class="callout warning">
+    <div class="callout-label">Pitfalls</div>
+    <p>Tense matters. Use <em>present perfect passive</em> for completed changes (<code>has been built</code>); use <em>future</em> for proposed changes (<code>will be built</code>). Always orient the reader with directional language before describing a feature. Don't invent buildings the map doesn't show. Note what stayed the same as well as what changed, this is often half the story.</p>
+  </div>
+</section>
+
+<!-- ============================================== -->
+<!-- 07 UNIVERSAL VOCAB KIT -->
+<!-- ============================================== -->
+<section id="kit">
+  <h2><span class="type-num">07.</span> Universal vocabulary kit</h2>
+  <p class="lede">These work across every task type. Treat them as a shared pool, drawn on as needed.</p>
+
+  <h3>Magnitude descriptors</h3>
+  <dl class="vocab">
+    <dt>Very large</dt>
+    <dd><code>striking</code> <code>dramatic</code> <code>exponential</code> <code>significant</code> <code>considerable</code> <code>substantial</code></dd>
+    <dt>Large</dt>
+    <dd><code>noticeable</code> <code>sharp</code> <code>marked</code></dd>
+    <dt>Moderate</dt>
+    <dd><code>steady</code> <code>gradual</code> <code>modest</code></dd>
+    <dt>Small</dt>
+    <dd><code>marginal</code> <code>slight</code> <code>minor</code></dd>
+    <dt>None</dt>
+    <dd><code>stable</code> <code>unchanged</code> <code>remained relatively stable</code> <code>near parity</code></dd>
+  </dl>
+
+  <h3>Approximation hedges</h3>
+  <dl class="vocab">
+    <dt>Standard</dt>
+    <dd><code>approximately</code> <code>around</code> <code>roughly</code> <code>about</code></dd>
+    <dt>Directional</dt>
+    <dd><code>just under</code> <code>just over</code> <code>slightly above</code> <code>slightly below</code> <code>nearly</code> <code>almost</code></dd>
+    <dt>Range</dt>
+    <dd><code>between [X] and [Y]</code> <code>from [X] to [Y]</code> <code>somewhere around</code></dd>
+  </dl>
+
+  <h3>Comparison and contrast</h3>
+  <dl class="vocab">
+    <dt>Comparison</dt>
+    <dd><code>considerably higher / lower than</code> <code>twice as much as</code> <code>more than double</code> <code>almost ten times greater</code> <code>at a similar level to</code></dd>
+    <dt>Equivalence</dt>
+    <dd><code>equally distributed</code> <code>near parity</code> <code>at the same level</code> <code>equivalent to</code></dd>
+    <dt>Contrast openers</dt>
+    <dd><code>In contrast,</code> <code>In comparison,</code> <code>Conversely,</code> <code>By contrast,</code> <code>However,</code></dd>
+  </dl>
+
+  <h3>Concessive structures</h3>
+  <dl class="vocab">
+    <dt>Single clause</dt>
+    <dd><code>Despite [NP], [main clause]</code> <code>Although [clause], [main clause]</code> <code>While [clause], [main clause]</code></dd>
+    <dt>Compact</dt>
+    <dd><code>albeit [adv / adj]</code> <code>though</code></dd>
+    <dt>Cross-sentence</dt>
+    <dd><code>Nevertheless,</code> <code>However,</code> <code>That said,</code></dd>
+  </dl>
+
+  <h3>Signposts and forecast language</h3>
+  <dl class="vocab">
+    <dt>Highlighting</dt>
+    <dd><code>Notably,</code> <code>Interestingly,</code> <code>In fact,</code> <code>Crucially,</code> (one per essay)</dd>
+    <dt>Forecast hedges</dt>
+    <dd><code>is predicted to</code> <code>is expected to</code> <code>is anticipated</code> <code>is projected to</code> <code>is likely to</code> <code>could</code> <code>will continue to</code></dd>
+    <dt>Past perfect framing</dt>
+    <dd><code>By [YEAR], [X] had [past participle]</code> <code>By this point, [X] had become</code></dd>
+  </dl>
+
+  <h3>Compression devices</h3>
+  <dl class="vocab">
+    <dt>Participle clauses</dt>
+    <dd><code>..., reaching [FIGURE] by [YEAR]</code> <code>..., overtaking [X] to become [Y]</code> <code>..., climbing steadily to [FIGURE]</code> <code>..., making [X] the [DESCRIPTOR]</code></dd>
+    <dt>Respectively</dt>
+    <dd><code>[X] and [Y] reached [FIG_A] and [FIG_B] respectively</code></dd>
+    <dt>Cleft</dt>
+    <dd><code>It is in this [ENV] that [X] develops [Y]</code> (use sparingly)</dd>
+  </dl>
+</section>
+
+<footer>
+  <p>Compiled from a Band 8+ model essay corpus. Treat the skeletons as starting points to fill in. Read the chart first, decide on the grouping, then pick the matching skeleton. If the data behaves in a way the skeleton doesn't accommodate, the data wins, so restructure as needed.</p>
+</footer>
+
+</main>
+</div>
+</body>
+</html>

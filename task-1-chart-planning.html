@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Task 1 - The Planning Scratchpad: A Chart-by-Chart Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Fonts */
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', Consolas, monospace;
+
+    /* Base Colors */
+    --bg-page: #fafaf7;
+    --bg-card: #ffffff;
+    --text-main: #1a1a1a;
+    --text-muted: #555555;
+    --border-color: #d8d4c8;
+    
+    /* UI Accent Colors */
+    --accent-primary: #2a5a78;
+    --accent-hover: #1d4056;
+
+    /* Semantic Callout Colors */
+    --box-example-bg: #eef3f7;
+    --box-example-border: #7ca0c0;
+    
+    --box-note-bg: #fdf6e3;
+    --box-note-border: #d4a05d;
+    
+    --box-tip-bg: #e9efe9;
+    --box-tip-border: #3d6e3e;
+    
+    --box-warning-bg: #fcf3e3;
+    --box-warning-border: #b3372a;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.7;
+    font-size: 17px; 
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Structural Layout */
+  .layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* Sidebar Navigation */
+  nav.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 2.5rem 1.75rem;
+    border-right: 1px solid var(--border-color);
+    background: var(--bg-page);
+  }
+
+  .nav-title {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-main);
+    letter-spacing: -0.01em;
+  }
+
+  .nav-sub {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 2rem;
+  }
+
+  .nav-group-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  nav.sidebar a {
+    display: block;
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 0.4rem 0 0.4rem 0.85rem;
+    border-left: 3px solid transparent;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    border-radius: 0 4px 4px 0;
+  }
+
+  nav.sidebar a:hover {
+    border-left-color: var(--accent-primary);
+    background: var(--box-example-bg);
+    color: var(--accent-hover);
+  }
+
+  /* Main Content Area */
+  main {
+    padding: 3.5rem 4rem 6rem;
+    max-width: 900px;
+  }
+
+  /* Headings */
+  h1 {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 4rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: baseline;
+  }
+
+  h2 .type-num {
+    color: var(--accent-primary);
+    margin-right: 0.5rem;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 2.5rem 0 0.75rem 0;
+    color: var(--accent-primary);
+  }
+
+  h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 1.5rem 0 0.5rem 0;
+    color: var(--text-muted);
+  }
+
+  p { margin: 0.8rem 0; }
+  ul, ol { padding-left: 1.5rem; margin: 0.8rem 0; }
+  li { margin-bottom: 0.4rem; }
+
+  /* Callout Boxes */
+  .callout {
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  }
+
+  .callout-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .callout.example { background: var(--box-example-bg); border-left: 4px solid var(--box-example-border); }
+  .callout.example .callout-label { color: var(--accent-primary); }
+  .callout.note { background: var(--box-note-bg); border-left: 4px solid var(--box-note-border); }
+  .callout.note .callout-label { color: #8a5a1f; }
+  .callout.tip { background: var(--box-tip-bg); border-left: 4px solid var(--box-tip-border); }
+  .callout.tip .callout-label { color: var(--box-tip-border); }
+  .callout.warning { background: var(--box-warning-bg); border-left: 4px solid var(--box-warning-border); }
+  .callout.warning .callout-label { color: var(--box-warning-border); }
+
+  /* Tags & Chips */
+  .tag {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--accent-primary);
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    border-radius: 3px;
+    vertical-align: middle;
+  }
+  .tag.muted { background: var(--text-muted); }
+
+  .chip-group { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0 1.5rem 0; }
+
+  code {
+    font-family: var(--font-mono);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    font-size: 0.85em;
+    background: #ebe8de;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    background: var(--bg-card);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px var(--border-color);
+  }
+  th, td { padding: 0.75rem 1rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border-color); }
+  th {
+    background: var(--bg-page); font-weight: 600; color: var(--text-muted);
+    font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+
+  /* Specific Components Adapted from Original Guide */
+  .timing { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 1.5rem 0; }
+  .tcell { padding: 1rem; border-radius: 6px; text-align: center; border: 1px solid var(--border-color); }
+  .tcell .tlab { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; display: block; color: var(--text-muted); }
+  .tcell .tname { font-size: 0.95rem; font-weight: 600; display: block; margin-bottom: 3px; color: var(--accent-primary); }
+  .tcell .ttime { font-size: 1.6rem; font-weight: 700; display: block; line-height: 1; font-family: var(--font-display); }
+  .tcell .tunit { font-size: 0.8rem; color: var(--text-muted); }
+  .t1 { background: var(--box-example-bg); }
+  .t2 { background: var(--box-note-bg); }
+  .t3 { background: var(--box-tip-bg); }
+
+  .symbol-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 1.5rem 0; }
+  .symbol-cell { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 6px; padding: 12px 10px; text-align: center; }
+  .symbol { font-size: 1.4rem; font-weight: 700; margin-bottom: 4px; line-height: 1.1; }
+  .symbol-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.3; }
+
+  .chart-section { background: var(--bg-card); border-radius: 6px; border: 1px solid var(--border-color); padding: 2rem; margin: 2rem 0; box-shadow: 0 1px 3px rgba(0,0,0,0.02); }
+  .chart-header { display: flex; align-items: center; gap: 16px; margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color); }
+  .chart-num { width: 46px; height: 46px; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.2rem; font-weight: 700; flex-shrink: 0; }
+  .chart-title { font-size: 1.4rem; font-weight: 700; margin: 0; color: var(--text-main); }
+  .chart-sub { font-size: 0.9rem; color: var(--text-muted); margin-top: 2px; }
+  .c1 .chart-num { background: var(--box-example-border); }
+  .c2 .chart-num { background: var(--box-warning-border); }
+  .c3 .chart-num { background: var(--box-tip-border); }
+  .c4 .chart-num { background: var(--box-note-border); }
+  .c5 .chart-num { background: var(--accent-primary); }
+
+  .notepad { background: var(--bg-card); border: 1px dashed var(--border-color); border-radius: 6px; padding: 1.25rem 1.5rem; margin: 1rem 0; font-size: 0.95rem; }
+  .np-label { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.6rem; display: inline-block; padding: 0.2em 0.6em; border-radius: 3px; }
+  .np-label.s1 { background: var(--box-example-bg); color: var(--accent-primary); }
+  .np-label.s2 { background: var(--box-note-bg); color: #8a5a1f; }
+  .np-label.s3 { background: var(--box-tip-bg); color: var(--box-tip-border); }
+  .np-strip { font-family: var(--font-mono); font-size: 0.85rem; padding: 8px 10px; background: var(--bg-page); border-radius: 4px; border: 1px solid var(--border-color); }
+  .np-strip span { color: var(--text-muted); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  .property { background: var(--bg-page); border: 1px solid var(--border-color); border-radius: 6px; padding: 1rem 1.25rem; margin: 1rem 0; font-size: 0.95rem; }
+  .property strong { display: block; margin-bottom: 4px; font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent-primary); }
+
+  .decision-row { display: grid; grid-template-columns: 110px 1fr; gap: 14px; align-items: start; padding: 1rem 0; border-bottom: 1px solid var(--border-color); font-size: 0.95rem; }
+  .decision-row:last-child { border: none; }
+  .decision-key { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
+
+  .flag-star { color: var(--box-note-border); font-weight: 700; }
+  .flag-up { color: var(--box-tip-border); font-weight: 700; }
+  .flag-down { color: var(--box-warning-border); font-weight: 700; }
+  .flag-bang { color: var(--box-warning-border); font-weight: 700; }
+  .flag-eq { color: var(--text-muted); }
+  .flag-arrow { color: var(--accent-primary); font-weight: 700;}
+
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; }
+    nav.sidebar { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--border-color); padding: 1.5rem; }
+    main { padding: 2rem 1.5rem 4rem; }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.4rem; margin-top: 3rem; }
+  }
+  @media print {
+    body { max-width: none; padding: 0; font-size: 14px; }
+    .layout { display: block; }
+    nav.sidebar { display: none; }
+    main { max-width: 100%; padding: 2rem; }
+    .chart-section { page-break-inside: avoid; }
+    h2 { page-break-before: always; }
+  }
+</style>
+</head>
+<body>
+
+<div class="layout">
+  <nav class="sidebar">
+    <div class="nav-title">IELTS Task 1</div>
+    <div class="nav-sub">Chart Planning Guide</div>
+
+    <div class="nav-group-label">Foundations</div>
+    <a href="#framework">01. The Framework</a>
+    <a href="#toolkit">02. Symbol Toolkit</a>
+
+    <div class="nav-group-label">Chart Types</div>
+    <a href="#chart-types">03. Adapting Types</a>
+    <a href="#chart-line" style="padding-left: 1.5rem; font-size: 0.85rem;">Line Chart</a>
+    <a href="#chart-pie" style="padding-left: 1.5rem; font-size: 0.85rem;">Pie Chart</a>
+    <a href="#chart-bar" style="padding-left: 1.5rem; font-size: 0.85rem;">Bar Chart</a>
+    <a href="#chart-table" style="padding-left: 1.5rem; font-size: 0.85rem;">Table</a>
+    <a href="#chart-mixed" style="padding-left: 1.5rem; font-size: 0.85rem;">Mixed Charts</a>
+
+    <div class="nav-group-label">Wrap-up</div>
+    <a href="#quick-ref">04. Quick Reference</a>
+    <a href="#pitfalls">05. Common Pitfalls</a>
+    <a href="#process">06. Whole Process</a>
+  </nav>
+
+  <main>
+    <header>
+      <div class="tag muted" style="margin-bottom: 1.25rem;">IELTS Academic · Writing Task 1 · Charts Only</div>
+      <h1>The Planning Scratchpad:<br>A Chart-by-Chart Guide</h1>
+      <p class="subtitle">
+        Three minutes of structured note-taking before any sentence is typed. The framework is the same for every chart, but the middle step adapts to what each chart is actually holding. This guide covers all five chart types you will meet in the academic test: line, pie, bar, table, and mixed.
+      </p>
+      <div class="chip-group">
+        <span class="tag">Computer-Based Test</span>
+        <span class="tag">Planning Phase Only</span>
+        <span class="tag">Charts & Tables</span>
+        <span class="tag">~3 Minutes Total</span>
+        <span class="tag">5 Chart Types</span>
+      </div>
+    </header>
+
+    <h2 id="framework"><span class="type-num">01.</span> The Three-Step Framework</h2>
+
+    <p>Every chart task is planned the same way: a details strip, a key-features table, and a paragraph plan. What changes between chart types is the <strong>shape of Step 2</strong> and the <strong>grouping logic of Step 3</strong>. Step 1 barely changes; the symbol set is identical across all five types.</p>
+
+    <div class="timing">
+      <div class="tcell t1">
+        <span class="tlab">Step 1</span>
+        <span class="tname">Details Strip</span>
+        <span class="ttime">30</span>
+        <span class="tunit">seconds</span>
+      </div>
+      <div class="tcell t2">
+        <span class="tlab">Step 2</span>
+        <span class="tname">Key Features Table</span>
+        <span class="ttime">90-120</span>
+        <span class="tunit">seconds</span>
+      </div>
+      <div class="tcell t3">
+        <span class="tlab">Step 3</span>
+        <span class="tname">Paragraph Plan</span>
+        <span class="ttime">30</span>
+        <span class="tunit">seconds</span>
+      </div>
+    </div>
+
+    <h3>Step 1 - Details Strip</h3>
+    <p>A single line across the top of the scratch surface that captures the chart's metadata. The contents feed directly into the introduction sentence; once written, the screen does not need to be consulted again for that information.</p>
+
+    <div class="notepad">
+      <span class="np-label s1">Step 1 template</span>
+      <div class="np-strip">
+        <span>Chart:</span> [type] &nbsp;|&nbsp;
+        <span>Unit:</span> [Y-axis label] &nbsp;|&nbsp;
+        <span>Where:</span> [country / context] &nbsp;|&nbsp;
+        <span>When:</span> [time frame] &nbsp;|&nbsp;
+        <span>N:</span> [number of categories]
+      </div>
+    </div>
+
+    <p>Whether the data is historical, projected, or both, belongs here. So does any unusual scale feature, such as a Y-axis that does not start at zero.</p>
+
+    <h3>Step 2 - Key Features Table</h3>
+    <p>This is the only step where structure changes. The table always has four columns; the middle two columns change depending on what the chart holds. Five variants are detailed below in Section 3. The right-most column is always reserved for flags.</p>
+
+    <h3>Step 3 - Paragraph Plan</h3>
+    <p>Two short lines beneath the table: <code>P1: [categories]</code> and <code>P2: [categories]</code>. The logic behind these groupings depends on the chart type. The most common patterns are grouping by trend (line charts), by chart (multi-pie comparisons), by performance tier (tables), and by growth pattern (bar charts).</p>
+
+    <div class="callout note">
+      <div class="callout-label">The Promise Rule</div>
+      <p style="margin: 0;">Every flag written in Step 2 should reach the overview or a body paragraph. Anything that does not appear in the writing was either not a key feature, or has been forgotten. Either is recoverable at the planning stage but costly afterwards.</p>
+    </div>
+
+    <h2 id="toolkit"><span class="type-num">02.</span> The Symbol Toolkit (Universal)</h2>
+
+    <p>The same shorthand is used across all chart types. Speed depends on consistency, so settle on these symbols early and stop inventing new ones in the test.</p>
+
+    <div class="symbol-grid">
+      <div class="symbol-cell">
+        <div class="symbol flag-star">★</div>
+        <div class="symbol-desc">Highest or lowest overall</div>
+      </div>
+      <div class="symbol-cell">
+        <div class="symbol flag-up">↑↑↑</div>
+        <div class="symbol-desc">Dramatic or notable increase</div>
+      </div>
+      <div class="symbol-cell">
+        <div class="symbol" style="color:var(--box-tip-border); font-weight:700">↑↑</div>
+        <div class="symbol-desc">Strong but not exceptional rise</div>
+      </div>
+      <div class="symbol-cell">
+        <div class="symbol flag-down">↓↓↓</div>
+        <div class="symbol-desc">Dramatic or notable decrease</div>
+      </div>
+      <div class="symbol-cell">
+        <div class="symbol flag-bang">!</div>
+        <div class="symbol-desc">Anomalous or unexpected</div>
+      </div>
+      <div class="symbol-cell">
+        <div class="symbol flag-eq">≈</div>
+        <div class="symbol-desc">Roughly stable or near-equal</div>
+      </div>
+      <div class="symbol-cell">
+        <div class="symbol flag-arrow">→</div>
+        <div class="symbol-desc">Convergence; two values meet or cross</div>
+      </div>
+      <div class="symbol-cell">
+        <div class="symbol" style="color:var(--accent-primary); font-weight:700">}</div>
+        <div class="symbol-desc">Grouping bracket; ties categories together</div>
+      </div>
+    </div>
+
+    <p>What each symbol licenses you to say in the writing:</p>
+    <ul>
+      <li><strong>★</strong> licenses superlative language: <em>"the highest figures throughout"</em>, <em>"by far the lowest"</em>.</li>
+      <li><strong>↑↑↑ / ↓↓↓</strong> license evaluative comparatives: <em>"the most dramatic growth"</em>, <em>"the sharpest decline"</em>.</li>
+      <li><strong>!</strong> licenses contrast phrases: <em>"the only category to..."</em>, <em>"notably, however..."</em>.</li>
+      <li><strong>≈</strong> licenses stability language: <em>"remained roughly stable"</em>, <em>"near parity"</em>.</li>
+      <li><strong>→</strong> licenses crossover language: <em>"by 1998, A had overtaken B"</em>, <em>"nearly matching"</em>.</li>
+    </ul>
+
+    <h2 id="chart-types"><span class="type-num">03.</span> Adapting the Scratchpad to Each Chart Type</h2>
+
+    <p>The next five sections walk through one chart type each. The structure is identical: properties first, scratchpad adaptation second, grouping logic third, and a fully worked example from the project last.</p>
+
+    <div class="chart-section c1" id="chart-line">
+      <div class="chart-header">
+        <div class="chart-num">1</div>
+        <div>
+          <div class="chart-title">Line Chart</div>
+          <div class="chart-sub">Time series, continuous lines, start-to-end change</div>
+        </div>
+      </div>
+
+      <h3>Distinguishing properties</h3>
+      <div class="property">
+        <strong>Structure</strong>
+        Categories are visualised as continuous lines on a shared time axis. Every line has a starting value and an ending value, with intermediate movement that may rise, fall, peak, dip, or cross other lines.
+      </div>
+      <div class="property">
+        <strong>What the chart is asking for</strong>
+        A comparison of how each category changed over the period, and how the categories compare to one another. The reader expects evaluative language about direction, magnitude, and timing.
+      </div>
+      <div class="property">
+        <strong>Common traps</strong>
+        Too many data points encourage transcription. Tense slips appear when historical data and projected data sit on the same chart. Crossovers and short-lived dips are easy to miss when scanning lines individually.
+      </div>
+
+      <h3>Step 2 adaptation</h3>
+      <p>The default four-column table fits line charts directly. Approximate start value, approximate end value, and a flag are sufficient for every category. Where the chart has more than two endpoints worth noting (such as an interior peak), add the year in parentheses next to the flag.</p>
+
+      <table class="scratch">
+        <thead><tr><th>Category</th><th>Start value</th><th>End value</th><th>Flag</th></tr></thead>
+        <tbody>
+          <tr><td>[name]</td><td>~[value]</td><td>~[value]</td><td>★ / ↑↑↑ / ↓ / ! / ≈ / →</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Step 3 grouping logic</h3>
+      <p>Group categories by <strong>trend type</strong>. The most natural pairings are:</p>
+      <ul>
+        <li><strong>Steady risers vs. dramatic risers</strong>: categories that grew gently against those that grew sharply.</li>
+        <li><strong>Risers vs. fallers</strong>: when the chart contains movement in both directions.</li>
+        <li><strong>The pack vs. the anomaly</strong>: when most categories behave similarly but one category does something different.</li>
+      </ul>
+
+      <h3>Worked example</h3>
+      <div class="callout tip">
+        <div class="callout-label">Task</div>
+        <p style="margin: 0;"><em>The graph below shows the percentage of households with different kinds of technology in the U.S. from 1995 to 1999. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</em></p>
+      </div>
+
+      <div class="notepad">
+        <span class="np-label s1">Step 1 - Details strip</span>
+        <div class="np-strip">
+          <span>Chart:</span> Line graph &nbsp;|&nbsp;
+          <span>Unit:</span> % of households (0-90) &nbsp;|&nbsp;
+          <span>Where:</span> U.S. &nbsp;|&nbsp;
+          <span>When:</span> 1995-1999 (yearly) &nbsp;|&nbsp;
+          <span>N:</span> 5
+        </div>
+      </div>
+
+      <table class="scratch">
+        <thead><tr><th>Category</th><th>1995</th><th>1999</th><th>Flag</th></tr></thead>
+        <tbody>
+          <tr><td>Washing machine</td><td>~60%</td><td>~80%</td><td><span class="flag-star">★ highest throughout</span></td></tr>
+          <tr><td>Computer</td><td>~40%</td><td>~75%</td><td>↑↑ steady; <span class="flag-arrow">→ near-ties phone by '99</span></td></tr>
+          <tr><td>Phone (mobile)</td><td>~18%</td><td>~75%</td><td><span class="flag-up">↑↑↑ biggest single jump</span></td></tr>
+          <tr><td>Internet</td><td>~10%</td><td>~50%</td><td><span class="flag-star">★ lowest start</span>; ↑↑</td></tr>
+          <tr><td>DVD player</td><td>~25%</td><td>~40%</td><td><span class="flag-bang">! dipped to ~15% by '96, then ↑</span></td></tr>
+        </tbody>
+      </table>
+
+      <div class="notepad">
+        <span class="np-label s3">Step 3 - Paragraph plan</span>
+        <div style="padding: 6px 0;">
+          <strong>P1 (steady, higher start):</strong> Washing machine + Computer<br>
+          <strong>P2 (lower start, dramatic / anomalous):</strong> Phone + Internet + DVD player
+        </div>
+      </div>
+
+      <div class="callout example">
+        <div class="callout-label">Notes on this example</div>
+        <p style="margin: 0;">The DVD player exclamation is what separates a Band 6 answer from a Band 7 one; without flagging the dip, the writer will produce a generic "all rose" overview and miss the only category that moved against the trend. The convergence between computer and phone in 1999 is worth marking with <span class="flag-arrow">→</span>, since it gives the body paragraph a natural comparative sentence.</p>
+      </div>
+    </div>
+
+    <div class="chart-section c2" id="chart-pie">
+      <div class="chart-header">
+        <div class="chart-num">2</div>
+        <div>
+          <div class="chart-title">Pie Chart</div>
+          <div class="chart-sub">Proportional segments, no inherent time axis</div>
+        </div>
+      </div>
+
+      <h3>Distinguishing properties</h3>
+      <div class="property">
+        <strong>Structure</strong>
+        Each pie shows a 100% total broken down into proportional segments. A single pie is a snapshot; multiple pies appear when the test compares the same categories across time, or compares different breakdowns of related data.
+      </div>
+      <div class="property">
+        <strong>What the chart is asking for</strong>
+        A reading of which slices dominate, which are minor, and (in multi-pie tasks) how the proportions shift. Evaluative language about size and rank matters more than directional language about change.
+      </div>
+      <div class="property">
+        <strong>Common traps</strong>
+        Mixing fractions with percentages confuses the reader. Pie charts with many small slices invite over-transcription. The "Other" category is often dismissed too quickly; include it when it exceeds 5%, or when it grows or shrinks meaningfully across pies.
+      </div>
+
+      <h3>Step 2 adaptation</h3>
+      <p>Replace the "Start / End" columns with one column per pie. The flag column shifts toward proportional rank rather than directional change.</p>
+
+      <table class="scratch">
+        <thead><tr><th>Category</th><th>Pie 1 (%)</th><th>Pie 2 (%)</th><th>Flag</th></tr></thead>
+        <tbody>
+          <tr><td>[name]</td><td>[value]</td><td>[value]</td><td>★ largest / ★ smallest / ≈ near-equal / ! unexpected shift</td></tr>
+        </tbody>
+      </table>
+
+      <p>For a single pie, drop the second pie column entirely. For three or more pies (as in the tea production / consumption / profits task), use as many columns as there are pies and adjust the flag to capture which pie a category dominates in.</p>
+
+      <h3>Step 3 grouping logic</h3>
+      <p>Three options, ranked by frequency:</p>
+      <ol>
+        <li><strong>By pie</strong> (most common for multi-pie tasks). P1 = first pie's main slices, P2 = second pie's main slices. The overview compares the two.</li>
+        <li><strong>By dominance tier</strong> (works for any pie). P1 = dominant slices, P2 = minor slices.</li>
+        <li><strong>By behaviour across time</strong> (works for comparative pies showing the same categories over two periods). P1 = categories that grew, P2 = categories that shrank.</li>
+      </ol>
+
+      <h3>Worked example</h3>
+      <div class="callout tip">
+        <div class="callout-label">Task</div>
+        <p style="margin: 0;"><em>The pie charts below show the percentage of five types of food sold by a supermarket in 2003 and 2013. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</em></p>
+      </div>
+
+      <div class="notepad">
+        <span class="np-label s1">Step 1 - Details strip</span>
+        <div class="np-strip">
+          <span>Chart:</span> Two pie charts &nbsp;|&nbsp;
+          <span>Unit:</span> % of food sales &nbsp;|&nbsp;
+          <span>Where:</span> one supermarket &nbsp;|&nbsp;
+          <span>When:</span> 2003 vs 2013 &nbsp;|&nbsp;
+          <span>N:</span> 5 categories per pie
+        </div>
+      </div>
+
+      <table class="scratch">
+        <thead><tr><th>Category</th><th>2003 (%)</th><th>2013 (%)</th><th>Flag</th></tr></thead>
+        <tbody>
+          <tr><td>Vegetables</td><td>25</td><td>23</td><td><span class="flag-star">★ largest in 2003</span>; ≈ slight ↓</td></tr>
+          <tr><td>Meat</td><td>21</td><td>25</td><td><span class="flag-star">★ largest in 2013</span>; ↑↑</td></tr>
+          <tr><td>Seafood</td><td>19</td><td>21</td><td>↑ moderate rise</td></tr>
+          <tr><td>Eggs</td><td>20</td><td>14</td><td><span class="flag-down">↓↓↓ biggest fall</span></td></tr>
+          <tr><td>Fruits</td><td>15</td><td>17</td><td><span class="flag-star">★ smallest both years</span>; slight ↑</td></tr>
+        </tbody>
+      </table>
+
+      <div class="notepad">
+        <span class="np-label s3">Step 3 - Paragraph plan</span>
+        <div style="padding: 6px 0;">
+          <strong>P1 (categories that rose):</strong> Meat + Seafood + Fruits<br>
+          <strong>P2 (categories that fell or held):</strong> Vegetables + Eggs<br>
+          <span style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-top: 4px;">Alternative grouping: P1 = top three by share in 2013; P2 = bottom two. Either organisation works, provided it is signalled clearly at the start of each paragraph.</span>
+        </div>
+      </div>
+
+      <div class="callout example">
+        <div class="callout-label">Notes on this example</div>
+        <p style="margin: 0;">The key reversal in this task is meat overtaking vegetables as the largest category. That single observation belongs in the overview. The Eggs fall is the headline figure for body paragraph two; without it, the answer flattens into "everything roughly the same".</p>
+      </div>
+
+      <div class="callout note">
+        <div class="callout-label">Three-pie variant</div>
+        <p style="margin: 0;">For tasks with three pies showing different breakdowns of related data (such as tea production by country, tea consumption by region, and how profits are distributed), use one column per pie. Flag where each category appears uniquely or dominates. The grouping logic shifts to <strong>by pie</strong>: one body paragraph per chart, with the overview weaving the three together.</p>
+      </div>
+    </div>
+
+    <div class="chart-section c3" id="chart-bar">
+      <div class="chart-header">
+        <div class="chart-num">3</div>
+        <div>
+          <div class="chart-title">Bar Chart</div>
+          <div class="chart-sub">Discrete bars; grouped, clustered, or stacked</div>
+        </div>
+      </div>
+
+      <h3>Distinguishing properties</h3>
+      <div class="property">
+        <strong>Structure</strong>
+        Categories are visualised as discrete bars of differing heights. Three common configurations: a single bar per category (one snapshot), grouped bars (same categories across multiple time points or groups), and stacked bars (each bar broken into proportional segments, behaving like a flattened pie).
+      </div>
+      <div class="property">
+        <strong>What the chart is asking for</strong>
+        For single-snapshot bar charts, a reading of rank and proportion. For multi-time-point or grouped bars, a reading of change, similar to a line chart, with the added option of comparing within a time point as well as across time.
+      </div>
+      <div class="property">
+        <strong>Common traps</strong>
+        Treating a multi-time bar chart as if it were a sequence of separate pie charts loses the time dimension. Treating it as if it were a line chart can lose the discrete-category framing. The structure of the answer should reflect what the chart is doing.
+      </div>
+
+      <h3>Step 2 adaptation</h3>
+      <p>Replace the "Start / End" columns with one column per time point (or per group, if the bars are clustered by group rather than time). Two columns for two-time-point bar charts, three for three-time-point, and so on.</p>
+
+      <table class="scratch">
+        <thead><tr><th>Category</th><th>Time 1</th><th>Time 2</th><th>(Time 3...)</th><th>Flag</th></tr></thead>
+        <tbody>
+          <tr><td>[name]</td><td>[value]</td><td>[value]</td><td>[value]</td><td>★ / ↑↑↑ / ↓↓↓ / ! / ≈</td></tr>
+        </tbody>
+      </table>
+
+      <p>For stacked bar charts, treat each segment within a stack as its own category. The columns then become "Stack 1 share / Stack 2 share / ...". Flags emphasise which segment dominates each stack and how the dominance shifts.</p>
+
+      <h3>Step 3 grouping logic</h3>
+      <p>Two main options:</p>
+      <ul>
+        <li><strong>By behaviour across time</strong>: categories that rose together, categories that fell, and categories that went against the trend.</li>
+        <li><strong>By identity</strong>: when the categories naturally divide into types (for example, imports vs exports, or genders, or age bands), let the natural division drive the paragraphs.</li>
+      </ul>
+
+      <h3>Worked example</h3>
+      <div class="callout tip">
+        <div class="callout-label">Task</div>
+        <p style="margin: 0;"><em>The bar chart below shows the number of tourists in three nations who travelled to New Zealand in 1999 and 2009. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</em></p>
+      </div>
+
+      <div class="notepad">
+        <span class="np-label s1">Step 1 - Details strip</span>
+        <div class="np-strip">
+          <span>Chart:</span> Grouped bar chart &nbsp;|&nbsp;
+          <span>Unit:</span> number of tourists &nbsp;|&nbsp;
+          <span>Where:</span> New Zealand &nbsp;|&nbsp;
+          <span>When:</span> 1999 vs 2009 &nbsp;|&nbsp;
+          <span>N:</span> 3 source nations
+        </div>
+      </div>
+
+      <table class="scratch">
+        <thead><tr><th>Category</th><th>1999</th><th>2009</th><th>Flag</th></tr></thead>
+        <tbody>
+          <tr><td>UK</td><td>~1.0M</td><td>~1.6M</td><td><span class="flag-star">★ highest in 2009</span>; ↑↑</td></tr>
+          <tr><td>US</td><td>~0.8M</td><td>~1.5M</td><td><span class="flag-up">↑↑↑ near-doubled</span></td></tr>
+          <tr><td>Japan</td><td>~1.5M</td><td>~1.14M</td><td><span class="flag-bang">! only fall</span>; was <span class="flag-star">★ highest in 1999</span></td></tr>
+        </tbody>
+      </table>
+
+      <div class="notepad">
+        <span class="np-label s3">Step 3 - Paragraph plan</span>
+        <div style="padding: 6px 0;">
+          <strong>P1 (rose):</strong> UK + US<br>
+          <strong>P2 (fell, against trend):</strong> Japan
+        </div>
+      </div>
+
+      <div class="callout example">
+        <div class="callout-label">Notes on this example</div>
+        <p style="margin: 0;">Two flags carry this answer: the Japan reversal (was highest in 1999, now no longer the leader), and the US near-doubling. Without these, the overview slumps into a generic statement that "more tourists came overall", which the chart does not even fully support given Japan's fall.</p>
+      </div>
+
+      <div class="callout note">
+        <div class="callout-label">Three-time-point variant</div>
+        <p style="margin: 0;">For tasks such as recycled waste by material across 2000, 2005, and 2010, add a third value column. Flag the magnitude of change across the full window, and note any non-monotonic movement (a dip followed by recovery, or a peak followed by decline). The paragraph plan typically groups by total growth rate: biggest growers in P1, moderate or anomalous categories in P2.</p>
+      </div>
+
+      <div class="callout note">
+        <div class="callout-label">Stacked bar variant</div>
+        <p style="margin: 0;">Treat each colour band as its own category. Flags emphasise which segment dominates each stack, and how the relative proportions shift between stacks. The paragraph plan typically follows the natural identity division: in a transport task showing imports vs exports across years, P1 = imports, P2 = exports, with the overview comparing totals across the two stacks.</p>
+      </div>
+    </div>
+
+    <div class="chart-section c4" id="chart-table">
+      <div class="chart-header">
+        <div class="chart-num">4</div>
+        <div>
+          <div class="chart-title">Table</div>
+          <div class="chart-sub">Rows and columns, no visual trend, two-pass scan</div>
+        </div>
+      </div>
+
+      <h3>Distinguishing properties</h3>
+      <div class="property">
+        <strong>Structure</strong>
+        Rows are categories, columns are metrics or time points. There is no visual line to follow, so the eye has to do the comparison work that a chart would otherwise do for you.
+      </div>
+      <div class="property">
+        <strong>What the chart is asking for</strong>
+        A reading of which rows dominate, which underperform, and where the spread is largest. If the columns are time points, directional change matters too. If the columns are different metrics, rank and relative position matter more.
+      </div>
+      <div class="property">
+        <strong>Common traps</strong>
+        Reading row-by-row only misses column-wide patterns (such as one country dominating every metric). Reading column-by-column only misses row-wide spread (such as one row having a much wider range than the others). Both passes are needed.
+      </div>
+
+      <h3>Step 2 adaptation</h3>
+      <p>The scratchpad uses one column per data column in the source table, plus a flag column. For larger tables (six or more data columns), keep only the columns you intend to discuss; the scratchpad is a planning tool, not a transcription.</p>
+
+      <table class="scratch">
+        <thead><tr><th>Row</th><th>Col 1</th><th>Col 2</th><th>Col 3 ...</th><th>Flag</th></tr></thead>
+        <tbody>
+          <tr><td>[name]</td><td>[value]</td><td>[value]</td><td>[value]</td><td>★ / ! / ≈ / spread note</td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>The two-pass scan</strong> is the difference between a Band 6 and a Band 7 table answer:</p>
+      <ol>
+        <li><strong>Pass 1 (column-wise)</strong>: scan each column for its highest and lowest value. Mark a <span class="flag-star">(1)</span> next to the highest and <span class="flag-down">(3)</span> next to the lowest in each column. Patterns emerge when one row repeatedly picks up the (1) marker.</li>
+        <li><strong>Pass 2 (row-wise)</strong>: for each row, look at the spread between its highest and lowest value. A wide spread is worth flagging; a flat row is also worth flagging.</li>
+      </ol>
+
+      <h3>Step 3 grouping logic</h3>
+      <p>Two natural options:</p>
+      <ul>
+        <li><strong>By performance tier</strong>: high performers in P1, low performers in P2.</li>
+        <li><strong>By behaviour across columns</strong> (when columns are time points): rising rows in P1, falling or volatile rows in P2.</li>
+      </ul>
+
+      <h3>Worked example</h3>
+      <div class="callout tip">
+        <div class="callout-label">Task</div>
+        <p style="margin: 0;"><em>The table shows the changes in carbon production in four countries from 1995 to 1999. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</em></p>
+      </div>
+
+      <div class="notepad">
+        <span class="np-label s1">Step 1 - Details strip</span>
+        <div class="np-strip">
+          <span>Chart:</span> Table &nbsp;|&nbsp;
+          <span>Unit:</span> kg per day &nbsp;|&nbsp;
+          <span>Where:</span> 4 African countries &nbsp;|&nbsp;
+          <span>When:</span> 1995-1999 (yearly) &nbsp;|&nbsp;
+          <span>N:</span> 4 rows × 5 years
+        </div>
+      </div>
+
+      <table class="scratch">
+        <thead><tr><th>Country</th><th>1995</th><th>1997</th><th>1999</th><th>Flag</th></tr></thead>
+        <tbody>
+          <tr><td>Nigeria</td><td>2.0M</td><td>1.9M</td><td>2.3M</td><td><span class="flag-star">★ highest every year</span>; ≈ stable around 2M</td></tr>
+          <tr><td>Algeria</td><td>0</td><td>40K</td><td>50K</td><td><span class="flag-bang">! started from zero</span>; ↑↑ from 1997</td></tr>
+          <tr><td>Congo</td><td>270K</td><td>230K</td><td>100K</td><td><span class="flag-down">↓↓↓ only consistent faller</span></td></tr>
+          <tr><td>Botswana</td><td>210K</td><td>15K</td><td>75K</td><td><span class="flag-bang">! volatile</span>; crashed then partial recovery</td></tr>
+        </tbody>
+      </table>
+
+      <div class="notepad">
+        <span class="np-label s3">Step 3 - Paragraph plan</span>
+        <div style="padding: 6px 0;">
+          <strong>P1 (dominant or rising):</strong> Nigeria + Algeria<br>
+          <strong>P2 (falling or volatile):</strong> Congo + Botswana
+        </div>
+      </div>
+
+      <div class="callout example">
+        <div class="callout-label">Notes on this example</div>
+        <p style="margin: 0;">Three features carry the overview: Nigeria's dominance (column-wise scan), Congo's consistent decline (row-wise direction), and Algeria's emergence from zero (an anomaly that would be missed without the row-wise pass). Botswana's volatility is the kind of detail that earns a Band 7 lexical range marker if reported with precision (<em>"crashed then partially recovered"</em>) rather than transcribed value-by-value.</p>
+      </div>
+    </div>
+
+    <div class="chart-section c5" id="chart-mixed">
+      <div class="chart-header">
+        <div class="chart-num">5</div>
+        <div>
+          <div class="chart-title">Mixed Charts</div>
+          <div class="chart-sub">Two visuals; two mini-scratchpads plus a synthesis note</div>
+        </div>
+      </div>
+
+      <h3>Distinguishing properties</h3>
+      <div class="property">
+        <strong>Structure</strong>
+        Two distinct visuals are presented together. Common pairings include table + line graph, bar chart + pie chart, and pie chart + table. The two visuals usually show related but different aspects of the same topic.
+      </div>
+      <div class="property">
+        <strong>What the chart is asking for</strong>
+        A reading of each visual on its own terms, plus a synthesis that captures any connection, contrast, or implication between them. The overview is where the synthesis lives; the body paragraphs typically take one visual each.
+      </div>
+      <div class="property">
+        <strong>Common traps</strong>
+        Treating the two visuals as completely separate tasks loses the synthesis marks. Treating them as one combined visual leads to confused paragraphing. The clearest organisation is one body paragraph per visual, with the overview drawing the connection.
+      </div>
+
+      <h3>Step 2 adaptation</h3>
+      <p>Run the appropriate scratchpad format for each visual separately. If one is a line graph, use the start-end-flag structure for it. If the other is a table, use the row-by-column scan for it. Below the two mini-scratchpads, add a <strong>synthesis note</strong>: two or three bullet points that capture what the two visuals say <em>together</em>.</p>
+
+      <table class="scratch">
+        <thead><tr><th colspan="4">Mini-scratchpad A (chart 1)</th></tr></thead>
+        <tbody>
+          <tr><td>[run appropriate format]</td><td>...</td><td>...</td><td>...</td></tr>
+        </tbody>
+      </table>
+
+      <table class="scratch" style="margin-top: 10px;">
+        <thead><tr><th colspan="4">Mini-scratchpad B (chart 2)</th></tr></thead>
+        <tbody>
+          <tr><td>[run appropriate format]</td><td>...</td><td>...</td><td>...</td></tr>
+        </tbody>
+      </table>
+
+      <div class="notepad" style="margin-top: 10px;">
+        <span class="np-label s2">Synthesis note (feeds the overview)</span>
+        <div style="padding: 4px 0; font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.6;">
+          &bull; [observation tying the two visuals together]<br>
+          &bull; [a contrast or unexpected link]<br>
+          &bull; [an umbrella claim that covers both]
+        </div>
+      </div>
+
+      <h3>Step 3 grouping logic</h3>
+      <p>The default is one paragraph per visual: P1 covers the first chart, P2 covers the second. The overview weaves both together using the synthesis note.</p>
+      <p>For tasks where the two visuals share a structural division (such as imports vs exports presented across two charts), the alternative is to group by that shared division across both visuals. This is harder to write and only worth attempting when the structural division is much more salient than the chart-by-chart split.</p>
+
+      <h3>Worked example</h3>
+      <div class="callout tip">
+        <div class="callout-label">Task</div>
+        <p style="margin: 0;"><em>The bar chart below shows the number of tourists in three nations who travelled to New Zealand in 1999 and 2009. The graph below shows the number of tourists who spent their holiday in two different ways. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</em></p>
+      </div>
+
+      <div class="notepad">
+        <span class="np-label s1">Step 1 - Details strip</span>
+        <div class="np-strip">
+          <span>Chart:</span> Bar chart + line graph &nbsp;|&nbsp;
+          <span>Unit:</span> number of tourists &nbsp;|&nbsp;
+          <span>Where:</span> New Zealand &nbsp;|&nbsp;
+          <span>When:</span> 1999, 2004, 2009 &nbsp;|&nbsp;
+          <span>N:</span> 3 source nations (bar) + 2 holiday types (line)
+        </div>
+      </div>
+
+      <table class="scratch">
+        <thead><tr><th colspan="4">Mini-scratchpad A - Bar chart (tourists by nation)</th></tr></thead>
+        <tbody>
+          <tr><th>Nation</th><th>1999</th><th>2009</th><th>Flag</th></tr>
+          <tr><td>UK</td><td>~1.0M</td><td>~1.6M</td><td><span class="flag-star">★ highest in 2009</span></td></tr>
+          <tr><td>US</td><td>~0.8M</td><td>~1.5M</td><td><span class="flag-up">↑↑↑ near-doubled</span></td></tr>
+          <tr><td>Japan</td><td>~1.5M</td><td>~1.14M</td><td><span class="flag-bang">! only fall</span></td></tr>
+        </tbody>
+      </table>
+
+      <table class="scratch" style="margin-top: 10px;">
+        <thead><tr><th colspan="4">Mini-scratchpad B - Line graph (holiday type)</th></tr></thead>
+        <tbody>
+          <tr><th>Type</th><th>1999</th><th>2004 (peak)</th><th>2009</th></tr>
+          <tr><td>Staying at resorts</td><td>~1.65M</td><td>~2.37M <span class="flag-star">★ peak</span></td><td>~1.05M <span class="flag-down">↓↓↓ from peak</span></td></tr>
+          <tr><td>Backpacking</td><td>~0.25M</td><td>~0.75M</td><td>~1.05M <span class="flag-up">↑↑↑ steady rise</span></td></tr>
+          <tr><td colspan="4" style="font-family: var(--font-sans); font-size: 0.85rem;"><span class="flag-arrow">→ The two converged in 2009 at ~1.05M.</span></td></tr>
+        </tbody>
+      </table>
+
+      <div class="notepad" style="margin-top: 10px;">
+        <span class="np-label s2">Synthesis note</span>
+        <div style="padding: 4px 0; font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.6;">
+          &bull; Total tourist numbers shifted in composition (Japan fell while UK/US rose).<br>
+          &bull; Holiday style also shifted: resort-stays peaked then collapsed; backpacking grew steadily.<br>
+          &bull; By 2009, the two holiday types met, suggesting a structural change in how tourists chose to travel.
+        </div>
+      </div>
+
+      <div class="notepad">
+        <span class="np-label s3">Step 3 - Paragraph plan</span>
+        <div style="padding: 6px 0;">
+          <strong>P1:</strong> Bar chart - tourists by nation (3 source countries, contrasting movements).<br>
+          <strong>P2:</strong> Line graph - holiday types (resort decline, backpacking growth, convergence in 2009).
+        </div>
+      </div>
+
+      <div class="callout example">
+        <div class="callout-label">Notes on this example</div>
+        <p style="margin: 0;">The synthesis note is the only step that does not exist in single-chart tasks. Without it, the overview becomes two separate one-sentence statements ("more tourists came; resort stays declined") rather than a coherent reading of what the data shows together. The convergence in 2009 is the key crossover, marked with <span class="flag-arrow">→</span>, and earns its place in the overview.</p>
+      </div>
+    </div>
+
+    <h2 id="quick-ref"><span class="type-num">04.</span> Quick Reference: All Five at a Glance</h2>
+
+    <table>
+      <thead>
+        <tr><th>Chart type</th><th>Step 2 middle columns</th><th>Most useful flags</th><th>Step 3 grouping</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Line</strong></td>
+          <td>Start value, End value</td>
+          <td>★, ↑↑↑, ↓↓↓, !, →</td>
+          <td>By trend type</td>
+        </tr>
+        <tr>
+          <td><strong>Pie (single)</strong></td>
+          <td>Value (one column)</td>
+          <td>★ largest, ★ smallest, ≈</td>
+          <td>By dominance tier</td>
+        </tr>
+        <tr>
+          <td><strong>Pie (multi)</strong></td>
+          <td>One column per pie</td>
+          <td>★, ≈, ↑↑↑ / ↓↓↓ (if time-series)</td>
+          <td>By pie, or by behaviour across pies</td>
+        </tr>
+        <tr>
+          <td><strong>Bar (single)</strong></td>
+          <td>Value (one column)</td>
+          <td>★ tallest, ★ shortest, ≈</td>
+          <td>By rank tier</td>
+        </tr>
+        <tr>
+          <td><strong>Bar (multi-time / grouped)</strong></td>
+          <td>One column per time point</td>
+          <td>★, ↑↑↑, ↓↓↓, !</td>
+          <td>By growth pattern, or by identity</td>
+        </tr>
+        <tr>
+          <td><strong>Stacked bar</strong></td>
+          <td>Share per stack</td>
+          <td>★ dominant segment, ↑↑↑ in share</td>
+          <td>By identity (e.g. imports vs exports)</td>
+        </tr>
+        <tr>
+          <td><strong>Table</strong></td>
+          <td>One column per data column</td>
+          <td>★ (1) highest, (3) lowest, !, spread</td>
+          <td>By performance tier</td>
+        </tr>
+        <tr>
+          <td><strong>Mixed</strong></td>
+          <td>Two mini-scratchpads + synthesis</td>
+          <td>Whichever fits each visual</td>
+          <td>One paragraph per visual</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="pitfalls"><span class="type-num">05.</span> Common Pitfalls at the Planning Stage</h2>
+
+    <div class="decision-row">
+      <div class="decision-key">Pitfall 1</div>
+      <div>
+        <strong>Skipping the scratchpad to "save time".</strong>
+        The three minutes spent here are recouped many times over during writing, because the decisions have already been made. Going straight to typing produces an answer that lists data rather than analyses it, which is the Band 5 to Band 6 trap.
+      </div>
+    </div>
+
+    <div class="decision-row">
+      <div class="decision-key">Pitfall 2</div>
+      <div>
+        <strong>Transcribing rather than selecting.</strong>
+        The scratchpad is a planning tool. Approximate figures and a flag per category are enough; precise values can be read off the screen at the moment they appear in a sentence. Filling the scratchpad with exact numbers wastes the time the scratchpad was meant to save.
+      </div>
+    </div>
+
+    <div class="decision-row">
+      <div class="decision-key">Pitfall 3</div>
+      <div>
+        <strong>Flagging too much, or too little.</strong>
+        A useful scratchpad has between one and three flags per category. Zero flags means the category will produce a flat data sentence; four or more flags means the category will dominate a paragraph it should not.
+      </div>
+    </div>
+
+    <div class="decision-row">
+      <div class="decision-key">Pitfall 4</div>
+      <div>
+        <strong>Groupings that exist in the head but not on the page.</strong>
+        The Step 3 paragraph plan should be visible and concrete. <em>"P1: categories that grew, P2: categories that fell"</em> is concrete; <em>"P1: the interesting ones, P2: the others"</em> is not. If the grouping cannot be named cleanly in three words, it has not been chosen yet.
+      </div>
+    </div>
+
+    <div class="decision-row">
+      <div class="decision-key">Pitfall 5</div>
+      <div>
+        <strong>Altering the data.</strong>
+        Adding percentages together, converting awkward percentages into "approximately a third", or splitting a column to invent sub-totals all create extra checking work for the examiner. The scratchpad should hold the data as the chart presents it.
+      </div>
+    </div>
+
+    <div class="decision-row">
+      <div class="decision-key">Pitfall 6</div>
+      <div>
+        <strong>(Computer test only) Returning to the screen too often.</strong>
+        The scratchpad's purpose is to capture everything the writing needs, so that the screen becomes a reference rather than the source of every sentence. A well-built scratchpad is consulted constantly while writing; the chart on screen, only occasionally.
+      </div>
+    </div>
+
+    <div class="decision-row">
+      <div class="decision-key">Pitfall 7</div>
+      <div>
+        <strong>Forgetting the synthesis note in mixed-chart tasks.</strong>
+        Without it, the answer becomes two separate single-chart answers stitched together, with no overview that actually overviews. The synthesis note is short (two or three lines) but it is what raises a mixed-task overview from Band 6 to Band 7+.
+      </div>
+    </div>
+
+    <h2 id="process"><span class="type-num">06.</span> The Whole Process in One Page</h2>
+
+    <div class="callout note">
+      <div class="callout-label">From planning to writing</div>
+      <p style="margin: 0;">By the time the scratchpad is complete, the introduction is half-written (Step 1 contains every component of it), the overview is half-written (the flags from Step 2 are its ingredients), and the body structure is fully decided (Step 3 names the two paragraphs and which categories go in each). The writing stage is then a matter of converting structured planning into prose, rather than thinking and writing at the same time.</p>
+    </div>
+
+    <div class="callout tip">
+      <div class="callout-label">A note on chart variants the test might throw</div>
+      <p style="margin: 0;">Variants beyond the five core types (stacked column charts, horizontal bar charts, area charts) all reduce to one of the cases above. A horizontal bar chart is structurally a bar chart with the axes rotated; the scratchpad is identical. An area chart is structurally a line chart with the area below each line filled; the scratchpad is identical. When something unfamiliar appears, ask which of the five it most resembles, and use that scratchpad.</p>
+    </div>
+
+    <p style="text-align: center; margin-top: 40px; color: var(--text-muted); font-size: 0.85rem;">
+      Companion document to <em>From Graph to Final Sentence: A Step-by-Step Framework</em>.<br>
+      Focus: planning phase, chart tasks only, computer-based test.
+    </p>
+
+  </main>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Task 1 - Process & Map Scratchpad Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Fonts */
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', Consolas, monospace;
+
+    /* Base Colors */
+    --bg-page: #fafaf7;
+    --bg-card: #ffffff;
+    --text-main: #1a1a1a;
+    --text-muted: #555555;
+    --border-color: #d8d4c8;
+    
+    /* UI Accent Colors */
+    --accent-primary: #2a5a78;
+    --accent-hover: #1d4056;
+
+    /* Semantic Callout Colors */
+    --box-example-bg: #eef3f7;
+    --box-example-border: #7ca0c0;
+    
+    --box-note-bg: #fdf6e3;
+    --box-note-border: #d4a05d;
+    
+    --box-tip-bg: #e9efe9;
+    --box-tip-border: #3d6e3e;
+    
+    --box-warning-bg: #fcf3e3;
+    --box-warning-border: #b3372a;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.7;
+    font-size: 17px; 
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Structural Layout */
+  .layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* Sidebar Navigation */
+  nav.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 2.5rem 1.75rem;
+    border-right: 1px solid var(--border-color);
+    background: var(--bg-page);
+  }
+
+  .nav-title {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-main);
+    letter-spacing: -0.01em;
+  }
+
+  .nav-sub {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 2rem;
+  }
+
+  .nav-group-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  nav.sidebar a {
+    display: block;
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 0.4rem 0 0.4rem 0.85rem;
+    border-left: 3px solid transparent;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    border-radius: 0 4px 4px 0;
+  }
+
+  nav.sidebar a:hover {
+    border-left-color: var(--accent-primary);
+    background: var(--box-example-bg);
+    color: var(--accent-hover);
+  }
+
+  /* Main Content Area */
+  main {
+    padding: 3.5rem 4rem 6rem;
+    max-width: 900px;
+  }
+
+  /* Headings */
+  h1 {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 4rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: baseline;
+  }
+
+  h2 .type-num {
+    color: var(--accent-primary);
+    margin-right: 0.5rem;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 2.5rem 0 0.75rem 0;
+    color: var(--accent-primary);
+  }
+
+  h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 1.5rem 0 0.5rem 0;
+    color: var(--text-muted);
+  }
+
+  p { margin: 0.8rem 0; }
+  ul, ol { padding-left: 1.5rem; margin: 0.8rem 0; }
+  li { margin-bottom: 0.4rem; }
+
+  /* Callout Boxes */
+  .callout {
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  }
+
+  .callout-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .callout.example { background: var(--box-example-bg); border-left: 4px solid var(--box-example-border); }
+  .callout.example .callout-label { color: var(--accent-primary); }
+  .callout.note { background: var(--box-note-bg); border-left: 4px solid var(--box-note-border); }
+  .callout.note .callout-label { color: #8a5a1f; }
+  .callout.tip { background: var(--box-tip-bg); border-left: 4px solid var(--box-tip-border); }
+  .callout.tip .callout-label { color: var(--box-tip-border); }
+  .callout.warning { background: var(--box-warning-bg); border-left: 4px solid var(--box-warning-border); }
+  .callout.warning .callout-label { color: var(--box-warning-border); }
+
+  /* Tags & Chips */
+  .tag {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--accent-primary);
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    border-radius: 3px;
+    vertical-align: middle;
+  }
+  .tag.muted { background: var(--text-muted); }
+
+  .chip-group { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0 1.5rem 0; }
+
+  code {
+    font-family: var(--font-mono);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    font-size: 0.85em;
+    background: #ebe8de;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    background: var(--bg-card);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px var(--border-color);
+  }
+  th, td { padding: 0.75rem 1rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border-color); }
+  th {
+    background: var(--bg-page); font-weight: 600; color: var(--text-muted);
+    font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+
+  /* Subtype Grid */
+  .subtype-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 1.5rem 0 2rem; }
+  .subtype-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 6px; padding: 1.25rem; font-size: 0.9rem; line-height: 1.55; box-shadow: 0 1px 3px rgba(0,0,0,0.02); }
+  .subtype-tag { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent-primary); display: block; margin-bottom: 5px; }
+  .subtype-name { font-family: var(--font-sans); font-size: 1.05rem; font-weight: 600; color: var(--text-main); display: block; margin-bottom: 6px; }
+  .subtype-ref { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); margin-top: 8px; display: block; border-top: 1px dashed var(--border-color); padding-top: 8px; }
+
+  /* Step Markers */
+  .step-marker { display: flex; align-items: center; gap: 14px; margin: 2rem 0 1rem; }
+  .step-num { width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: #fff; flex-shrink: 0; background: var(--accent-primary); }
+  .step-title-inline { font-family: var(--font-sans); font-size: 1.1rem; font-weight: 600; color: var(--text-main); }
+  .step-time { font-family: var(--font-mono); font-size: 0.8rem; font-weight: 400; color: var(--text-muted); margin-left: 8px; }
+
+  /* Notepad Styles */
+  .notepad { background: var(--bg-card); border: 1px dashed var(--border-color); border-radius: 6px; padding: 1.5rem; margin: 1.5rem 0; font-size: 0.95rem; }
+  .notepad-title { font-family: var(--font-sans); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color); }
+  .np-section { margin-bottom: 1.5rem; }
+  .np-section:last-child { margin-bottom: 0; }
+  
+  .np-label { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.6rem; display: inline-block; padding: 0.2em 0.6em; border-radius: 3px; }
+  .np-label.s1 { background: var(--box-example-bg); color: var(--accent-primary); }
+  .np-label.s2 { background: var(--box-note-bg); color: #8a5a1f; }
+  .np-label.s3 { background: var(--box-tip-bg); color: var(--box-tip-border); }
+  
+  .np-strip { font-family: var(--font-mono); font-size: 0.85rem; padding: 8px 10px; background: var(--bg-page); border-radius: 4px; border: 1px solid var(--border-color); }
+  .np-strip span { color: var(--text-muted); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  .np-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .np-group { background: var(--bg-page); border: 1px solid var(--border-color); border-radius: 6px; padding: 12px 14px; font-size: 0.9rem; }
+  .np-group-label { font-family: var(--font-sans); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; display: block; margin-bottom: 6px; color: var(--accent-primary); }
+
+  /* Flags */
+  .flag-star, .flag-add { color: var(--box-tip-border); font-weight: 700; }
+  .flag-rm, .flag-bang { color: var(--box-warning-border); font-weight: 700; }
+  .flag-keep { color: var(--text-muted); font-weight: 700; }
+  .flag-change { color: var(--accent-primary); font-weight: 700; }
+  .flag-form { color: var(--box-note-border); font-weight: 700; }
+
+  /* Pitfall Rows */
+  .decision-row { display: grid; grid-template-columns: 110px 1fr; gap: 14px; align-items: start; padding: 1rem 0; border-bottom: 1px solid var(--border-color); font-size: 0.95rem; }
+  .decision-row:last-child { border: none; }
+  .decision-key { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
+
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; }
+    nav.sidebar { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--border-color); padding: 1.5rem; }
+    main { padding: 2rem 1.5rem 4rem; }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.4rem; margin-top: 3rem; }
+    .np-groups { grid-template-columns: 1fr; }
+  }
+  @media print {
+    body { max-width: none; padding: 0; font-size: 14px; }
+    .layout { display: block; }
+    nav.sidebar { display: none; }
+    main { max-width: 100%; padding: 2rem; }
+    .notepad, table { page-break-inside: avoid; }
+    h2 { page-break-before: always; }
+  }
+</style>
+</head>
+<body>
+
+<div class="layout">
+  <nav class="sidebar">
+    <div class="nav-title">IELTS Task 1</div>
+    <div class="nav-sub">Process & Map Guide</div>
+
+    <div class="nav-group-label">Foundations</div>
+    <a href="#why-guide">01. Why this guide exists</a>
+
+    <div class="nav-group-label">Task Types</div>
+    <a href="#process-tasks">02. Process Tasks</a>
+    <a href="#process-sugar" style="padding-left: 1.5rem; font-size: 0.85rem;">Example: Sugar</a>
+    <a href="#process-cocoa" style="padding-left: 1.5rem; font-size: 0.85rem;">Example: Cocoa</a>
+
+    <a href="#map-tasks">03. Map & Plan Tasks</a>
+    <a href="#map-court" style="padding-left: 1.5rem; font-size: 0.85rem;">Example: Sports Court</a>
+    <a href="#map-conference" style="padding-left: 1.5rem; font-size: 0.85rem;">Example: Conference Centre</a>
+
+    <div class="nav-group-label">Wrap-up</div>
+    <a href="#cheat-sheet">04. Side-by-side Cheat Sheet</a>
+    <a href="#pitfalls">05. Common Pitfalls</a>
+  </nav>
+
+  <main>
+    <header>
+      <div class="tag muted" style="margin-bottom: 1.25rem;">IELTS Academic · Writing Task 1 · Planning Phase Guide</div>
+      <h1>The Scratchpad, Adapted:<br>Process & Map Tasks</h1>
+      <p class="subtitle">A focused planning guide for the two Task 1 question types that break the chart rulebook. Covers every sub-type in the project and walks through the scratchpad on four worked examples.</p>
+      <div class="chip-group">
+        <span class="tag">Part A - Process tasks</span>
+        <span class="tag">Part B - Map tasks</span>
+        <span class="tag">Side-by-side cheat sheet</span>
+        <span class="tag">Computer-based test</span>
+      </div>
+    </header>
+
+    <h2 id="why-guide"><span class="type-num">01.</span> Why this guide exists</h2>
+
+    <p>The three-step pre-writing framework holds for every Task 1 question. Notice details, identify key features, group logically, all inside three minutes. What changes between question types is the <em>substance</em> of each step.</p>
+
+    <p>For a line graph, Step 2 means listing trends. For a process, Step 2 means grouping steps into stages. For a map, Step 2 means cataloguing what has been added, removed, kept, or replaced. The scratchpad architecture is the same; the columns and the questions are not.</p>
+
+    <p>This guide assumes familiarity with the chart-based scratchpad from the main guide. It covers only what changes for process and map tasks.</p>
+
+    <div class="callout note">
+      <div class="callout-label">Key Idea</div>
+      <p style="margin: 0;">Process tasks call for <strong>stages</strong>, the way a chart task calls for trends. Map tasks call for an inventory of <strong>changes</strong>, the way a chart task calls for data points. Bring chart-based instincts to either and the answer drifts into list-mode, which caps the Task Achievement score at Band 5 or 6.</p>
+    </div>
+
+    <h3>The shared 3-minute budget</h3>
+    <p>Timing is identical across all task types. Allow 30 seconds for Step 1, around two minutes for Steps 2 and 3 combined, then start writing. The substance changes; the clock does not.</p>
+
+    <div class="callout tip">
+      <div class="callout-label">Computer-based scratch surface</div>
+      <p style="margin: 0;">Whether the test centre gives you a laminated whiteboard, paper, or an on-screen notepad, the layout in this guide works on all three. Write a one-line strip across the top (Step 1), a compact table below it (Step 2), and a two-line paragraph plan at the bottom (Step 3).</p>
+    </div>
+
+    <h2 id="process-tasks"><span class="type-num">02.</span> Process Tasks</h2>
+    <p class="subtitle">Group steps into stages · passive voice common · avoid first/then/finally chains</p>
+
+    <p>A process task shows a sequence: how something is made, how something occurs in nature, or how something works. The task statement usually uses words like <em>diagram</em>, <em>process</em>, <em>stages</em>, <em>life cycle</em>, <em>manufacture</em>, or <em>produce</em>. The scratchpad's job is to convert a busy diagram into a small number of grouped stages that drive the body paragraphs.</p>
+
+    <h3>Sub-types you will encounter</h3>
+    <p>The project contains eleven process tasks (img 0060 through 0070). They fall into six recognisable patterns, and the scratchpad adapts slightly to each.</p>
+
+    <div class="subtype-grid">
+      <div class="subtype-card">
+        <span class="subtype-tag">Type 1</span>
+        <span class="subtype-name">Linear manufacturing</span>
+        Single chain from raw material to product, possibly with one branch.
+        <span class="subtype-ref">Sugar (0068) · Instant noodles (0067) · Smoked fish (0061) · Canned fruits (0062)</span>
+      </div>
+      <div class="subtype-card">
+        <span class="subtype-tag">Type 2</span>
+        <span class="subtype-name">Branching outputs</span>
+        One process splits into two or more final products.
+        <span class="subtype-ref">Cocoa beans (0066) · Pulp & paper (0060)</span>
+      </div>
+      <div class="subtype-card">
+        <span class="subtype-tag">Type 3</span>
+        <span class="subtype-name">Natural cycle</span>
+        A continuous loop with no fixed start or end.
+        <span class="subtype-ref">Carbon cycle (0069)</span>
+      </div>
+      <div class="subtype-card">
+        <span class="subtype-tag">Type 4</span>
+        <span class="subtype-name">Natural progression</span>
+        A natural phenomenon shown in successive stages.
+        <span class="subtype-ref">Sand dune formation (0064)</span>
+      </div>
+      <div class="subtype-card">
+        <span class="subtype-tag">Type 5</span>
+        <span class="subtype-name">Parallel comparison</span>
+        Two or more separate processes compared side by side.
+        <span class="subtype-ref">Recruitment, three companies (0065)</span>
+      </div>
+      <div class="subtype-card">
+        <span class="subtype-tag">Type 6</span>
+        <span class="subtype-name">Structural-functional</span>
+        A static device shown with arrows indicating how it works.
+        <span class="subtype-ref">Water filter (0063) · Glass recycling (0070)</span>
+      </div>
+    </div>
+
+    <div class="callout tip">
+      <div class="callout-label">Identify the sub-type first</div>
+      <p style="margin: 0;">The sub-type determines how you group stages in Step 3. A linear process gives two stages of unequal size. A branching process needs the branch point named as a separator. A parallel comparison needs one paragraph per process, with comparisons made explicit. Take 5 seconds to classify before starting the scratchpad.</p>
+    </div>
+
+    <div class="step-marker">
+      <div class="step-num">1</div>
+      <div class="step-title-inline">Noticing details - the process details strip <span class="step-time">~30 seconds</span></div>
+    </div>
+
+    <p>Read the diagram's metadata before tracing any arrow. The strip captures the introduction sentence and the overview-level facts in one line.</p>
+
+    <h4>What to capture</h4>
+    <ul>
+      <li><strong>Process type:</strong> mechanical, manual, natural, or mixed. This shapes the overview.</li>
+      <li><strong>Number of steps:</strong> count the labelled boxes or icons.</li>
+      <li><strong>Where it happens:</strong> factory, field, natural environment, or multiple locations.</li>
+      <li><strong>Raw material to final product:</strong> trace what enters at the start and what comes out at the end. Note any intermediate forms (plant, juice, syrup, sugar).</li>
+      <li><strong>Time markers:</strong> rare, but a number like "12 to 18 months" is a key feature.</li>
+      <li><strong>Branches or merges:</strong> circle the arrow split or the inputs that combine.</li>
+      <li><strong>Label conventions:</strong> most labels use the <em>-ing</em> form (growing, harvesting). A noun label (centrifuge, evaporator) names a device; it has no verb form.</li>
+    </ul>
+
+    <div class="callout example">
+      <div class="callout-label">Computer-based adaptation - details strip</div>
+      Write one compact line across the top of your scratch surface:<br><br>
+      <code>Type | N steps | Where | Raw &rarr; Final | Time | Branches?</code><br><br>
+      Everything needed for the introduction and the overview is now off-screen and in your notes.
+    </div>
+
+    <div class="step-marker">
+      <div class="step-num">2</div>
+      <div class="step-title-inline">Identifying key features - the stage table <span class="step-time">~90 seconds</span></div>
+    </div>
+
+    <p>This is where the rookie error appears most often: treating every step as a key feature, then producing a flat list. A step is one part of the process. A stage is broader and groups several steps. The body paragraphs follow stages.</p>
+
+    <h4>How to group steps into stages</h4>
+    <p>Three signals tend to mark a stage boundary:</p>
+    <ul>
+      <li><strong>Change in form.</strong> When the material's physical state changes (solid to liquid, raw to processed, plant to juice), a new stage typically begins.</li>
+      <li><strong>Change in location.</strong> From field to factory, from sea to port, from outdoor to packaging line.</li>
+      <li><strong>Change in agent.</strong> A shift from manual to mechanical, or from human-driven to automated.</li>
+      <li><strong>Explicit labelling.</strong> If the diagram already names "Stage 1, Stage 2, Stage 3" (as in cocoa beans 0066 or glass recycling 0070), the work is done for you.</li>
+    </ul>
+
+    <h4>The umbrella term column</h4>
+    <p>Each stage needs a single noun phrase that covers all its steps. The overview should use these umbrella terms rather than the specific step labels. Common umbrella terms include <em>farming</em>, <em>harvesting</em>, <em>processing</em>, <em>refining</em>, <em>packaging</em>, <em>distribution</em>. The skill is choosing one that fits without sounding generic.</p>
+
+    <div class="callout note">
+      <div class="callout-label">Key Idea</div>
+      <p style="margin: 0;">Treating the first and last steps as a "trend" produces the most common Band 5 process overview: "<em>The process starts with farming and ends with dry sugar.</em>" That sentence skips everything in between. The overview must summarise the <strong>stages</strong> rather than the endpoints.</p>
+    </div>
+
+    <h4>Flags to mark</h4>
+    <table>
+      <thead>
+        <tr><th>Symbol</th><th>Use</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="flag-form">&#9733;</span></td><td>Form-change point (plant becomes liquid, juice becomes syrup)</td></tr>
+        <tr><td><span class="flag-change">&#10550;</span></td><td>Branch or merge point</td></tr>
+        <tr><td><span class="flag-bang">!</span></td><td>Unusual feature (two methods shown for one step, time given for one step only)</td></tr>
+        <tr><td><span class="flag-keep">&#8773;</span></td><td>Similar to a previous step (worth a comparison)</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout example">
+      <div class="callout-label">Computer-based adaptation - stage table</div>
+      <p style="margin: 0;">Write a four-column table: step number, label, what happens (3-5 words), stage. Fill it in by following the arrows on screen, jotting on your scratchpad, and looking back. The table need not be neat; rough labels and flags are enough.</p>
+    </div>
+
+    <div class="step-marker">
+      <div class="step-num">3</div>
+      <div class="step-title-inline">Grouping - the paragraph plan <span class="step-time">~30 seconds</span></div>
+    </div>
+
+    <p>The default is one paragraph per stage. For a process with two clear stages, this gives two body paragraphs of roughly equal length. For three stages, decide whether to give each its own paragraph or to combine two shorter ones.</p>
+
+    <h4>Plan format</h4>
+    <p>Below the stage table, write two or three short lines:</p>
+    <ul>
+      <li><code>P1: [stage name], steps [1, 2, ...]</code></li>
+      <li><code>P2: [stage name], steps [N, N+1, ...]</code></li>
+      <li><code>Compare: [any comparisons available]</code></li>
+    </ul>
+
+    <h4>What to avoid</h4>
+    <ul>
+      <li><strong>Sentence-opener templates.</strong> Starting every sentence with "First, ... Then, ... Next, ... Finally, ..." reads as mechanical and signals Band 6. Vary openers using time clauses (<em>Once the crop has been harvested</em>) and reduced relative clauses (<em>The juice is passed through a filter, purifying it</em>).</li>
+      <li><strong>Listing every step in the overview.</strong> The overview names the stages, never the steps.</li>
+      <li><strong>Copying diagram labels verbatim.</strong> The diagram says "Growing"; the answer says "The sugar cane is grown" or "The crop takes 12 to 18 months to grow."</li>
+    </ul>
+
+    <div class="callout warning">
+      <div class="callout-label">Verb pattern check</div>
+      <p style="margin: 0;">Process tasks lean heavily on the passive (<em>The juice is extracted</em>, <em>The plants are crushed</em>). Note in your scratchpad which verbs work passively. Intransitive verbs (fall, appear, become, arrive) cannot be made passive and need a transitive alternative (<em>drop</em>, <em>emerge</em>).</p>
+    </div>
+
+    <h3 id="process-sugar">Worked example 1: Sugar from sugar cane (img 0068)</h3>
+    <div class="callout example">
+      <div class="callout-label">Task</div>
+      <p style="margin: 0;">The diagram below shows the manufacturing process for making sugar from sugar cane. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</p>
+    </div>
+
+    <h4>What the diagram shows</h4>
+    <p>Seven numbered steps: growing (12 to 18 months), harvesting (two methods shown, by machine or by hand), crushing, purifying juice through a limestone filter, an evaporator that turns juice into syrup, a centrifuge that separates sugar crystals from syrup, and finally drying and cooling.</p>
+
+    <div class="notepad">
+      <div class="notepad-title">Scratch notepad - sugar from sugar cane</div>
+
+      <div class="np-section">
+        <span class="np-label s1">Step 1 - Details strip</span>
+        <div class="np-strip">
+          <span>Type:</span> mechanical (mostly) &nbsp;|&nbsp;
+          <span>Steps:</span> 7 &nbsp;|&nbsp;
+          <span>Where:</span> field &rarr; factory &nbsp;|&nbsp;
+          <span>Material:</span> sugar cane &rarr; juice &rarr; syrup &rarr; sugar &nbsp;|&nbsp;
+          <span>Time:</span> 12-18 months (step 1 only) &nbsp;|&nbsp;
+          <span>Branch:</span> harvesting (2 methods)
+        </div>
+      </div>
+
+      <div class="np-section">
+        <span class="np-label s2">Step 2 - Stage table</span>
+        <table>
+          <thead>
+            <tr><th>Step</th><th>Label</th><th>What happens</th><th>Stage</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Growing</td><td>cane grown, 12-18 months <span class="flag-bang">!</span></td><td>1 (farming)</td></tr>
+            <tr><td>2</td><td>Harvesting</td><td>two methods: machine or hand <span class="flag-bang">!</span></td><td>1 (farming)</td></tr>
+            <tr><td>3</td><td>Crushing</td><td>juice extracted <span class="flag-form">&#9733; plant &rarr; liquid</span></td><td>2 (processing)</td></tr>
+            <tr><td>4</td><td>Purifying</td><td>juice through limestone filter</td><td>2 (processing)</td></tr>
+            <tr><td>5</td><td>Evaporator</td><td>juice becomes syrup <span class="flag-form">&#9733; liquid &rarr; syrup</span></td><td>2 (processing)</td></tr>
+            <tr><td>6</td><td>Centrifuge</td><td>separates sugar crystals from syrup <span class="flag-form">&#9733; syrup &rarr; crystals</span></td><td>2 (processing)</td></tr>
+            <tr><td>7</td><td>Drying &amp; cooling</td><td>final product</td><td>2 (processing)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="np-section">
+        <span class="np-label s3">Step 3 - Paragraph plan</span>
+        <div class="np-groups">
+          <div class="np-group">
+            <span class="np-group-label">P1 - Farming (steps 1-2)</span>
+            Cane grown 12-18 months, then harvested. Two methods: mechanical (specialist machinery) vs manual (labour-intensive).
+          </div>
+          <div class="np-group">
+            <span class="np-group-label">P2 - Processing (steps 3-7)</span>
+            Five mechanical steps converting plant to sugar via three form-changes. All factory-based, all passive verbs.
+          </div>
+        </div>
+        <div style="margin-top:10px;color:var(--text-muted);font-size:0.85rem">
+          Comparisons: harvesting methods (mechanical vs manual); stage length (stage 1 longest, by far).<br>
+          Overview captures: type (mechanical), 2 main stages (farming + processing), 3 form-changes, locations (field then factory).
+        </div>
+      </div>
+    </div>
+
+    <div class="callout tip">
+      <div class="callout-label">Why this plan works</div>
+      <p style="margin: 0;">The two stages are uneven (2 steps vs 5 steps), and that is fine. P1 stays short because farming is short; P2 carries the bulk of the description because processing is where the form-changes happen. The body paragraphs mirror the diagram's natural rhythm rather than fighting it.</p>
+    </div>
+
+    <h3 id="process-cocoa">Worked example 2: Cocoa beans, branching variant (img 0066)</h3>
+    <div class="callout example">
+      <div class="callout-label">Task</div>
+      <p style="margin: 0;">The diagram shows the stages of processing cocoa beans. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</p>
+    </div>
+
+    <h4>What the diagram shows</h4>
+    <p>The diagram already names three stages explicitly. Stage 1 covers picking, removing shells, and drying whole beans. After pressing, the process branches: one path goes to further pressing, producing cocoa cake which is then ground into cocoa powder or cocoa liquor for industry. The other path adds sugar in further refining to produce industrial chocolate, which becomes finished chocolate products for consumers. The branch is the structural feature of the task.</p>
+
+    <div class="notepad">
+      <div class="notepad-title">Scratch notepad - cocoa beans processing</div>
+
+      <div class="np-section">
+        <span class="np-label s1">Step 1 - Details strip</span>
+        <div class="np-strip">
+          <span>Type:</span> mechanical (mostly) &nbsp;|&nbsp;
+          <span>Stages:</span> 3 (labelled in diagram) &nbsp;|&nbsp;
+          <span>Where:</span> processing plant &nbsp;|&nbsp;
+          <span>Material:</span> beans &rarr; <em>two final products</em> &nbsp;|&nbsp;
+          <span>Branch:</span> at pressing <span class="flag-change">&#10550;</span> two parallel paths
+        </div>
+      </div>
+
+      <div class="np-section">
+        <span class="np-label s2">Step 2 - Stage table</span>
+        <table>
+          <thead>
+            <tr><th>Stage</th><th>Steps</th><th>Outputs</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Picking, shelling, drying</td><td>dried whole beans</td><td>Linear; shells removed as by-product</td></tr>
+            <tr><td>2A</td><td>Further pressing &rarr; cocoa cake &rarr; grinding</td><td>cocoa powder (consumer); cocoa liquor (industry)</td><td>Branch path A <span class="flag-change">&#10550;</span></td></tr>
+            <tr><td>2B</td><td>Further refining (+ sugar) &rarr; industrial chocolate &rarr; final processing</td><td>finished chocolate products (consumer)</td><td>Branch path B <span class="flag-change">&#10550;</span>; only stage where sugar enters</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="np-section">
+        <span class="np-label s3">Step 3 - Paragraph plan</span>
+        <div class="np-groups">
+          <div class="np-group">
+            <span class="np-group-label">P1 - Stage 1 (initial preparation)</span>
+            Beans picked, shells removed, dried. Single linear path. Output: whole beans ready for pressing.
+          </div>
+          <div class="np-group">
+            <span class="np-group-label">P2 - Stages 2-3 (the branch)</span>
+            Pressing splits into two paths. Path A (further pressing): cocoa cake, then ground into powder/liquor. Path B (further refining + sugar): industrial chocolate, then finished products. End users differ.
+          </div>
+        </div>
+        <div style="margin-top:10px;color:var(--text-muted);font-size:0.85rem">
+          Comparisons: the two branch outputs (powder/liquor for industry vs chocolate for consumers); sugar only enters path B.<br>
+          Overview captures: type (mechanical), 3 labelled stages, branching at pressing, two distinct end-products.
+        </div>
+      </div>
+    </div>
+
+    <div class="callout note">
+      <div class="callout-label">Branch handling</div>
+      <p style="margin: 0;">Where a process branches, name the branch point in the overview and devote space to comparing the two paths. The branch is what makes the task interesting, and the assessor expects to see the comparison made explicit. Phrases that work: <em>at this point the process diverges</em>; <em>one path leads to ..., the other to ...</em>; <em>whereas path A produces X, path B yields Y</em>.</p>
+    </div>
+
+    <h2 id="map-tasks"><span class="type-num">03.</span> Map & Plan Tasks</h2>
+    <p class="subtitle">Catalogue changes · passive past or future tense · before/after paragraphs</p>
+
+    <p>A map or plan task shows two or more views of the same place, normally before-and-after or present-and-future. The diagrams might depict an island, a building floor plan, a town across decades, or an airport pre- and post-redevelopment. The scratchpad's job is to convert a busy comparison into a small inventory of changes, grouped by domain.</p>
+
+    <h3>Sub-types you will encounter</h3>
+    <p>The project contains eleven map tasks (img 0071 through 0081). They cluster into five patterns based on time relationship and spatial scope.</p>
+
+    <div class="subtype-grid">
+      <div class="subtype-card">
+        <span class="subtype-tag">Type 1</span>
+        <span class="subtype-name">Past & present</span>
+        Two maps, with the second being "now". Simple past for the first, present perfect or simple present for the second.
+        <span class="subtype-ref">Sports court (0071) · Museum (0074) · Tourist destination (0075) · College campus (0077) · Library (0078)</span>
+      </div>
+      <div class="subtype-card">
+        <span class="subtype-tag">Type 2</span>
+        <span class="subtype-name">Present & future</span>
+        Two maps, with the second being the planned redevelopment. Future tense throughout the second paragraph (<em>will be</em>, <em>is going to be</em>).
+        <span class="subtype-ref">Conference centre (0081) · Airport (0076) · Community centre (0073, framed as past/present but tense logic is the same)</span>
+      </div>
+      <div class="subtype-card">
+        <span class="subtype-tag">Type 3</span>
+        <span class="subtype-name">Multi-period</span>
+        Three or more time points showing gradual development. Calls for narrative across paragraphs, with the largest changes flagged.
+        <span class="subtype-ref">Willington (0079) · Meadowside/Fonton (0072)</span>
+      </div>
+      <div class="subtype-card">
+        <span class="subtype-tag">Type 4</span>
+        <span class="subtype-name">Single planning map</span>
+        Only one map, showing a planned development. No before-state. Describe the proposed layout grouped by zone.
+        <span class="subtype-ref">Factory complex & housing (0080)</span>
+      </div>
+      <div class="subtype-card">
+        <span class="subtype-tag">Type 5</span>
+        <span class="subtype-name">Internal floor plan</span>
+        Same physical area, but the focus is fixtures and fittings inside a building. Vocabulary leans on furniture and facilities terms.
+        <span class="subtype-ref">Library (0078) · Community centre (0073) · Conference centre (0081)</span>
+      </div>
+    </div>
+
+    <div class="callout tip">
+      <div class="callout-label">Identify the tense logic first</div>
+      <p style="margin: 0;">Before noting a single change, look at the time labels. Past+present needs the simple past and present perfect. Present+future needs future tense throughout the second paragraph. Multi-period needs careful sequencing. Getting tense wrong is the single most common Band 5/6 mistake in this task type.</p>
+    </div>
+
+    <div class="step-marker">
+      <div class="step-num">1</div>
+      <div class="step-title-inline">Noticing details - the map details strip <span class="step-time">~30 seconds</span></div>
+    </div>
+
+    <p>The metadata for a map differs from a chart. There are no axes, no units, no categories in the chart sense. What replaces them is the spatial frame: dates, scale, compass, and the key.</p>
+
+    <h4>What to capture</h4>
+    <ul>
+      <li><strong>Place type:</strong> island, town, building floor, campus, airport. Determines vocabulary domain.</li>
+      <li><strong>Time labels:</strong> the dates or framing of each map ("1990 / Now", "Present / Future", "1962 / 1985 / 2000").</li>
+      <li><strong>Key:</strong> the box explaining symbols (footpaths, vehicle tracks, building types). Always check.</li>
+      <li><strong>Scale:</strong> if shown, note it for use when describing distances or sizes.</li>
+      <li><strong>Compass:</strong> if shown, available for large-area orientation. Use sparingly; do not append a compass point to every detail.</li>
+      <li><strong>Boundaries:</strong> natural features (river, sea, woods) and infrastructure (road, railway) often anchor the map.</li>
+    </ul>
+
+    <div class="callout example">
+      <div class="callout-label">Computer-based adaptation - details strip</div>
+      Write one compact line across the top of your scratch surface:<br><br>
+      <code>Place | Times | Key? | Scale? | Compass? | Boundaries</code><br><br>
+      The strip tells you which tense pair to use and which vocabulary set the answer will draw on.
+    </div>
+
+    <div class="callout warning">
+      <div class="callout-label">Common slip</div>
+      <p style="margin: 0;">Skipping the key wastes information the examiner expects you to use. If the key explains that a dotted line means a footpath, the answer should distinguish footpaths from roads. Symbols carry information you might otherwise miss.</p>
+    </div>
+
+    <div class="step-marker">
+      <div class="step-num">2</div>
+      <div class="step-title-inline">Identifying key features - the change inventory <span class="step-time">~90 seconds</span></div>
+    </div>
+
+    <p>The chart inventory asks: what went up, what went down? The map inventory asks: what was added, removed, kept, expanded, reduced, replaced, or repositioned? Each change type implies a specific verb form and a specific tense.</p>
+
+    <h4>The seven change types</h4>
+    <table>
+      <thead>
+        <tr><th>Change type</th><th>Symbol</th><th>Typical verb pattern</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Added</td><td><span class="flag-add">+ NEW</span></td><td>"<em>X has been built / added / constructed</em>" or "<em>X will be added</em>"</td></tr>
+        <tr><td>Removed</td><td><span class="flag-rm">&minus; GONE</span></td><td>"<em>X has been removed / demolished</em>" or "<em>X will be removed</em>"</td></tr>
+        <tr><td>Expanded / enlarged</td><td><span class="flag-change">&#8593; BIG</span></td><td>"<em>X has been extended / widened / lengthened</em>"</td></tr>
+        <tr><td>Reduced / shrunk</td><td><span class="flag-change">&#8595; SMALL</span></td><td>"<em>X has been reduced / narrowed / shortened</em>"</td></tr>
+        <tr><td>Replaced</td><td><span class="flag-change">&#8635; REPL</span></td><td>"<em>X has been replaced by Y</em>" or "<em>Y has been built where X used to be</em>"</td></tr>
+        <tr><td>Repositioned</td><td><span class="flag-change">&#8644; MOVE</span></td><td>"<em>X has been moved / relocated</em>"</td></tr>
+        <tr><td>Retained</td><td><span class="flag-keep">= KEEP</span></td><td>"<em>X remains / has been retained / is still in place</em>"</td></tr>
+      </tbody>
+    </table>
+
+    <h4>The umbrella term column</h4>
+    <p>Each change belongs to a vocabulary domain. The standard umbrella terms for map tasks fall into a small number of categories:</p>
+    <ul>
+      <li><strong>Accommodation:</strong> housing, blocks of flats, huts, dormitories</li>
+      <li><strong>Amenities:</strong> reception, restaurants, cafes, shops, toilets</li>
+      <li><strong>Leisure facilities:</strong> pools, gyms, sports courts, dance studios</li>
+      <li><strong>Access / transport:</strong> roads, footpaths, vehicle tracks, piers, car parks, stations</li>
+      <li><strong>Natural features:</strong> trees, vegetation, beach, river, gardens, parks</li>
+      <li><strong>Infrastructure:</strong> bridges, power lines, sewerage</li>
+      <li><strong>Internal layout (for floor plans):</strong> meeting rooms, halls, offices, storage, kitchens</li>
+    </ul>
+
+    <div class="callout note">
+      <div class="callout-label">Key Idea</div>
+      <p style="margin: 0;">The umbrella term is what the overview uses. Writing "<em>several new sports facilities have been added</em>" is overview-level. Writing "<em>a leisure pool, two dance studios, and a gym have been added</em>" is body-paragraph level. Choose the umbrella term in Step 2 so that the overview almost writes itself in Step 3.</p>
+    </div>
+
+    <div class="callout example">
+      <div class="callout-label">Computer-based adaptation - change inventory</div>
+      <p style="margin: 0;">Write a four-column table: feature, Time 1 state, Time 2 state, change type. Add a fifth column for the umbrella group if there is room. This is the densest part of the scratchpad and the one to spend the most time on.</p>
+    </div>
+
+    <div class="step-marker">
+      <div class="step-num">3</div>
+      <div class="step-title-inline">Grouping - the paragraph plan <span class="step-time">~30 seconds</span></div>
+    </div>
+
+    <p>The default is two paragraphs, organised by time. The first paragraph describes the before-state (shorter, since the focus is on what changed). The second describes the after-state, with the changes themselves highlighted (longer, since this is where the task is scored).</p>
+
+    <h4>Paragraph plan formats</h4>
+    <p>Three groupings tend to work well, depending on the task:</p>
+    <ol>
+      <li><strong>Before / after.</strong> The classic, and the one to default to. Works for past-present and present-future maps.</li>
+      <li><strong>Indoor / outdoor.</strong> Useful when the changes split naturally along that boundary (sports centre with internal and external facilities, museum with interior arrangement and surrounding grounds).</li>
+      <li><strong>Retained / changed.</strong> Useful when several features stay the same and the rest are transformed. P1 covers what is unchanged, P2 covers what has been altered.</li>
+    </ol>
+
+    <h4>What to avoid</h4>
+    <ul>
+      <li><strong>Compass-based grouping.</strong> Dividing the map into north, south, east, and west and writing one paragraph on each produces a flat list. The reader cannot tell what changed.</li>
+      <li><strong>Describing each map separately.</strong> "<em>The first map shows... The second map shows...</em>" reads as two disconnected descriptions and undermines the comparison task.</li>
+      <li><strong>Naming every location precisely.</strong> "<em>X is to the left of Y, which is on the east side of Z</em>" is the symptom. Mention location when it matters (a feature has moved, the building has expanded in a specific direction), and otherwise leave it.</li>
+      <li><strong>Personal opinion or evaluation.</strong> Adjectives like <em>beautiful</em>, <em>impressive</em>, <em>modern</em>, <em>well-developed</em> introduce subjectivity and reduce the Task Achievement score.</li>
+    </ul>
+
+    <div class="callout warning">
+      <div class="callout-label">The tense question</div>
+      <p style="margin: 0;">In map tasks, the wrong tense in the wrong paragraph is a Grammatical Range and Accuracy red flag. Ask the four questions in Step 2: <em>What did it look like before? What has changed? What has been added? What has stayed the same?</em> The variety in the questions produces variety in the verbs.</p>
+    </div>
+
+    <h3 id="map-court">Worked example 1: University sports court, 1990 vs Now (img 0071)</h3>
+    <div class="callout example">
+      <div class="callout-label">Task</div>
+      <p style="margin: 0;">The two maps below give information about the facilities of a university sports court in 1990 and the present. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</p>
+    </div>
+
+    <h4>What the maps show</h4>
+    <p>In 1990, the site is largely outdoor: an outdoor pool, a separate small cafe, a small changing room, a park area with many trees, and a small car park. By the present, the layout has changed dramatically. A single indoor building now contains a fitness centre, indoor pool, changing room, cafe, and reception. Outside the building, there are tennis courts and a basketball court. The park and the car park are gone.</p>
+
+    <div class="notepad">
+      <div class="notepad-title">Scratch notepad - sports court 1990 vs now</div>
+
+      <div class="np-section">
+        <span class="np-label s1">Step 1 - Details strip</span>
+        <div class="np-strip">
+          <span>Place:</span> university sports court &nbsp;|&nbsp;
+          <span>Times:</span> 1990 vs Now (past-present) &nbsp;|&nbsp;
+          <span>Key:</span> no &nbsp;|&nbsp;
+          <span>Scale:</span> no &nbsp;|&nbsp;
+          <span>Compass:</span> no &nbsp;|&nbsp;
+          <span>Boundary:</span> implied site boundary
+        </div>
+      </div>
+
+      <div class="np-section">
+        <span class="np-label s2">Step 2 - Change inventory</span>
+        <table>
+          <thead>
+            <tr><th>Feature</th><th>1990</th><th>Now</th><th>Change</th><th>Group</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Pool</td><td>Outdoor</td><td>Indoor (in building)</td><td><span class="flag-change">&#8635; replaced / relocated</span> <span class="flag-form">&#9733;</span></td><td>leisure</td></tr>
+            <tr><td>Cafe</td><td>Outdoor, small, separate</td><td>Inside, in building</td><td><span class="flag-change">&#8644; moved</span></td><td>amenities</td></tr>
+            <tr><td>Changing room</td><td>Outdoor, small, separate</td><td>Inside, in building</td><td><span class="flag-change">&#8644; moved</span></td><td>amenities</td></tr>
+            <tr><td>Fitness centre</td><td>(none)</td><td>Yes, inside building</td><td><span class="flag-add">+ added</span></td><td>leisure</td></tr>
+            <tr><td>Reception</td><td>(none)</td><td>Yes, inside building</td><td><span class="flag-add">+ added</span></td><td>amenities</td></tr>
+            <tr><td>Tennis courts (4)</td><td>(none)</td><td>Outside</td><td><span class="flag-add">+ added</span></td><td>leisure</td></tr>
+            <tr><td>Basketball court</td><td>(none)</td><td>Outside</td><td><span class="flag-add">+ added</span></td><td>leisure</td></tr>
+            <tr><td>Park / trees</td><td>Large, dominant</td><td>(none)</td><td><span class="flag-rm">&minus; removed</span> <span class="flag-form">&#9733;</span></td><td>natural</td></tr>
+            <tr><td>Car park</td><td>Small, present</td><td>(none)</td><td><span class="flag-rm">&minus; removed</span></td><td>access</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="np-section">
+        <span class="np-label s3">Step 3 - Paragraph plan</span>
+        <div class="np-groups">
+          <div class="np-group">
+            <span class="np-group-label">P1 - In 1990 (before)</span>
+            Largely outdoor site dominated by park and outdoor pool, with a small separate cafe and changing room. Compact car park.
+          </div>
+          <div class="np-group">
+            <span class="np-group-label">P2 - Today (after)</span>
+            Site transformed into a centralised indoor building (fitness centre, indoor pool, cafe, changing room, reception). Outside: courts replace the park. Car park gone.
+          </div>
+        </div>
+        <div style="margin-top:10px;color:var(--text-muted);font-size:0.85rem">
+          Overview captures: shift from outdoor-dominant to indoor-centralised layout, dramatic increase in sports facilities, loss of natural space (park) and parking.
+          <br>
+          Tense logic: P1 simple past (<em>there was an outdoor pool</em>). P2 mix of present perfect (<em>has been built, has been replaced</em>) and simple present (<em>the building contains, the courts occupy</em>).
+        </div>
+      </div>
+    </div>
+
+    <div class="callout tip">
+      <div class="callout-label">Why this plan works</div>
+      <p style="margin: 0;">The overview names the dominant transformation (outdoor to indoor) without listing facilities. The change inventory shows that one feature ★ the pool, drives the whole story: it moved indoors, and a building grew around it. The body paragraphs trace this through the umbrella terms (leisure, amenities, natural, access), avoiding a compass-based list.</p>
+    </div>
+
+    <h3 id="map-conference">Worked example 2: Conference centre, Present vs Future (img 0081)</h3>
+    <div class="callout example">
+      <div class="callout-label">Task</div>
+      <p style="margin: 0;">The maps below show a conference centre as it is now, and plans for its development. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</p>
+    </div>
+
+    <h4>What the maps show</h4>
+    <p>The present layout has two meeting rooms, a hall, gardens (on the far side of the road), a separate car park (also across the road, connected by paths over the road), a toilet, a reception, and a cafe. The future layout adds a third meeting room, a kitchen, and a fitting room. The cafe moves inside the building. The gardens and car park are repositioned to the right side of the building. The road remains as a boundary.</p>
+
+    <div class="notepad">
+      <div class="notepad-title">Scratch notepad - conference centre present vs future</div>
+
+      <div class="np-section">
+        <span class="np-label s1">Step 1 - Details strip</span>
+        <div class="np-strip">
+          <span>Place:</span> conference centre &nbsp;|&nbsp;
+          <span>Times:</span> Present vs Future (present-future) &nbsp;|&nbsp;
+          <span>Key:</span> no &nbsp;|&nbsp;
+          <span>Scale:</span> no &nbsp;|&nbsp;
+          <span>Compass:</span> no &nbsp;|&nbsp;
+          <span>Boundary:</span> road (stays)
+        </div>
+      </div>
+
+      <div class="np-section">
+        <span class="np-label s2">Step 2 - Change inventory</span>
+        <table>
+          <thead>
+            <tr><th>Feature</th><th>Present</th><th>Future</th><th>Change</th><th>Group</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Meeting rooms</td><td>2</td><td>3</td><td><span class="flag-add">+ one added</span></td><td>internal</td></tr>
+            <tr><td>Hall</td><td>Yes (large)</td><td>Yes (smaller, central)</td><td><span class="flag-change">&#8595; reduced</span></td><td>internal</td></tr>
+            <tr><td>Cafe</td><td>Outside line, by reception</td><td>Inside, top section</td><td><span class="flag-change">&#8644; moved indoors</span></td><td>amenities</td></tr>
+            <tr><td>Kitchen</td><td>(none)</td><td>Yes, beside cafe</td><td><span class="flag-add">+ added</span></td><td>amenities</td></tr>
+            <tr><td>Fitting room</td><td>(none)</td><td>Yes, by reception</td><td><span class="flag-add">+ added</span></td><td>amenities</td></tr>
+            <tr><td>Toilet, Reception</td><td>Present</td><td>Present (same area)</td><td><span class="flag-keep">= retained</span></td><td>amenities</td></tr>
+            <tr><td>Gardens</td><td>Across road, left of car park</td><td>Right of building (relocated)</td><td><span class="flag-change">&#8644; moved</span></td><td>natural</td></tr>
+            <tr><td>Car park</td><td>Across road</td><td>Right of building</td><td><span class="flag-change">&#8644; moved</span></td><td>access</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="np-section">
+        <span class="np-label s3">Step 3 - Paragraph plan</span>
+        <div class="np-groups">
+          <div class="np-group">
+            <span class="np-group-label">P1 - Present layout</span>
+            Two meeting rooms and a large hall make up most of the building, with toilet, reception, and cafe along the bottom edge. Gardens and car park sit across the road.
+          </div>
+          <div class="np-group">
+            <span class="np-group-label">P2 - Future changes</span>
+            A third meeting room will be added, the hall reduced. The cafe will move inside, and a new kitchen and fitting room will be added. Gardens and car park will be relocated to the right of the building, removing the need to cross the road.
+          </div>
+        </div>
+        <div style="margin-top:10px;color:var(--text-muted);font-size:0.85rem">
+          Overview captures: expansion of internal facilities (meeting rooms, kitchen, fitting room), consolidation of cafe indoors, repositioning of outdoor amenities to the same side as the building.<br>
+          Tense logic: P1 simple present (<em>the building contains</em>, <em>there are</em>). P2 future passive (<em>a third meeting room will be added</em>, <em>the cafe is going to be moved</em>).
+        </div>
+      </div>
+    </div>
+
+    <div class="callout note">
+      <div class="callout-label">Future-tense discipline</div>
+      <p style="margin: 0;">Map tasks with a planned future invite the future passive throughout the second paragraph: <em>will be added</em>, <em>will be extended</em>, <em>is going to be relocated</em>. Beware of <em>"is planned to be"</em>; the correct construction is <em>"is planned"</em> or simply <em>"will be ..."</em>. Do not write <em>"plan to remove"</em> as a passive (cannot use the verb <em>plan</em> that way).</p>
+    </div>
+
+    <h2 id="cheat-sheet"><span class="type-num">04.</span> Side-by-side Cheat Sheet</h2>
+    <p class="subtitle">Process scratchpad vs Map scratchpad</p>
+
+    <p>Read across each row to see how the same step takes different content in process and map tasks.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 22%;">Aspect</th>
+          <th style="color: var(--accent-primary);">Process tasks</th>
+          <th style="color: #8a5a1f;">Map & plan tasks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight: 600; background: var(--bg-page);">Step 1 strip</td>
+          <td>Type, N steps, Where, Raw &rarr; Final, Time, Branches</td>
+          <td>Place, Times, Key, Scale, Compass, Boundaries</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; background: var(--bg-page);">Step 2 table</td>
+          <td>Step number, label, what happens, stage group</td>
+          <td>Feature, Time 1 state, Time 2 state, change type, umbrella group</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; background: var(--bg-page);">Step 2 flags</td>
+          <td>Form-change &#9733;, branch &#10550;, unusual !, similarity &#8773;</td>
+          <td>Added +, removed &minus;, expanded &#8593;, reduced &#8595;, replaced &#8635;, moved &#8644;, kept =</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; background: var(--bg-page);">Step 3 default plan</td>
+          <td>One paragraph per stage (often unequal length)</td>
+          <td>Before / After (P2 longer, where changes live)</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; background: var(--bg-page);">Step 3 alternatives</td>
+          <td>Field vs factory; mechanical vs manual; main path vs branch path</td>
+          <td>Indoor vs outdoor; retained vs changed; zone by zone</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; background: var(--bg-page);">Dominant verb form</td>
+          <td>Passive present (<em>is heated</em>, <em>is crushed</em>); time clauses with present perfect (<em>once the crop has been harvested</em>)</td>
+          <td>Past + present perfect for past-present maps; future passive (<em>will be built</em>) for present-future maps</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; background: var(--bg-page);">Overview must contain</td>
+          <td>Type of process, number of stages (using umbrella terms), main material changes</td>
+          <td>The dominant transformation, the main categories affected (using umbrella terms), what was retained</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; background: var(--bg-page);">Overview must not contain</td>
+          <td>Step labels copied from diagram, every step listed, "first stage and last stage" framing</td>
+          <td>Compass points for everything, list of individual buildings, evaluative adjectives (<em>beautiful</em>, <em>modern</em>)</td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; background: var(--bg-page);">Body opener variety</td>
+          <td>Avoid First/Then/Next/Finally chain; use time clauses and reduced relatives</td>
+          <td>Avoid The first map shows / The second map shows; use <em>Prior to development</em>, <em>Following construction</em>, <em>In terms of [umbrella]</em></td>
+        </tr>
+        <tr>
+          <td style="font-weight: 600; background: var(--bg-page);">Comparison source</td>
+          <td>Methods (manual vs mechanical), stage durations, similarities between steps</td>
+          <td>Time 1 vs Time 2 by category; retained features vs new features; size or position changes</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="pitfalls"><span class="type-num">05.</span> Common Pitfalls at the Planning Stage</h2>
+
+    <div class="decision-row">
+      <div class="decision-key">Pitfall 1</div>
+      <div>
+        <strong>Process: treating steps as trends.</strong> "<em>The process begins with sugar cane and ends with sugar.</em>" This summarises only the endpoints and skips the stages between them. The overview must name the stages between the endpoints.
+      </div>
+    </div>
+
+    <div class="decision-row">
+      <div class="decision-key">Pitfall 2</div>
+      <div>
+        <strong>Process: copying diagram labels.</strong> The diagram says <em>"Growing"</em>; the answer should say <em>"The sugar cane is grown."</em> Verbatim copying from the question paper is penalised.
+      </div>
+    </div>
+
+    <div class="decision-row">
+      <div class="decision-key">Pitfall 3</div>
+      <div>
+        <strong>Process: First / Then / Next / Finally chain.</strong> Repetitive cohesive devices flag Band 6. Mix in time clauses (<em>Once the juice has been purified</em>) and reduced relatives (<em>The plants are crushed, extracting the juice</em>).
+      </div>
+    </div>
+
+    <div class="decision-row">
+      <div class="decision-key">Pitfall 4</div>
+      <div>
+        <strong>Map: describing each diagram separately.</strong> "<em>The first map shows... The second map shows...</em>" reads as two disconnected paragraphs and undermines the comparison task. Structure around what changed, not around which diagram you are looking at.
+      </div>
+    </div>
+
+    <div class="decision-row">
+      <div class="decision-key">Pitfall 5</div>
+      <div>
+        <strong>Map: only simple present tense.</strong> Using only <em>"there is / there are"</em> across both paragraphs signals you are describing pictures rather than summarising change. Force tense variety with the four questions: what did it look like, what has changed, what has been added, what has been removed.
+      </div>
+    </div>
+
+    <div class="decision-row">
+      <div class="decision-key">Pitfall 6</div>
+      <div>
+        <strong>Map: compass-point lists.</strong> Naming the precise compass direction for every feature ("<em>X is to the east of Y, which is to the south of Z</em>") buries the changes under location data. Use compass points only when they convey a key feature (a building extended in a specific direction).
+      </div>
+    </div>
+
+    <div class="decision-row">
+      <div class="decision-key">Pitfall 7</div>
+      <div>
+        <strong>Map: evaluative language.</strong> Adjectives like <em>beautiful</em>, <em>impressive</em>, <em>modern</em>, <em>well-developed</em> introduce personal opinion and reduce the Task Achievement score. The task is to summarise facts, not to assess them.
+      </div>
+    </div>
+
+    <div class="decision-row">
+      <div class="decision-key">Pitfall 8</div>
+      <div>
+        <strong>Map: wrong passive construction.</strong> "<em>The outdoor courts are planned to be removed</em>" is incorrect. Use <em>"will be removed"</em> or <em>"are to be removed"</em>. The verb <em>plan</em> does not work passively in this construction.
+      </div>
+    </div>
+
+    <div class="decision-row">
+      <div class="decision-key">Pitfall 9</div>
+      <div>
+        <strong>Both: skipping Step 1 entirely.</strong> Starting Step 2 without the strip means working from screen-glances, which costs more time than the strip would have taken. Thirty seconds spent on the strip saves several minutes during writing.
+      </div>
+    </div>
+
+    <p style="text-align: center; margin-top: 40px; color: var(--text-muted); font-size: 0.85rem;">
+      <strong>Scope of this guide:</strong> This document covers only the planning phase (Steps 1, 2, and 3 of the pre-writing process) for process and map tasks. The writing phase and post-writing checks are covered in the main IELTS Task 1 Complete Guide.<br><br>
+      <strong>Time budget recap:</strong> Three minutes total for planning. Spend it where the substance lives: ~30 seconds on the details strip, ~90 seconds on the stage table or change inventory, and ~30 seconds on the paragraph plan.
+    </p>
+
+  </main>
+</div>
+
+</body>
+</html>

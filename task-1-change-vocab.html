@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Task 1: Describing Changes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Fonts */
+    --font-display: 'Fraunces', Georgia, serif; /* Exclusively for H1 */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', Consolas, monospace;
+
+    /* Base Colors */
+    --bg-page: #fafaf7;
+    --bg-card: #ffffff;
+    --text-main: #1a1a1a;
+    --text-muted: #555555;
+    --border-color: #d8d4c8;
+    
+    /* UI Accent Colors */
+    --accent-primary: #2a5a78;   /* Deep Blue for primary structural accents */
+    --accent-hover: #1d4056;
+
+    /* Semantic Callout Colors */
+    --box-example-bg: #eef3f7;
+    --box-example-border: #7ca0c0;
+    
+    --box-note-bg: #fdf6e3;
+    --box-note-border: #d4a05d;
+    
+    --box-tip-bg: #e9efe9;
+    --box-tip-border: #3d6e3e;
+    
+    --box-warning-bg: #fcf3e3;
+    --box-warning-border: #b3372a;
+
+    /* Task 1 Specific Colors (Trends) */
+    --up-color: #2d7a3e;
+    --up-bg: #e3f0e3;
+    --down-color: #b3372a;
+    --down-bg: #f5e0dc;
+    --stable-color: #6b6b6b;
+    --stable-bg: #ececec;
+    --flux-color: #b07b1f;
+    --flux-bg: #f5ecd6;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+
+  /* Base Typography & Sizing (17px base) */
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.7;
+    font-size: 17px; 
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Structural Layout */
+  .layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* Sidebar Navigation */
+  nav.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 2.5rem 1.75rem;
+    border-right: 1px solid var(--border-color);
+    background: var(--bg-page);
+  }
+
+  .nav-title {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-main);
+    letter-spacing: -0.01em;
+  }
+
+  .nav-sub {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 2rem;
+  }
+
+  .nav-group-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  nav.sidebar a {
+    display: block;
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 0.4rem 0 0.4rem 0.85rem;
+    border-left: 3px solid transparent;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    border-radius: 0 4px 4px 0;
+  }
+
+  nav.sidebar a:hover {
+    border-left-color: var(--accent-primary);
+    background: var(--box-example-bg);
+    color: var(--accent-hover);
+  }
+
+  /* Main Content Area */
+  main {
+    padding: 3.5rem 4rem 6rem;
+    max-width: 900px;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 3.5rem;
+    max-width: 700px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 4rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 2.5rem 0 0.75rem 0;
+    color: var(--accent-primary);
+  }
+
+  h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 1.5rem 0 0.5rem 0;
+    color: var(--text-muted);
+  }
+
+  p { margin: 0.8rem 0; }
+
+  ul, ol { 
+    padding-left: 1.5rem; 
+    margin: 0.8rem 0; 
+  }
+  
+  li { margin-bottom: 0.4rem; }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    background: var(--bg-card);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px var(--border-color);
+  }
+
+  th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  th {
+    background: var(--bg-page);
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: var(--bg-page); }
+
+  /* Callout Boxes (Unified styling system) */
+  .callout {
+    padding: 1.15rem 1.4rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  }
+
+  .callout-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  /* Specific Callout Variants */
+  .callout.example {
+    background: var(--box-example-bg);
+    border-left: 4px solid var(--box-example-border);
+  }
+  .callout.example .callout-label { color: var(--accent-primary); }
+
+  .callout.note {
+    background: var(--box-note-bg);
+    border-left: 4px solid var(--box-note-border);
+  }
+  .callout.note .callout-label { color: #8a5a1f; }
+
+  .callout.tip {
+    background: var(--box-tip-bg);
+    border-left: 4px solid var(--box-tip-border);
+  }
+  .callout.tip .callout-label { color: var(--box-tip-border); }
+
+  .callout.warning {
+    background: var(--box-warning-bg);
+    border-left: 4px solid var(--box-warning-border);
+  }
+  .callout.warning .callout-label { color: var(--box-warning-border); }
+
+  .callout.example em { color: var(--text-main); font-style: italic; font-weight: 600; }
+
+  /* Inline Vocabulary / Task 1 specific text formatting */
+  code, .vocab {
+    font-family: var(--font-mono);
+    background: #ebe8de;
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    font-size: 0.85em;
+    color: var(--text-main);
+  }
+
+  .vocab.up { color: var(--up-color); background: var(--up-bg); }
+  .vocab.down { color: var(--down-color); background: var(--down-bg); }
+  .vocab.stable { color: var(--stable-color); background: var(--stable-bg); }
+  .vocab.flux { color: var(--flux-color); background: var(--flux-bg); }
+
+  .matrix-up { color: var(--up-color); font-weight: 500; }
+  .matrix-down { color: var(--down-color); font-weight: 500; }
+  .matrix-stable { color: var(--stable-color); font-weight: 500; }
+
+  /* Illustrations & SVGs */
+  .illustration {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  }
+
+  .illustration svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .caption {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 1rem;
+    text-align: center;
+    font-style: italic;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; }
+    nav.sidebar {
+      position: static;
+      height: auto;
+      border-right: 0;
+      border-bottom: 1px solid var(--border-color);
+      padding: 1.5rem;
+    }
+    main { padding: 2rem 1.5rem 4rem; }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.4rem; margin-top: 3rem; }
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+<nav class="sidebar">
+  <div class="nav-title">Task 1: Describing Changes</div>
+  <div class="nav-sub">IELTS Writing</div>
+
+  <div class="nav-group-label">Contents</div>
+  <a href="#sec0">0. Framework foundations</a>
+  <a href="#sec1">1. Line graph</a>
+  <a href="#sec2">2. Bar chart</a>
+  <a href="#sec3">3. Pie chart</a>
+  <a href="#sec4">4. Table</a>
+  <a href="#sec5">5. Mixed chart</a>
+  <a href="#sec6">6. Cheat sheet</a>
+</nav>
+
+<main>
+
+<header>
+  <h1>IELTS Task 1: Describing Changes</h1>
+  <p class="subtitle">Trend and velocity vocabulary across all five chart types</p>
+</header>
+
+<!-- =========================================================== -->
+<!-- SECTION 0: FRAMEWORK -->
+<!-- =========================================================== -->
+<section id="sec0">
+<h2>0. Framework Foundations</h2>
+
+<p>Every description of change carries two pieces of information at once. The first is <strong>direction</strong>: whether a value rises, falls, holds steady, or moves erratically. The second is <strong>velocity</strong>: how large the movement is, and how quickly it happens. Almost every adverb and verb in this lesson slots into one of those two roles, and the two roles are independent. A sharp fall and a gentle rise share the same grammatical scaffolding.</p>
+
+<h3>0.1 The direction-by-velocity matrix</h3>
+
+<p>Pick a direction (column) and a velocity (row). The cell gives you a phrase that fits.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Intensity</th>
+      <th>Down</th>
+      <th>Flat</th>
+      <th>Up</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Very small</strong></td>
+      <td class="matrix-down">edged down, dipped slightly, fell marginally</td>
+      <td class="matrix-stable">remained stable, held steady</td>
+      <td class="matrix-up">edged up, rose slightly, crept up</td>
+    </tr>
+    <tr>
+      <td><strong>Moderate</strong></td>
+      <td class="matrix-down">fell gradually, declined steadily</td>
+      <td class="matrix-stable">levelled off, plateaued</td>
+      <td class="matrix-up">rose gradually, climbed steadily</td>
+    </tr>
+    <tr>
+      <td><strong>Large</strong></td>
+      <td class="matrix-down">fell significantly, dropped considerably</td>
+      <td class="matrix-stable">n/a</td>
+      <td class="matrix-up">rose significantly, increased markedly</td>
+    </tr>
+    <tr>
+      <td><strong>Extreme</strong></td>
+      <td class="matrix-down">plummeted, plunged, fell sharply</td>
+      <td class="matrix-stable">n/a</td>
+      <td class="matrix-up">surged, soared, rose sharply, rocketed</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>0.2 Verb form versus noun form</h3>
+
+<p>Switching between these two forms is one of the easiest ways to add lexical variety. Same meaning, different grammar.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Verb form (subject + verb + adverb)</th>
+      <th>Noun form (there was / saw + adjective + noun)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Sales <em>rose sharply</em>.</td><td>There was <em>a sharp rise</em> in sales.</td></tr>
+    <tr><td>The figure <em>fell gradually</em>.</td><td>The figure <em>saw a gradual fall</em>.</td></tr>
+    <tr><td>Demand <em>increased significantly</em>.</td><td>Demand <em>experienced a significant increase</em>.</td></tr>
+    <tr><td>Prices <em>fluctuated</em>.</td><td>Prices <em>showed fluctuations</em>.</td></tr>
+  </tbody>
+</table>
+
+<h3>0.3 The velocity scale</h3>
+
+<p>The same idea visualised as a slope. As you move right, the movement intensifies.</p>
+
+<div class="illustration">
+  <svg viewBox="0 0 720 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Velocity scale from marginal to exponential">
+    <!-- baseline -->
+    <line x1="40" y1="135" x2="700" y2="135" stroke="#1a1a1a" stroke-width="1.5"/>
+
+    <!-- 1: marginally -->
+    <g>
+      <line x1="65" y1="135" x2="105" y2="130" stroke="#2d7a3e" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="85" cy="135" r="3" fill="#1a1a1a"/>
+      <text x="85" y="158" text-anchor="middle" font-size="11" font-family="Inter, sans-serif" font-weight="600">marginally</text>
+      <text x="85" y="172" text-anchor="middle" font-size="10" font-family="Inter, sans-serif" fill="#555">slightly</text>
+      <text x="85" y="184" text-anchor="middle" font-size="10" font-family="Inter, sans-serif" fill="#555">a fraction</text>
+    </g>
+
+    <!-- 2: gradually -->
+    <g>
+      <line x1="170" y1="135" x2="220" y2="120" stroke="#2d7a3e" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="195" cy="135" r="3" fill="#1a1a1a"/>
+      <text x="195" y="158" text-anchor="middle" font-size="11" font-family="Inter, sans-serif" font-weight="600">gradually</text>
+      <text x="195" y="172" text-anchor="middle" font-size="10" font-family="Inter, sans-serif" fill="#555">steadily</text>
+      <text x="195" y="184" text-anchor="middle" font-size="10" font-family="Inter, sans-serif" fill="#555">progressively</text>
+    </g>
+
+    <!-- 3: moderately -->
+    <g>
+      <line x1="280" y1="135" x2="330" y2="105" stroke="#2d7a3e" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="305" cy="135" r="3" fill="#1a1a1a"/>
+      <text x="305" y="158" text-anchor="middle" font-size="11" font-family="Inter, sans-serif" font-weight="600">moderately</text>
+      <text x="305" y="172" text-anchor="middle" font-size="10" font-family="Inter, sans-serif" fill="#555">noticeably</text>
+    </g>
+
+    <!-- 4: significantly -->
+    <g>
+      <line x1="390" y1="135" x2="440" y2="80" stroke="#2d7a3e" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="415" cy="135" r="3" fill="#1a1a1a"/>
+      <text x="415" y="158" text-anchor="middle" font-size="11" font-family="Inter, sans-serif" font-weight="600">significantly</text>
+      <text x="415" y="172" text-anchor="middle" font-size="10" font-family="Inter, sans-serif" fill="#555">considerably</text>
+      <text x="415" y="184" text-anchor="middle" font-size="10" font-family="Inter, sans-serif" fill="#555">markedly</text>
+    </g>
+
+    <!-- 5: sharply -->
+    <g>
+      <line x1="500" y1="135" x2="540" y2="55" stroke="#2d7a3e" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="520" cy="135" r="3" fill="#1a1a1a"/>
+      <text x="520" y="158" text-anchor="middle" font-size="11" font-family="Inter, sans-serif" font-weight="600">sharply</text>
+      <text x="520" y="172" text-anchor="middle" font-size="10" font-family="Inter, sans-serif" fill="#555">rapidly</text>
+      <text x="520" y="184" text-anchor="middle" font-size="10" font-family="Inter, sans-serif" fill="#555">dramatically</text>
+    </g>
+
+    <!-- 6: exponentially (curve) -->
+    <g>
+      <path d="M 605 135 Q 625 130 640 110 T 660 40" stroke="#2d7a3e" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <circle cx="625" cy="135" r="3" fill="#1a1a1a"/>
+      <text x="640" y="158" text-anchor="middle" font-size="11" font-family="Inter, sans-serif" font-weight="600">exponentially</text>
+      <text x="640" y="172" text-anchor="middle" font-size="10" font-family="Inter, sans-serif" fill="#555">(accelerating</text>
+      <text x="640" y="184" text-anchor="middle" font-size="10" font-family="Inter, sans-serif" fill="#555">rate)</text>
+    </g>
+
+    <!-- arrow -->
+    <text x="40" y="20" font-size="11" font-family="Inter, sans-serif" fill="#555">smaller</text>
+    <line x1="80" y1="16" x2="660" y2="16" stroke="#999" stroke-width="1"/>
+    <polygon points="660,12 670,16 660,20" fill="#999"/>
+    <text x="690" y="20" font-size="11" font-family="Inter, sans-serif" fill="#555" text-anchor="end">larger</text>
+  </svg>
+  <div class="caption">The velocity scale, low intensity on the left, accelerating on the right.</div>
+</div>
+
+<h3>0.4 Off-scale vocabulary: stability and fluctuation</h3>
+
+<p>Two situations sit outside the velocity scale because they describe a lack of clean directional movement.</p>
+
+<ul>
+  <li><strong>Stable:</strong> <span class="vocab stable">remained stable</span>, <span class="vocab stable">held steady</span>, <span class="vocab stable">plateaued</span>, <span class="vocab stable">levelled off</span>, <span class="vocab stable">stayed constant</span></li>
+  <li><strong>Fluctuating:</strong> <span class="vocab flux">fluctuated</span>, <span class="vocab flux">wavered</span>, <span class="vocab flux">showed slight fluctuations</span></li>
+</ul>
+
+<div class="callout warning">
+  <div class="callout-label">Watch out</div>
+  <p style="margin:0"><strong>'Oscillated'</strong> is only correct for a needle on a dial, a pendulum, or a wave. It does not mean 'went up and down a bit'. Use <span class="vocab flux">fluctuated</span> instead.</p>
+  <p style="margin:0.4rem 0 0"><strong>'Exponentially'</strong> requires the rate of increase to accelerate each period. If the line is straight and steep, the word you want is <span class="vocab up">sharply</span>, not <span class="vocab up">exponentially</span>.</p>
+</div>
+
+<h3>0.5 The "relative" modifiers</h3>
+
+<p>These adjust a value against context, not against an absolute size. Useful when a figure looks small in isolation but is significant against the others, or vice versa.</p>
+
+<ul>
+  <li><span class="vocab">relatively</span> small / large / stable</li>
+  <li><span class="vocab">only</span> 6 million (small in this dataset)</li>
+  <li><span class="vocab">just</span> over 50% / <span class="vocab">just</span> under 200 grams</li>
+</ul>
+
+</section>
+
+<!-- =========================================================== -->
+<!-- SECTION 1: LINE GRAPH -->
+<!-- =========================================================== -->
+<section id="sec1">
+<h2>1. Line Graph</h2>
+
+<p>Line graphs are the natural home of trend vocabulary. Every adverb on the velocity scale applies, and chained verb phrases ("rose sharply before levelling off") are expected.</p>
+
+<h3>1.1 What it contributes</h3>
+<p>Continuous change over time. The reader sees the shape of the movement directly, so the writing must match what the eye sees. A wobble described as a "dramatic decline" loses marks for accuracy.</p>
+
+<h3>1.2 Annotated graph</h3>
+
+<div class="illustration">
+  <svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Annotated line graph showing six phrase segments">
+    <!-- axes -->
+    <line x1="60" y1="40" x2="60" y2="280" stroke="#1a1a1a" stroke-width="1.5"/>
+    <line x1="60" y1="280" x2="680" y2="280" stroke="#1a1a1a" stroke-width="1.5"/>
+
+    <!-- y labels -->
+    <text x="50" y="285" text-anchor="end" font-size="10" font-family="Inter, sans-serif" fill="#555">0</text>
+    <text x="50" y="225" text-anchor="end" font-size="10" font-family="Inter, sans-serif" fill="#555">25</text>
+    <text x="50" y="165" text-anchor="end" font-size="10" font-family="Inter, sans-serif" fill="#555">50</text>
+    <text x="50" y="105" text-anchor="end" font-size="10" font-family="Inter, sans-serif" fill="#555">75</text>
+    <text x="50" y="45" text-anchor="end" font-size="10" font-family="Inter, sans-serif" fill="#555">100</text>
+
+    <!-- gridlines -->
+    <line x1="60" y1="220" x2="680" y2="220" stroke="#eee" stroke-width="1"/>
+    <line x1="60" y1="160" x2="680" y2="160" stroke="#eee" stroke-width="1"/>
+    <line x1="60" y1="100" x2="680" y2="100" stroke="#eee" stroke-width="1"/>
+    <line x1="60" y1="40" x2="680" y2="40" stroke="#eee" stroke-width="1"/>
+
+    <!-- x labels -->
+    <text x="100" y="298" text-anchor="middle" font-size="10" font-family="Inter, sans-serif" fill="#555">2000</text>
+    <text x="200" y="298" text-anchor="middle" font-size="10" font-family="Inter, sans-serif" fill="#555">2002</text>
+    <text x="300" y="298" text-anchor="middle" font-size="10" font-family="Inter, sans-serif" fill="#555">2004</text>
+    <text x="400" y="298" text-anchor="middle" font-size="10" font-family="Inter, sans-serif" fill="#555">2006</text>
+    <text x="500" y="298" text-anchor="middle" font-size="10" font-family="Inter, sans-serif" fill="#555">2008</text>
+    <text x="600" y="298" text-anchor="middle" font-size="10" font-family="Inter, sans-serif" fill="#555">2010</text>
+
+    <!-- data line: points (100,240) (200,100) (300,100) (400,130) (500,80) (600,40) (680,180) -->
+    <polyline points="100,240 200,100 300,100 400,130 500,80 600,40 680,180"
+              stroke="#2d7a3e" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+
+    <!-- data points -->
+    <circle cx="100" cy="240" r="3.5" fill="#2d7a3e"/>
+    <circle cx="200" cy="100" r="3.5" fill="#2d7a3e"/>
+    <circle cx="300" cy="100" r="3.5" fill="#2d7a3e"/>
+    <circle cx="400" cy="130" r="3.5" fill="#2d7a3e"/>
+    <circle cx="500" cy="80" r="3.5" fill="#2d7a3e"/>
+    <circle cx="600" cy="40" r="3.5" fill="#2d7a3e"/>
+    <circle cx="680" cy="180" r="3.5" fill="#2d7a3e"/>
+
+    <!-- annotations -->
+    <!-- A: sharp rise -->
+    <line x1="150" y1="170" x2="150" y2="335" stroke="#999" stroke-width="0.5" stroke-dasharray="2,2"/>
+    <text x="150" y="350" text-anchor="middle" font-size="11" font-family="Inter, sans-serif" fill="#2d7a3e" font-weight="600">A. rose sharply</text>
+
+    <!-- B: plateaued -->
+    <line x1="250" y1="100" x2="250" y2="20" stroke="#999" stroke-width="0.5" stroke-dasharray="2,2"/>
+    <text x="250" y="14" text-anchor="middle" font-size="11" font-family="Inter, sans-serif" fill="#6b6b6b" font-weight="600">B. plateaued</text>
+
+    <!-- C: dipped slightly -->
+    <line x1="350" y1="115" x2="350" y2="335" stroke="#999" stroke-width="0.5" stroke-dasharray="2,2"/>
+    <text x="350" y="350" text-anchor="middle" font-size="11" font-family="Inter, sans-serif" fill="#b3372a" font-weight="600">C. dipped slightly</text>
+
+    <!-- D: climbed steadily -->
+    <line x1="450" y1="105" x2="450" y2="20" stroke="#999" stroke-width="0.5" stroke-dasharray="2,2"/>
+    <text x="450" y="14" text-anchor="middle" font-size="11" font-family="Inter, sans-serif" fill="#2d7a3e" font-weight="600">D. climbed steadily</text>
+
+    <!-- E: surged / peaked -->
+    <line x1="600" y1="40" x2="600" y2="20" stroke="#999" stroke-width="0.5" stroke-dasharray="2,2"/>
+    <text x="600" y="14" text-anchor="middle" font-size="11" font-family="Inter, sans-serif" fill="#2d7a3e" font-weight="600">E. surged to a peak</text>
+
+    <!-- F: plummeted -->
+    <line x1="640" y1="110" x2="640" y2="335" stroke="#999" stroke-width="0.5" stroke-dasharray="2,2"/>
+    <text x="640" y="350" text-anchor="middle" font-size="11" font-family="Inter, sans-serif" fill="#b3372a" font-weight="600">F. plummeted</text>
+  </svg>
+  <div class="caption">Six segments, six different phrases. Each describes both direction and velocity.</div>
+</div>
+
+<h3>1.3 Example sentences</h3>
+
+<div class="callout example">
+  <div class="callout-label">Model sentences from the graph above</div>
+  <p style="margin:0.3rem 0">Between 2000 and 2002, the figure <em>rose sharply</em>, climbing from roughly 10 to 75. It then <em>plateaued</em> for two years before <em>dipping slightly</em> in 2006.</p>
+  <p style="margin:0.3rem 0">From 2006 onwards, the line <em>climbed steadily</em>, before <em>surging to a peak</em> of just under 100 in 2010. This level was short-lived, and the figure <em>plummeted</em> over the final period, falling back to around 50.</p>
+</div>
+
+<h3>1.4 Useful sentence patterns</h3>
+
+<ul>
+  <li><strong>Chaining:</strong> X <em>rose sharply</em> before <em>levelling off</em> at Y.</li>
+  <li><strong>Despite + noun:</strong> Despite <em>a slight dip</em> in 2006, the overall trend was upward.</li>
+  <li><strong>After + ing:</strong> After <em>climbing steadily</em> for four years, the figure peaked at Y.</li>
+  <li><strong>Reaching a peak/low:</strong> The figure <em>reached a peak of</em> Y in 2010, then <em>fell back to</em> Z.</li>
+</ul>
+
+<div class="callout warning">
+  <div class="callout-label">Traps</div>
+  <ul style="margin:0.3rem 0">
+    <li>"A rising trend" describes the overall direction. The line is allowed to wobble within it. Do not call the trend "inconsistent" because of one dip.</li>
+    <li>Do not pair <span class="vocab up">sharply</span> with a small move. "Fell sharply from 50% to 49%" misrepresents the data. Use <span class="vocab down">edged down</span> or <span class="vocab down">fell marginally</span>.</li>
+    <li><strong>Crossover language:</strong> "X <em>overtook</em> Y" means one passed the other. "X and Y <em>converged</em>" means they met without crossing. They are not interchangeable.</li>
+    <li>Always anchor your phrase to a time reference (in 2006, between 2002 and 2004, over the final two years). Adverbs alone are weak.</li>
+  </ul>
+</div>
+
+</section>
+
+<!-- =========================================================== -->
+<!-- SECTION 2: BAR CHART -->
+<!-- =========================================================== -->
+<section id="sec2">
+<h2>2. Bar Chart</h2>
+
+<p>The bar chart splits into two sub-cases, and the vocabulary shifts between them. Identifying which sub-case you have is the first thing to do.</p>
+
+<h3>2.1 Sub-case A: bars over time</h3>
+
+<p>If the x-axis is time (years, decades, months), treat the chart exactly like a line graph. Every adverb on the velocity scale applies. The bars are just a different visual for the same underlying movement.</p>
+
+<div class="illustration">
+  <svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart over time">
+    <line x1="60" y1="40" x2="60" y2="230" stroke="#1a1a1a" stroke-width="1.5"/>
+    <line x1="60" y1="230" x2="560" y2="230" stroke="#1a1a1a" stroke-width="1.5"/>
+
+    <!-- bars: 2010, 2012, 2014, 2016, 2018, 2020 -->
+    <rect x="90" y="190" width="50" height="40" fill="#2d7a3e" opacity="0.85"/>
+    <rect x="170" y="170" width="50" height="60" fill="#2d7a3e" opacity="0.85"/>
+    <rect x="250" y="130" width="50" height="100" fill="#2d7a3e" opacity="0.85"/>
+    <rect x="330" y="135" width="50" height="95" fill="#2d7a3e" opacity="0.85"/>
+    <rect x="410" y="85" width="50" height="145" fill="#2d7a3e" opacity="0.85"/>
+    <rect x="490" y="55" width="50" height="175" fill="#2d7a3e" opacity="0.85"/>
+
+    <!-- x labels -->
+    <text x="115" y="245" text-anchor="middle" font-size="10" font-family="Inter, sans-serif">2010</text>
+    <text x="195" y="245" text-anchor="middle" font-size="10" font-family="Inter, sans-serif">2012</text>
+    <text x="275" y="245" text-anchor="middle" font-size="10" font-family="Inter, sans-serif">2014</text>
+    <text x="355" y="245" text-anchor="middle" font-size="10" font-family="Inter, sans-serif">2016</text>
+    <text x="435" y="245" text-anchor="middle" font-size="10" font-family="Inter, sans-serif">2018</text>
+    <text x="515" y="245" text-anchor="middle" font-size="10" font-family="Inter, sans-serif">2020</text>
+
+    <!-- annotation arrow -->
+    <path d="M 115 60 Q 320 25 515 30" stroke="#b07b1f" stroke-width="1.5" fill="none" stroke-dasharray="3,3"/>
+    <polygon points="510,25 522,30 510,35" fill="#b07b1f"/>
+    <text x="320" y="18" text-anchor="middle" font-size="11" font-family="Inter, sans-serif" font-weight="600" fill="#b07b1f">overall, rose steadily then more sharply</text>
+
+    <!-- gap annotation -->
+    <text x="275" y="125" text-anchor="middle" font-size="9.5" font-family="Inter, sans-serif" fill="#b3372a">slight dip</text>
+    <line x1="275" y1="128" x2="350" y2="138" stroke="#b3372a" stroke-width="0.8"/>
+  </svg>
+  <div class="caption">Bars over time, line-graph vocabulary applies directly.</div>
+</div>
+
+<h4>Useful phrasing</h4>
+<div class="callout example">
+  <div class="callout-label">Bar chart over time</div>
+  <p style="margin:0.3rem 0">The figure <em>climbed steadily</em> from 2010 to 2014. After <em>dipping slightly</em> in 2016, it <em>rose more sharply</em> over the final four years, <em>reaching a peak of</em> 175 in 2020.</p>
+</div>
+
+<h3>2.2 Sub-case B: snapshot comparison</h3>
+
+<p>If the x-axis lists categories (countries, age groups, product types) and there is no time element, no change is happening. Trend vocabulary does not apply. The toolkit here is <strong>comparison</strong>.</p>
+
+<div class="illustration">
+  <svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart comparing categories at one point in time">
+    <line x1="60" y1="40" x2="60" y2="230" stroke="#1a1a1a" stroke-width="1.5"/>
+    <line x1="60" y1="230" x2="560" y2="230" stroke="#1a1a1a" stroke-width="1.5"/>
+
+    <!-- bars: UK, USA, France, Germany, Japan -->
+    <rect x="95" y="60" width="60" height="170" fill="#5a8db8" opacity="0.85"/>
+    <rect x="185" y="100" width="60" height="130" fill="#5a8db8" opacity="0.85"/>
+    <rect x="275" y="105" width="60" height="125" fill="#5a8db8" opacity="0.85"/>
+    <rect x="365" y="155" width="60" height="75" fill="#5a8db8" opacity="0.85"/>
+    <rect x="455" y="195" width="60" height="35" fill="#5a8db8" opacity="0.85"/>
+
+    <!-- labels -->
+    <text x="125" y="245" text-anchor="middle" font-size="10" font-family="Inter, sans-serif">UK</text>
+    <text x="215" y="245" text-anchor="middle" font-size="10" font-family="Inter, sans-serif">USA</text>
+    <text x="305" y="245" text-anchor="middle" font-size="10" font-family="Inter, sans-serif">France</text>
+    <text x="395" y="245" text-anchor="middle" font-size="10" font-family="Inter, sans-serif">Germany</text>
+    <text x="485" y="245" text-anchor="middle" font-size="10" font-family="Inter, sans-serif">Japan</text>
+
+    <!-- annotations -->
+    <text x="125" y="52" text-anchor="middle" font-size="10.5" font-family="Inter, sans-serif" font-weight="600" fill="#2d7a3e">the highest</text>
+    <text x="215" y="92" text-anchor="middle" font-size="10.5" font-family="Inter, sans-serif" fill="#555">considerably</text>
+    <text x="215" y="105" text-anchor="middle" font-size="10.5" font-family="Inter, sans-serif" fill="#555">lower</text>
+    <text x="305" y="92" text-anchor="middle" font-size="10.5" font-family="Inter, sans-serif" font-weight="600" fill="#3a6a8c">roughly equal</text>
+    <text x="305" y="105" text-anchor="middle" font-size="10.5" font-family="Inter, sans-serif" fill="#3a6a8c">to USA</text>
+    <text x="395" y="147" text-anchor="middle" font-size="10.5" font-family="Inter, sans-serif" fill="#555">around half</text>
+    <text x="395" y="160" text-anchor="middle" font-size="10.5" font-family="Inter, sans-serif" fill="#555">the UK figure</text>
+    <text x="485" y="187" text-anchor="middle" font-size="10.5" font-family="Inter, sans-serif" font-weight="600" fill="#b3372a">by far the lowest</text>
+  </svg>
+  <div class="caption">Snapshot bar chart, no time element. Use comparison vocabulary only.</div>
+</div>
+
+<h4>Comparison vocabulary</h4>
+
+<table>
+  <thead>
+    <tr><th>Function</th><th>Phrases</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Much higher</td><td><span class="vocab">considerably higher than</span>, <span class="vocab">far above</span>, <span class="vocab">significantly more than</span>, <span class="vocab">nearly double</span></td></tr>
+    <tr><td>Slightly higher</td><td><span class="vocab">marginally higher than</span>, <span class="vocab">slightly above</span>, <span class="vocab">just over</span></td></tr>
+    <tr><td>Roughly the same</td><td><span class="vocab">roughly equal to</span>, <span class="vocab">on a par with</span>, <span class="vocab">at a similar level to</span>, <span class="vocab">comparable to</span></td></tr>
+    <tr><td>Slightly lower</td><td><span class="vocab">marginally lower than</span>, <span class="vocab">just below</span></td></tr>
+    <tr><td>Much lower</td><td><span class="vocab">considerably lower than</span>, <span class="vocab">far below</span>, <span class="vocab">a fraction of</span>, <span class="vocab">around half</span></td></tr>
+    <tr><td>Ranking</td><td><span class="vocab">the highest</span>, <span class="vocab">the second-highest</span>, <span class="vocab">the next-highest</span>, <span class="vocab">by far the lowest</span></td></tr>
+  </tbody>
+</table>
+
+<div class="callout example">
+  <div class="callout-label">Snapshot bar chart</div>
+  <p style="margin:0.3rem 0">The UK had the highest figure at 170, <em>considerably more than</em> any other country. The USA and France were <em>roughly equal</em>, at around 130 and 125 respectively, while Germany's figure was <em>around half</em> that of the UK. Japan was <em>by far the lowest</em>, at just 35.</p>
+</div>
+
+<div class="callout warning">
+  <div class="callout-label">The biggest trap in the whole topic</div>
+  <p style="margin:0">Writing "the figure for men <em>rose</em> to 60% while women <em>fell</em> to 40%" on a snapshot bar chart. Nothing rose or fell. Those are simply the two values being compared. Use comparison language instead: "Men <em>accounted for</em> 60%, <em>considerably more than</em> women at 40%."</p>
+  <p style="margin:0.4rem 0 0">This mistake is common because students reach for trend vocabulary by reflex. Always check the x-axis first.</p>
+</div>
+
+</section>
+
+<!-- =========================================================== -->
+<!-- SECTION 3: PIE CHART -->
+<!-- =========================================================== -->
+<section id="sec3">
+<h2>3. Pie Chart</h2>
+
+<p>Pie charts work in <strong>proportions</strong>, not absolute changes. With one pie, there is no change to describe at all. With two or more pies, change vocabulary returns, but applied to shares of a whole rather than raw figures.</p>
+
+<h3>3.1 Single pie: proportion vocabulary only</h3>
+
+<p>The relevant toolkit is fractions and shares. No trend adverbs.</p>
+
+<table>
+  <thead>
+    <tr><th>Function</th><th>Phrases</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Verbs of proportion</td><td><span class="vocab">accounted for</span>, <span class="vocab">made up</span>, <span class="vocab">represented</span>, <span class="vocab">constituted</span>, <span class="vocab">comprised</span></td></tr>
+    <tr><td>Large shares</td><td><span class="vocab">the majority</span>, <span class="vocab">over half</span>, <span class="vocab">nearly two-thirds</span>, <span class="vocab">the largest share</span></td></tr>
+    <tr><td>Medium shares</td><td><span class="vocab">a quarter</span>, <span class="vocab">a third</span>, <span class="vocab">just under half</span>, <span class="vocab">around 40%</span></td></tr>
+    <tr><td>Small shares</td><td><span class="vocab">a small proportion</span>, <span class="vocab">a marginal share</span>, <span class="vocab">the smallest segment</span>, <span class="vocab">just under 10%</span></td></tr>
+  </tbody>
+</table>
+
+<h3>3.2 Two pies: change applied to proportions</h3>
+
+<p>This is the more common exam case. Two pies show the same categories at two points in time, or for two different groups. Now trend verbs return, but the subject of the verb is "the share of X" or "the proportion of Y", not the raw figure.</p>
+
+<div class="illustration">
+  <svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two pie charts before and after">
+    <!-- LEFT pie: 2000 -->
+    <g transform="translate(140,140)">
+      <!-- A: 50% (red, top half) -->
+      <path d="M 0 0 L 0 -90 A 90 90 0 1 1 0 90 Z" fill="#b3372a" opacity="0.85"/>
+      <!-- B: 30% -->
+      <path d="M 0 0 L 0 90 A 90 90 0 0 1 -85.6 -27.8 Z" fill="#5a8db8" opacity="0.85"/>
+      <!-- C: 20% -->
+      <path d="M 0 0 L -85.6 -27.8 A 90 90 0 0 1 0 -90 Z" fill="#d4a05d" opacity="0.85"/>
+
+      <!-- labels -->
+      <text x="35" y="0" font-size="12" font-family="Inter, sans-serif" fill="white" font-weight="600">A 50%</text>
+      <text x="-50" y="40" font-size="12" font-family="Inter, sans-serif" fill="white" font-weight="600">B 30%</text>
+      <text x="-50" y="-40" font-size="12" font-family="Inter, sans-serif" fill="white" font-weight="600">C 20%</text>
+    </g>
+    <text x="140" y="265" text-anchor="middle" font-size="13" font-family="Inter, sans-serif" font-weight="600">2000</text>
+
+    <!-- RIGHT pie: 2020 -->
+    <g transform="translate(460,140)">
+      <!-- A: 25% (top-right quarter, 0° to 90°) -->
+      <path d="M 0 0 L 0 -90 A 90 90 0 0 1 90 0 Z" fill="#b3372a" opacity="0.85"/>
+      <!-- B: 60% (90° to 306°, large arc since sweep > 180°) -->
+      <path d="M 0 0 L 90 0 A 90 90 0 1 1 -72.8 -52.9 Z" fill="#5a8db8" opacity="0.85"/>
+      <!-- C: 15% (small wedge, 306° to 360°) -->
+      <path d="M 0 0 L -72.8 -52.9 A 90 90 0 0 1 0 -90 Z" fill="#d4a05d" opacity="0.85"/>
+
+      <text x="40" y="-35" text-anchor="middle" font-size="12" font-family="Inter, sans-serif" fill="white" font-weight="600">A 25%</text>
+      <text x="-15" y="55" text-anchor="middle" font-size="12" font-family="Inter, sans-serif" fill="white" font-weight="600">B 60%</text>
+      <text x="-28" y="-50" text-anchor="middle" font-size="11" font-family="Inter, sans-serif" fill="white" font-weight="600">C 15%</text>
+    </g>
+    <text x="460" y="265" text-anchor="middle" font-size="13" font-family="Inter, sans-serif" font-weight="600">2020</text>
+
+    <!-- arrows between -->
+    <g font-family="Inter, sans-serif" font-size="11">
+      <!-- A halved -->
+      <path d="M 235 100 Q 300 80 365 105" stroke="#b3372a" stroke-width="1.5" fill="none" stroke-dasharray="3,3"/>
+      <polygon points="360,100 370,107 360,112" fill="#b3372a"/>
+      <text x="300" y="72" text-anchor="middle" fill="#b3372a" font-weight="600">A: halved</text>
+
+      <!-- B doubled -->
+      <path d="M 235 175 Q 300 200 365 175" stroke="#2d7a3e" stroke-width="1.5" fill="none" stroke-dasharray="3,3"/>
+      <polygon points="360,180 370,175 360,170" fill="#2d7a3e"/>
+      <text x="300" y="220" text-anchor="middle" fill="#2d7a3e" font-weight="600">B: doubled</text>
+
+      <!-- C slight fall -->
+      <path d="M 240 145 Q 300 145 360 145" stroke="#6b6b6b" stroke-width="1" fill="none" stroke-dasharray="3,3"/>
+      <polygon points="358,142 366,145 358,148" fill="#6b6b6b"/>
+      <text x="300" y="138" text-anchor="middle" fill="#6b6b6b">C: fell slightly</text>
+    </g>
+
+    <!-- title -->
+    <text x="300" y="25" text-anchor="middle" font-size="13" font-family="Inter, sans-serif" font-weight="600" fill="#1a1a1a">Share of categories A, B, C (2000 vs 2020)</text>
+  </svg>
+  <div class="caption">Two pies with the changes between them annotated.</div>
+</div>
+
+<h4>Useful patterns</h4>
+
+<ul>
+  <li><span class="vocab up">The share of B doubled</span>, rising from 30% to 60%.</li>
+  <li><span class="vocab down">A's proportion fell by half</span>, dropping from 50% to 25%.</li>
+  <li><span class="vocab down">The slice for C contracted slightly</span>, from 20% to 15%.</li>
+  <li><span class="vocab up">B overtook A as the largest share</span>.</li>
+</ul>
+
+<div class="callout example">
+  <div class="callout-label">Two-pie comparison</div>
+  <p style="margin:0.3rem 0">Between 2000 and 2020, the composition of the three categories changed considerably. The share of A <em>fell by half</em>, dropping from 50% to 25%, while the proportion for B <em>doubled</em>, rising from 30% to 60% to become the largest category. C's slice <em>contracted slightly</em>, from 20% to 15%.</p>
+</div>
+
+<div class="callout warning">
+  <div class="callout-label">Traps</div>
+  <ul style="margin:0.3rem 0">
+    <li><strong>Percentage vs percentage points.</strong> If a share moves from 20% to 30%, that is a 10 <em>percentage-point</em> rise, but a 50% <em>relative</em> rise. Both are correct in different ways. Pick one framing and stay consistent. The safest move is to say "rose by 10 percentage points, from 20% to 30%".</li>
+    <li><strong>The total is always 100%.</strong> If one slice grows, another must shrink. Making this trade-off visible in the writing is often the natural overview sentence.</li>
+    <li><strong>Do not say "X is bigger" without saying "X's share is bigger"</strong>. The raw value of A might still be larger in absolute terms; only the proportion is shown. Stay precise.</li>
+  </ul>
+</div>
+
+</section>
+
+<!-- =========================================================== -->
+<!-- SECTION 4: TABLE -->
+<!-- =========================================================== -->
+<section id="sec4">
+<h2>4. Table</h2>
+
+<p>A table holds no inherent visual structure, so the vocabulary depends entirely on what the table is actually showing. The first job is to identify the table's shape, then borrow the toolkit from the appropriate earlier section. There is no "table vocabulary" of its own.</p>
+
+<h3>4.1 The diagnostic step: what kind of table is this?</h3>
+
+<p>Before reaching for any phrase, identify which of these three structures the table has. Each one points to a different vocabulary set.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Table type</th>
+      <th>Tell-tale signs</th>
+      <th>Vocabulary to use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Time series</strong></td>
+      <td>Years, decades, or dates across the top or down the side</td>
+      <td>Line-graph toolkit (Section 1): rose, fell, climbed steadily, plateaued, etc.</td>
+    </tr>
+    <tr>
+      <td><strong>Snapshot comparison</strong></td>
+      <td>Categories (countries, age groups, products) with one set of values, no time element</td>
+      <td>Snapshot bar-chart toolkit (Section 2.2): considerably more than, roughly equal to, by far the lowest</td>
+    </tr>
+    <tr>
+      <td><strong>Proportional</strong></td>
+      <td>Figures expressed as percentages that sum to 100%</td>
+      <td>Pie-chart toolkit (Section 3): accounted for, made up, the majority of, a marginal share</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>4.2 Worked example: a single table, three lenses</h3>
+
+<p>The same table can be read multiple ways, and the vocabulary changes with the reading. Below is a small table with three different "lenses" applied.</p>
+
+<div class="illustration">
+  <table style="font-size: 0.95rem; max-width: 500px; margin: 0 auto;">
+    <thead>
+      <tr>
+        <th>Country</th>
+        <th>2000</th>
+        <th>2010</th>
+        <th>2020</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>UK</td><td>40</td><td>55</td><td>72</td></tr>
+      <tr><td>USA</td><td>62</td><td>60</td><td>58</td></tr>
+      <tr><td>Japan</td><td>35</td><td>50</td><td>54</td></tr>
+      <tr><td>India</td><td>12</td><td>28</td><td>65</td></tr>
+    </tbody>
+  </table>
+  <div class="caption">Figure X across four countries, 2000 to 2020.</div>
+</div>
+
+<h4>Lens 1: time series (read across rows)</h4>
+<div class="callout example">
+  <div class="callout-label">Trend vocabulary applies</div>
+  <p style="margin:0.3rem 0">The UK figure <em>climbed steadily</em> over the two decades, rising from 40 to 72. India's figure <em>rose most dramatically</em>, increasing more than fivefold from just 12 in 2000 to 65 in 2020. The USA, in contrast, <em>declined gradually</em> from 62 to 58.</p>
+</div>
+
+<h4>Lens 2: snapshot comparison (read down a single column)</h4>
+<div class="callout example">
+  <div class="callout-label">Comparison vocabulary applies</div>
+  <p style="margin:0.3rem 0">In 2000, the USA's figure was the highest at 62, <em>considerably above</em> the UK and Japan, both at around 35 to 40. India was <em>by far the lowest</em> at just 12. By 2020, the picture had shifted: the UK led at 72, <em>narrowly ahead of</em> India at 65, while the USA had fallen to <em>roughly the same level as</em> Japan.</p>
+</div>
+
+<h4>Lens 3: ranking shifts (track each country's position over time)</h4>
+<div class="callout example">
+  <div class="callout-label">Trend + ranking vocabulary</div>
+  <p style="margin:0.3rem 0">India <em>overtook</em> both the USA and Japan during this period to become the second-highest by 2020. The UK <em>maintained its upward trajectory</em> throughout, while the USA's <em>ranking fell</em> from first to last among the four.</p>
+</div>
+
+<h3>4.3 Organising a table answer</h3>
+
+<p>The hardest part of a table is not vocabulary, it is what to leave out. A table can have twenty cells, and listing all of them produces an answer that reads like a database dump. Two strategies work.</p>
+
+<ul>
+  <li><strong>Group by similarity:</strong> bundle countries or categories that follow the same trend together, then contrast with the ones that don't. ("The UK and Japan both climbed steadily, while the USA declined and India surged.")</li>
+  <li><strong>Group by ranking:</strong> describe the top two or three, then the bottom one or two. ("The two highest figures throughout were X and Y, while Z remained consistently the lowest.")</li>
+</ul>
+
+<div class="callout warning">
+  <div class="callout-label">Traps specific to tables</div>
+  <ul style="margin:0.3rem 0">
+    <li><strong>Listing every cell.</strong> "In 2010, the figure was 23. In 2011, it was 25. In 2012, it was 26..." This is the most common error. Tables still need <em>trends and comparisons</em>, not enumeration.</li>
+    <li><strong>Mismatched vocabulary.</strong> Using "rose sharply" on a snapshot-style table where no time is shown. Always check whether time is on one axis before reaching for trend verbs.</li>
+    <li><strong>Forgetting the overview.</strong> A table answer still needs an overview that captures the main pattern. Rank the rows or columns to find it: who started highest, who ended highest, which moved the most.</li>
+    <li><strong>Spurious precision.</strong> If figures are 23.7 and 24.1, do not call this a "noticeable rise". Use <em>edged up</em> or <em>remained virtually unchanged</em>. The numbers can lie if the adverb is wrong.</li>
+    <li><strong>Ignoring rate when values cluster.</strong> If most countries look similar in raw values, the meaningful comparison is often the <em>rate of change</em> rather than the absolute figure. India in the table above is at 65, lower than the UK's 72, but its <em>growth rate</em> is the dramatic story.</li>
+  </ul>
+</div>
+
+</section>
+
+<!-- =========================================================== -->
+<!-- SECTION 5: MIXED CHART -->
+<!-- =========================================================== -->
+<section id="sec5">
+<h2>5. Mixed Chart</h2>
+
+<p>Mixed charts (a bar chart alongside a line graph, two pies plus a table, and so on) add no new vocabulary. Everything you have learned in Sections 1 to 4 applies. The challenge here is <strong>organisation and linking</strong>, which is mostly about flagging relationships between the two visuals.</p>
+
+<h3>5.1 Two common combinations</h3>
+
+<ul>
+  <li><strong>Two related datasets:</strong> for example, a line graph of unemployment and a bar chart of inflation over the same period. The reader expects you to show how the two move together (or in opposition).</li>
+  <li><strong>Two different views of similar information:</strong> for example, a pie chart of energy sources in one year and a bar chart of energy consumption over a decade. Here the link is thematic, not mathematical.</li>
+</ul>
+
+<h3>5.2 Linking vocabulary</h3>
+
+<p>This is the one genuinely new contribution of mixed charts: the words that bridge the two visuals.</p>
+
+<table>
+  <thead>
+    <tr><th>Relationship</th><th>Linking phrases</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Moves in parallel</td><td><span class="vocab">correspondingly</span>, <span class="vocab">in parallel</span>, <span class="vocab">mirroring this</span>, <span class="vocab">similarly</span></td></tr>
+    <tr><td>Moves in opposition</td><td><span class="vocab">in contrast</span>, <span class="vocab">conversely</span>, <span class="vocab">on the other hand</span>, <span class="vocab">whereas</span></td></tr>
+    <tr><td>Happens alongside</td><td><span class="vocab">meanwhile</span>, <span class="vocab">at the same time</span>, <span class="vocab">over the same period</span></td></tr>
+  </tbody>
+</table>
+
+<div class="callout example">
+  <div class="callout-label">Linking two charts</div>
+  <p style="margin:0.3rem 0">While the bar chart shows unemployment <em>climbing steadily</em> between 2008 and 2012, the line graph reveals that, <em>over the same period</em>, consumer confidence <em>fell sharply</em>. The two trends moved in opposition, suggesting a clear inverse relationship.</p>
+</div>
+
+<div class="callout warning">
+  <div class="callout-label">Traps</div>
+  <ul style="margin:0.3rem 0">
+    <li><strong>Two essays glued together.</strong> Writing one paragraph about chart A and one about chart B without ever connecting them loses marks on Task Achievement. The rubric asks for "comparisons where relevant", and the relevance here is between the two visuals.</li>
+    <li><strong>Forcing a connection that does not exist.</strong> If the two charts are genuinely unrelated, say so plainly: "the two charts cover different aspects and show no clear correlation". Better than inventing a link.</li>
+    <li><strong>Duplicating data points across paragraphs.</strong> Each figure should appear once. If chart B simply restates chart A in a different form, describe the data once and note the format difference in passing.</li>
+  </ul>
+</div>
+
+</section>
+
+<!-- =========================================================== -->
+<!-- SECTION 6: CHEAT SHEET -->
+<!-- =========================================================== -->
+<section id="sec6">
+<h2>6. Cheat Sheet</h2>
+
+<p>A single-page reference. The intensity goes from top to bottom in each block.</p>
+
+<h3>6.1 Verbs and adverbs by direction</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width: 30%">Intensity</th>
+      <th style="width: 35%">Up</th>
+      <th style="width: 35%">Down</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Very small</td>
+      <td class="matrix-up">edged up, crept up, rose marginally, inched up</td>
+      <td class="matrix-down">edged down, dipped slightly, fell marginally, slipped</td>
+    </tr>
+    <tr>
+      <td>Gradual</td>
+      <td class="matrix-up">rose gradually, climbed steadily, increased progressively</td>
+      <td class="matrix-down">fell gradually, declined steadily, decreased progressively</td>
+    </tr>
+    <tr>
+      <td>Moderate</td>
+      <td class="matrix-up">rose noticeably, climbed moderately</td>
+      <td class="matrix-down">fell noticeably, declined moderately</td>
+    </tr>
+    <tr>
+      <td>Large</td>
+      <td class="matrix-up">rose significantly, increased considerably, climbed markedly</td>
+      <td class="matrix-down">fell significantly, dropped considerably, declined markedly</td>
+    </tr>
+    <tr>
+      <td>Extreme</td>
+      <td class="matrix-up">surged, soared, rocketed, rose sharply, climbed dramatically</td>
+      <td class="matrix-down">plummeted, plunged, crashed, fell sharply, dropped dramatically</td>
+    </tr>
+    <tr>
+      <td>Accelerating rate</td>
+      <td class="matrix-up">rose exponentially, grew at an accelerating rate</td>
+      <td class="matrix-down">fell at an accelerating rate, declined exponentially (rare)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>6.2 Off-scale phrases</h3>
+
+<table>
+  <thead>
+    <tr><th>Situation</th><th>Phrases</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Stayed the same</td><td>remained stable, held steady, plateaued, levelled off, stayed constant, was unchanged</td></tr>
+    <tr><td>Went up and down</td><td>fluctuated, wavered, showed slight fluctuations, oscillated <em>(only for dials/waves)</em></td></tr>
+    <tr><td>Reached a high/low</td><td>reached a peak of, peaked at, hit a high of, bottomed out at, reached a low of, hit a trough at</td></tr>
+    <tr><td>Started/ended</td><td>began at, started at, opened at | ended at, finished at, closed at, stood at</td></tr>
+    <tr><td>Crossed over</td><td>overtook, was overtaken by, surpassed, was surpassed by, converged with, diverged from</td></tr>
+  </tbody>
+</table>
+
+<h3>6.3 Noun-form equivalents</h3>
+
+<table>
+  <thead>
+    <tr><th>Verb form</th><th>Noun form</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>rose sharply</td><td>a sharp rise / a steep increase / a dramatic upturn</td></tr>
+    <tr><td>fell gradually</td><td>a gradual fall / a steady decline / a slow downturn</td></tr>
+    <tr><td>increased significantly</td><td>a significant increase / a considerable rise / a marked growth</td></tr>
+    <tr><td>fluctuated</td><td>fluctuations / wavering / instability</td></tr>
+    <tr><td>plateaued</td><td>a plateau / a period of stability</td></tr>
+  </tbody>
+</table>
+
+<h3>6.4 Snapshot comparison toolkit (for bar charts and tables with no time element)</h3>
+
+<table>
+  <thead>
+    <tr><th>Function</th><th>Phrases</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Much greater</td><td>considerably higher than, far above, significantly more than, nearly double, more than twice as much as</td></tr>
+    <tr><td>Slightly greater</td><td>marginally higher than, slightly above, just over, a fraction higher than</td></tr>
+    <tr><td>Similar</td><td>roughly equal to, on a par with, at a similar level to, comparable to, broadly the same as</td></tr>
+    <tr><td>Slightly lower</td><td>marginally lower than, slightly below, just under</td></tr>
+    <tr><td>Much lower</td><td>considerably lower than, far below, a fraction of, around half of, less than half</td></tr>
+  </tbody>
+</table>
+
+<h3>6.5 Proportion toolkit (for pie charts and percentage tables)</h3>
+
+<table>
+  <thead>
+    <tr><th>Size of share</th><th>Phrases</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Verbs of proportion</td><td>accounted for, made up, represented, constituted, comprised</td></tr>
+    <tr><td>Dominant</td><td>the majority, over half, the largest share, the dominant category, two-thirds</td></tr>
+    <tr><td>Substantial</td><td>around a third, just under half, a sizeable proportion, roughly 40%</td></tr>
+    <tr><td>Modest</td><td>a quarter, around 20%, a notable share</td></tr>
+    <tr><td>Small</td><td>a small proportion, a marginal share, the smallest segment, under 10%, a fraction</td></tr>
+  </tbody>
+</table>
+
+<h3>6.6 Linking words (mixed charts and multi-paragraph answers)</h3>
+
+<table>
+  <thead>
+    <tr><th>Function</th><th>Words</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Similar pattern</td><td>similarly, correspondingly, in parallel, in the same way, mirroring this</td></tr>
+    <tr><td>Opposite pattern</td><td>in contrast, conversely, on the other hand, whereas, while, however</td></tr>
+    <tr><td>Simultaneous</td><td>meanwhile, at the same time, over the same period, concurrently</td></tr>
+    <tr><td>Additional information</td><td>furthermore, in addition, moreover, also</td></tr>
+  </tbody>
+</table>
+
+<div class="callout tip">
+  <div class="callout-label">Final reminders before the exam</div>
+  <ul style="margin:0.3rem 0">
+    <li>Always anchor a trend phrase to a time reference. "Rose sharply" alone is weak; "rose sharply between 2010 and 2014" is complete.</li>
+    <li>Match the intensity of your adverb to the actual size of the move. A change from 50 to 49 is not "sharp".</li>
+    <li>Identify your chart type before you reach for vocabulary. Snapshot bar charts and single pies do not take trend verbs.</li>
+    <li>Vary verb and noun forms across the answer for Lexical Resource marks. Do not use "rose" five times when "climbed", "increased", and "a rise" are available.</li>
+    <li>Group your data before writing. Listing every cell is the fastest way to a Band 6.</li>
+  </ul>
+</div>
+
+</section>
+
+</main>
+</div>
+</body>
+</html>

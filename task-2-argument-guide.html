@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Build and Develop an Argument</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', Consolas, monospace;
+    --bg-page: #fafaf7;
+    --bg-card: #ffffff;
+    --text-main: #1a1a1a;
+    --text-muted: #555555;
+    --border-color: #d8d4c8;
+    --accent-primary: #2a5a78;
+    --accent-hover: #1d4056;
+    --box-example-bg: #eef3f7;
+    --box-example-border: #7ca0c0;
+    --box-note-bg: #fdf6e3;
+    --box-note-border: #d4a05d;
+    --box-tip-bg: #e9efe9;
+    --box-tip-border: #3d6e3e;
+    --box-warning-bg: #fcf3e3;
+    --box-warning-border: #b3372a;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.7;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  nav.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 2.5rem 1.75rem;
+    border-right: 1px solid var(--border-color);
+    background: var(--bg-page);
+  }
+
+  .nav-title {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-main);
+    letter-spacing: -0.01em;
+  }
+
+  .nav-sub {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 2rem;
+  }
+
+  .nav-group-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  nav.sidebar a {
+    display: block;
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 0.4rem 0 0.4rem 0.85rem;
+    border-left: 3px solid transparent;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    border-radius: 0 4px 4px 0;
+  }
+
+  nav.sidebar a:hover {
+    border-left-color: var(--accent-primary);
+    background: var(--box-example-bg);
+    color: var(--accent-hover);
+  }
+
+  main {
+    padding: 3.5rem 4rem 6rem;
+    max-width: 900px;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 3.5rem;
+    max-width: 700px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 4rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: baseline;
+  }
+
+  h2 .type-num {
+    color: var(--accent-primary);
+    margin-right: 0.5rem;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 2.5rem 0 0.75rem 0;
+    color: var(--accent-primary);
+  }
+
+  h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 1.5rem 0 0.5rem 0;
+    color: var(--text-muted);
+  }
+
+  p { margin: 0.8rem 0; }
+
+  ul, ol {
+    padding-left: 1.5rem;
+    margin: 0.8rem 0;
+  }
+
+  li { margin-bottom: 0.4rem; }
+
+  .callout {
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  }
+
+  .callout-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .callout.example { background: var(--box-example-bg); border-left: 4px solid var(--box-example-border); }
+  .callout.example .callout-label { color: var(--accent-primary); }
+  .callout.note { background: var(--box-note-bg); border-left: 4px solid var(--box-note-border); }
+  .callout.note .callout-label { color: #8a5a1f; }
+  .callout.tip { background: var(--box-tip-bg); border-left: 4px solid var(--box-tip-border); }
+  .callout.tip .callout-label { color: var(--box-tip-border); }
+  .callout.warning { background: var(--box-warning-bg); border-left: 4px solid var(--box-warning-border); }
+  .callout.warning .callout-label { color: var(--box-warning-border); }
+
+  .skeleton {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  }
+
+  .skeleton .label {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-primary);
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+
+  .skeleton p { margin: 0; line-height: 1.6; }
+  .skeleton p + p { margin-top: 0.75rem; }
+
+  .tag {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--accent-primary);
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    border-radius: 3px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+
+  .tag.muted { background: var(--text-muted); }
+
+  code, .vocab, .placeholder {
+    font-family: var(--font-mono);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    font-size: 0.85em;
+  }
+
+  code, .vocab {
+    background: #ebe8de;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+  }
+
+  .placeholder {
+    background: #e2e8f0;
+    color: var(--accent-primary);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .chip-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.5rem 0 1.5rem 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    background: var(--bg-card);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px var(--border-color);
+  }
+
+  th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  th {
+    background: var(--bg-page);
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+
+  /* Flow diagram for argument structure */
+  .arg-flow {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    margin: 1.25rem 0;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px var(--border-color);
+    font-size: 0.92rem;
+  }
+
+  .arg-flow-step {
+    flex: 1;
+    padding: 0.85rem 1rem;
+    background: var(--bg-card);
+    border-right: 1px solid var(--border-color);
+    position: relative;
+  }
+
+  .arg-flow-step:last-child { border-right: none; }
+
+  .arg-flow-step .step-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 0.3rem;
+  }
+
+  .arg-flow-step .step-content {
+    color: var(--text-main);
+    line-height: 1.5;
+  }
+
+  .arg-flow-step.highlight { background: var(--box-example-bg); }
+  .arg-flow-step.highlight .step-label { color: var(--accent-primary); }
+
+  /* arrow between steps */
+  .arg-flow-arrow {
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+    background: var(--bg-page);
+    color: var(--text-muted);
+    font-size: 1rem;
+    border-right: 1px solid var(--border-color);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; }
+    nav.sidebar { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--border-color); padding: 1.5rem; }
+    main { padding: 2rem 1.5rem 4rem; }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.4rem; margin-top: 3rem; }
+    .arg-flow { flex-direction: column; }
+    .arg-flow-arrow { display: none; }
+    .arg-flow-step { border-right: none; border-bottom: 1px solid var(--border-color); }
+    .arg-flow-step:last-child { border-bottom: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+  <nav class="sidebar">
+    <div class="nav-title">Argument Guide</div>
+    <div class="nav-sub">Lessons 1–7 Reference</div>
+
+    <div class="nav-group-label">Foundations</div>
+    <a href="#what-is">What is an argument?</a>
+    <a href="#clear-unclear">Clear vs. unclear</a>
+
+    <div class="nav-group-label">Building Arguments</div>
+    <a href="#adding">Adding information</a>
+    <a href="#cause-effect">Cause &amp; effect</a>
+    <a href="#contrast">Contrast &amp; negation</a>
+
+    <div class="nav-group-label">Developing Ideas</div>
+    <a href="#explain">Explaining &amp; clarifying</a>
+    <a href="#evidence">Supporting evidence</a>
+
+    <div class="nav-group-label">Advanced</div>
+    <a href="#counter">Counterarguments</a>
+    <a href="#hedging">Hedging language</a>
+  </nav>
+
+  <main>
+    <header>
+      <h1>Writing Task 2 — Building an Argument</h1>
+      <p class="subtitle">A concise reference guide to presenting, developing, and strengthening arguments in IELTS Writing Task 2, drawn from Lessons 1–7.</p>
+    </header>
+
+
+    <!-- ===================== SECTION 1 ===================== -->
+    <section id="what-is">
+      <h2><span class="type-num">01.</span> What Is an Argument?</h2>
+
+      <p>An argument is a <strong>conclusion</strong> supported by one or more <strong>reasons</strong> (premises). Every time you make a point in your essay, you are making an argument. The key principle is simple: a conclusion must be logically supported by the reasons given for it.</p>
+
+      <div class="callout example">
+        <div class="callout-label">Model Structure</div>
+        <p style="margin:0;">
+          <em>Fruit contains vitamin C, which helps keep us healthy,</em>
+          <strong> so the government should encourage everyone to eat more fruit.</strong>
+        </p>
+        <p style="margin:0.6rem 0 0 0; font-size:0.88rem; color: var(--text-muted);">
+          Conclusion: <em>The government should encourage everyone to eat more fruit.</em><br>
+          Premise 1: fruit contains vitamin C &nbsp;|&nbsp; Premise 2: vitamin C keeps us healthy
+        </p>
+      </div>
+
+      <div class="callout note">
+        <div class="callout-label">Key Idea</div>
+        <p style="margin:0;">Writing "In my view" or "I believe" at the start and end of your essay is <strong>not</strong> enough to make your position clear throughout. Only the language and reasoning in your argument can do that.</p>
+      </div>
+    </section>
+
+
+    <!-- ===================== SECTION 2 ===================== -->
+    <section id="clear-unclear">
+      <h2><span class="type-num">02.</span> Clear vs. Unclear Arguments</h2>
+
+      <p>An argument can fail even when the language is accurate. The reasoning itself may be flawed. There are two common causes.</p>
+
+      <table>
+        <thead>
+          <tr><th>Problem</th><th>Example</th><th>Why it fails</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>No reason given</strong></td>
+            <td>The government should encourage everyone to eat more fruit.</td>
+            <td>The reader has no basis for accepting this claim.</td>
+          </tr>
+          <tr>
+            <td><strong>Reason not logically connected</strong></td>
+            <td>The government should encourage fruit. For example, a study showed that 85% of people eat fruit.</td>
+            <td>The statistic does not explain <em>why</em> the government should act.</td>
+          </tr>
+          <tr>
+            <td><strong>Contradictory premises</strong></td>
+            <td>There are many jobs robots will never do, and they will eventually replace humans in most jobs.</td>
+            <td>The two claims directly contradict each other.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout warning">
+        <div class="callout-label">Common Pitfall</div>
+        <p style="margin:0;">Extreme vocabulary (<code>catastrophic</code>, <code>disastrous</code>) can undermine an argument if the topic doesn't justify it. Use language whose strength matches your evidence.</p>
+      </div>
+    </section>
+
+
+    <!-- ===================== SECTION 3 ===================== -->
+    <section id="adding">
+      <h2><span class="type-num">03.</span> Argument Type 1: Adding Information</h2>
+      <p>Present several reasons that, taken together, lead to a conclusion. Use this when you have multiple distinct supporting points. Mark emphasis to show which reason carries the most weight.</p>
+
+      <h4>Connectors</h4>
+      <div class="chip-group">
+        <code>Firstly</code><code>Secondly</code><code>In addition</code><code>Furthermore</code><code>Moreover</code><code>What is more</code><code>Similarly</code><code>also</code>
+      </div>
+
+      <h4>Emphasis (when one reason outweighs others)</h4>
+      <div class="chip-group">
+        <code>More importantly</code><code>Even more importantly</code><code>not only ... but also</code>
+      </div>
+
+      <div class="callout example">
+        <div class="callout-label">Model Example</div>
+        <p style="margin:0;">There are several reasons why the government collects taxes. Firstly, the money raised can be used to build new roads or public buildings. Secondly, existing infrastructure such as schools and hospitals can be updated or repaired. <strong>More importantly</strong>, these funds are needed to pay the salaries of government workers, including firefighters and the police. Thus, taxes <strong>not only</strong> help improve the community <strong>but also</strong> make it safer.</p>
+      </div>
+
+      <div class="skeleton">
+        <span class="label">Skeleton</span>
+        <p>There are several reasons why <span class="placeholder">[MAIN CLAIM]</span>. Firstly, <span class="placeholder">[REASON 1]</span>. In addition, <span class="placeholder">[REASON 2]</span>. More importantly, <span class="placeholder">[STRONGEST REASON]</span>. Thus, <span class="placeholder">[CONCLUSION]</span>.</p>
+      </div>
+    </section>
+
+
+    <!-- ===================== SECTION 4 ===================== -->
+    <section id="cause-effect">
+      <h2><span class="type-num">04.</span> Argument Type 2: Cause &amp; Effect</h2>
+      <p>Show that one event or condition produces a result. The tense and modal verb you choose signal how certain you are about the outcome.</p>
+
+      <h4>Cause → Effect vocabulary</h4>
+      <div class="chip-group">
+        <code>causes</code><code>leads to</code><code>results in</code><code>is caused by</code><code>results from</code><code>is the result of</code>
+      </div>
+
+      <h4>Certainty markers</h4>
+      <div class="chip-group">
+        <code>will / would</code><code>is likely to</code><code>probably</code><code>may / might / could</code>
+      </div>
+
+      <div class="callout example">
+        <div class="callout-label">Model Example — Certain Result</div>
+        <p style="margin:0;">Eating too much fast food and a lack of exercise can <strong>lead to</strong> obesity.</p>
+      </div>
+
+      <div class="callout example">
+        <div class="callout-label">Model Example — Cautious Prediction</div>
+        <p style="margin:0;">If the government helps homeless people, this <strong>could</strong> solve <strong>many</strong> of their problems.</p>
+      </div>
+
+      <table>
+        <thead><tr><th>If/When clause</th><th>Result clause — confident</th><th>Result clause — cautious</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>If + simple present <br><em>(possible future)</em></td>
+            <td>will + verb</td>
+            <td>may / could / might + verb</td>
+          </tr>
+          <tr>
+            <td>When + simple present <br><em>(general truth)</em></td>
+            <td>simple present</td>
+            <td>often / can + verb</td>
+          </tr>
+          <tr>
+            <td>If + simple past <br><em>(less likely future)</em></td>
+            <td>would + verb</td>
+            <td>could / might + verb</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+
+    <!-- ===================== SECTION 5 ===================== -->
+    <section id="contrast">
+      <h2><span class="type-num">05.</span> Argument Type 3: Contrast &amp; Negation</h2>
+      <p>Strengthen a point by showing what happens in the opposing situation — "what if we didn't do this?" This is particularly useful in problems/solutions and positive/negative development tasks.</p>
+
+      <h4>Connectors</h4>
+      <div class="chip-group">
+        <code>If ... does not ...</code><code>Without ...</code><code>Unless ...</code><code>However</code><code>Although</code><code>While</code>
+      </div>
+
+      <div class="callout example">
+        <div class="callout-label">Model Example</div>
+        <p style="margin:0;">It can put pressure on local charities who have to find food and shelter for the homeless. <strong>If the government does not step in</strong> to help people who are struggling financially, then this puts even more stress on community programmes, and causes homelessness to rise even further.</p>
+      </div>
+
+      <div class="callout warning">
+        <div class="callout-label">Referencing Trap</div>
+        <p style="margin:0;">When linking back to an earlier idea, use a <strong>synonym or paraphrase</strong> rather than a pronoun. A loose pronoun like "it" or "this" often attaches to the wrong idea, making the conclusion unclear.</p>
+        <p style="margin:0.5rem 0 0 0;">❌ <em>In addition, <strong>it</strong> means that house prices remain very high.</em><br>
+        ✓ <em>In addition, <strong>a lack of accommodation</strong> means that house prices remain very high.</em></p>
+      </div>
+    </section>
+
+
+    <!-- ===================== SECTION 6 ===================== -->
+    <section id="explain">
+      <h2><span class="type-num">06.</span> Explaining &amp; Clarifying Ideas</h2>
+
+      <p>You may need to explain an idea to define a key term, provide context for your perspective, or rephrase a complex point more simply. Ask yourself: <em>"Will the examiner understand this from their own experience, or does it depend on mine?"</em></p>
+
+      <h4>When to clarify perspective</h4>
+      <div class="chip-group">
+        <code>In my country, ...</code><code>In my city, ...</code><code>For some people, ...</code><code>In this context, ...</code>
+      </div>
+
+      <h4>Rephrasing / clarifying</h4>
+      <div class="chip-group">
+        <code>This means ...</code><code>which means ...</code><code>In other words, ...</code><code>That is to say, ...</code>
+      </div>
+
+      <div class="callout example">
+        <div class="callout-label">Model Example — Showing Perspective</div>
+        <p style="margin:0;"><em>In my country, the vast majority of people drive to school or work. Therefore, if people are spending more time travelling, this means that they are also driving more and more. Because of this, our fossil fuels are likely to be depleted.</em></p>
+      </div>
+
+      <div class="callout tip">
+        <div class="callout-label">Fact vs. Opinion</div>
+        <p style="margin:0;">A <strong>fact</strong> can be objectively verified. An <strong>opinion</strong> can only be argued for. Don't present an opinion as though it applies universally. Use modal verbs (<code>can</code>, <code>may</code>) and limiting phrases (<code>some people</code>, <code>in many cases</code>) to hedge claims that aren't universal truths.</p>
+      </div>
+
+      <div class="callout warning">
+        <div class="callout-label">Don't Jump to a Conclusion</div>
+        <p style="margin:0;">Reaching a conclusion before you've gathered all the evidence produces an argument the reader cannot follow. If you are interpreting the question through your own experience, make that perspective explicit — don't assume the examiner shares it.</p>
+      </div>
+    </section>
+
+
+    <!-- ===================== SECTION 7 ===================== -->
+    <section id="evidence">
+      <h2><span class="type-num">07.</span> Supporting Evidence</h2>
+
+      <p>Main ideas tend to be <strong>general and broad</strong>. Supporting evidence is <strong>specific and focused</strong>. The evidence must logically connect to the main idea — it must show <em>why</em> the idea is reasonable, not simply repeat it.</p>
+
+      <h3>What good evidence does</h3>
+      <ul>
+        <li>Explains <em>why</em> a conclusion is valid or reasonable</li>
+        <li>Provides a concrete, specific instance of a broader claim</li>
+        <li>Comes from your own knowledge or experience — not invented statistics</li>
+      </ul>
+
+      <h3>Two ways to order an argument</h3>
+      <p>You can present your conclusion first and then support it, or present evidence first and then conclude. Both are valid; alternating between them adds variety.</p>
+
+      <div class="callout example">
+        <div class="callout-label">Option A — Point then Evidence</div>
+        <p style="margin:0;">Taxes help improve the community while also making it safer. <strong>For example</strong>, the funds are used to pay the salaries of government workers such as firefighters and the police.</p>
+      </div>
+
+      <div class="callout example">
+        <div class="callout-label">Option B — Evidence then Conclusion</div>
+        <p style="margin:0;">These funds are used to pay the salaries of all government workers, including firefighters and the police. <strong>Thus</strong>, taxes help improve the community while also making it safer.</p>
+      </div>
+
+      <div class="callout warning">
+        <div class="callout-label">Three Things That Kill an Example</div>
+        <ul style="margin:0.2rem 0 0 0;">
+          <li><strong>Invented statistics</strong> — they sound implausible and don't prove anything.</li>
+          <li><strong>Repeating the main idea</strong> — writing "For example, ..." and then restating the same point is mechanical, not supportive.</li>
+          <li><strong>Trivial evidence for a serious conclusion</strong> — the scale of the example must match the scale of the claim.</li>
+        </ul>
+      </div>
+
+      <div class="callout note">
+        <div class="callout-label">Key Idea</div>
+        <p style="margin:0;">Finish body paragraphs with a <strong>general conclusion</strong>, not a specific example. Examples should appear in the middle of the argument, where they support the reasoning — not as the final word.</p>
+      </div>
+    </section>
+
+
+    <!-- ===================== SECTION 8 ===================== -->
+    <section id="counter">
+      <h2><span class="type-num">08.</span> Counterarguments</h2>
+
+      <p>Acknowledging the opposing view and then showing <em>why you reject it</em> makes your argument stronger than simply ignoring it. The three-step structure below is the clearest way to manage this.</p>
+
+      <div class="arg-flow">
+        <div class="arg-flow-step">
+          <div class="step-label">1. Your argument</div>
+          <div class="step-content">State your position and the reason for it.</div>
+        </div>
+        <div class="arg-flow-step">
+          <div class="step-label">2. Acknowledge counter</div>
+          <div class="step-content">Show you understand the opposing view, using hedging language to weaken it.</div>
+        </div>
+        <div class="arg-flow-step highlight">
+          <div class="step-label">3. Refute</div>
+          <div class="step-content">Explain why you still don't hold the opposing view. Your position must remain clear.</div>
+        </div>
+      </div>
+
+      <h4>Language to acknowledge (concede)</h4>
+      <div class="chip-group">
+        <code>Admittedly, ...</code><code>Some people may argue ...</code><code>Some people might say ...</code><code>It is true that ...</code><code>That may be true for some people.</code>
+      </div>
+
+      <h4>Language to refute</h4>
+      <div class="chip-group">
+        <code>Nevertheless, ...</code><code>However, ...</code><code>Although ...</code><code>While ...</code><code>Having said that, ...</code>
+      </div>
+
+      <div class="callout example">
+        <div class="callout-label">Model — Complete Agreement with Counterargument</div>
+        <p style="margin:0;"><strong>My argument:</strong> I completely agree, because staying in the same job is rewarding and increases your chance of promotion.</p>
+        <p style="margin:0.5rem 0 0 0;"><em>Counterargument: Some people might say it is boring to stay in the same job.</em></p>
+        <p style="margin:0.5rem 0 0 0;"><strong>Concede:</strong> It is true that there is less variety.</p>
+        <p style="margin:0.5rem 0 0 0;"><strong>Refute:</strong> However, I believe changing jobs too often can be unsettling, and you may actually learn less.</p>
+      </div>
+
+      <div class="callout warning">
+        <div class="callout-label">The Classic Band 6.5 Mistake</div>
+        <p style="margin:0;">Presenting the counterargument without making it clear that you <em>disagree</em> with it makes your position ambiguous. Writing "Governments cannot be held responsible when people lose their home" as a plain statement means the examiner reads it as <strong>your position</strong>. Always use hedging language to signal distance: <em>"Some people may argue that governments cannot be held responsible..."</em></p>
+      </div>
+    </section>
+
+
+    <!-- ===================== SECTION 9 ===================== -->
+    <section id="hedging">
+      <h2><span class="type-num">09.</span> Hedging Language</h2>
+
+      <p>Hedging signals how confident you are about a claim. Used carefully, it makes your argument more precise and credible. Used to weaken the counterargument, it strengthens your own position.</p>
+
+      <h4>Weaken a claim (less certain)</h4>
+      <div class="chip-group">
+        <code>could</code><code>might</code><code>may</code><code>possibly</code><code>some</code><code>sometimes</code><code>it is unlikely that</code><code>a few</code>
+      </div>
+
+      <h4>Strengthen a claim (more certain)</h4>
+      <div class="chip-group">
+        <code>will</code><code>would</code><code>must</code><code>clearly</code><code>definitely</code><code>generally</code><code>is likely to</code><code>often</code><code>in most cases</code>
+      </div>
+
+      <div class="callout example">
+        <div class="callout-label">Hedging in Action — Weakening a Counterargument</div>
+        <p style="margin:0;"><em>Staying in the same job <strong>may have some</strong> benefits,</em> but I still think it is better to have more variety.</p>
+        <p style="margin:0.5rem 0 0 0; font-size:0.88rem; color:var(--text-muted);">The underlined hedging (<code>may have some</code>) casts doubt on the counterargument without dismissing it outright — which makes the refusal to accept it more convincing, not less.</p>
+      </div>
+
+      <div class="callout tip">
+        <div class="callout-label">Quick Checklist</div>
+        <ul style="margin:0.2rem 0 0 0;">
+          <li>Does each main point have a <strong>logical reason</strong> behind it?</li>
+          <li>Are your conclusions <strong>supported</strong> by specific evidence, not invented statistics?</li>
+          <li>Is your <strong>position clear throughout</strong> — especially when discussing the opposing view?</li>
+          <li>Have you used <strong>referencing</strong> (synonyms/paraphrase) to avoid ambiguous pronouns?</li>
+          <li>Does the strength of your language <strong>match your certainty</strong> about each claim?</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+</body>
+</html>

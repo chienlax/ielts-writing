@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 2 Essay Planning Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', Consolas, monospace;
+      --bg-page: #fafaf7;
+      --bg-card: #ffffff;
+      --text-main: #1a1a1a;
+      --text-muted: #555555;
+      --border-color: #d8d4c8;
+      --accent-primary: #2a5a78;
+      --accent-hover: #1d4056;
+      --box-example-bg: #eef3f7;
+      --box-example-border: #7ca0c0;
+      --box-note-bg: #fdf6e3;
+      --box-note-border: #d4a05d;
+      --box-tip-bg: #e9efe9;
+      --box-tip-border: #3d6e3e;
+      --box-warning-bg: #fcf3e3;
+      --box-warning-border: #b3372a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      background: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.7;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    nav.sidebar {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2.5rem 1.75rem;
+      border-right: 1px solid var(--border-color);
+      background: var(--bg-page);
+    }
+
+    .nav-title {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 0.25rem;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+
+    .nav-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 2rem;
+    }
+
+    .nav-group-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-top: 1.75rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    nav.sidebar a {
+      display: block;
+      color: var(--text-main);
+      text-decoration: none;
+      padding: 0.4rem 0 0.4rem 0.85rem;
+      border-left: 3px solid transparent;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      border-radius: 0 4px 4px 0;
+    }
+
+    nav.sidebar a:hover {
+      border-left-color: var(--accent-primary);
+      background: var(--box-example-bg);
+      color: var(--accent-hover);
+    }
+
+    main {
+      padding: 3.5rem 4rem 6rem;
+      max-width: 900px;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem 0;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 3.5rem;
+      max-width: 700px;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin: 4rem 0 1rem 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border-color);
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: baseline;
+    }
+
+    h2 .type-num {
+      color: var(--accent-primary);
+      margin-right: 0.5rem;
+      font-family: inherit;
+      font-weight: inherit;
+      font-size: inherit;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 2.5rem 0 0.75rem 0;
+      color: var(--accent-primary);
+    }
+
+    h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 1.5rem 0 0.5rem 0;
+      color: var(--text-muted);
+    }
+
+    p {
+      margin: 0.8rem 0;
+    }
+
+    ul,
+    ol {
+      padding-left: 1.5rem;
+      margin: 0.8rem 0;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    .callout {
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .callout-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .callout.example {
+      background: var(--box-example-bg);
+      border-left: 4px solid var(--box-example-border);
+    }
+
+    .callout.example .callout-label {
+      color: var(--accent-primary);
+    }
+
+    .callout.note {
+      background: var(--box-note-bg);
+      border-left: 4px solid var(--box-note-border);
+    }
+
+    .callout.note .callout-label {
+      color: #8a5a1f;
+    }
+
+    .callout.tip {
+      background: var(--box-tip-bg);
+      border-left: 4px solid var(--box-tip-border);
+    }
+
+    .callout.tip .callout-label {
+      color: var(--box-tip-border);
+    }
+
+    .callout.warning {
+      background: var(--box-warning-bg);
+      border-left: 4px solid var(--box-warning-border);
+    }
+
+    .callout.warning .callout-label {
+      color: var(--box-warning-border);
+    }
+
+    .skeleton {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 1.25rem 1.5rem;
+      margin: 1rem 0;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .skeleton .label {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-primary);
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+
+    .skeleton p {
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .skeleton p+p {
+      margin-top: 0.75rem;
+    }
+
+    .tag {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: var(--accent-primary);
+      color: #ffffff;
+      padding: 0.2em 0.6em;
+      border-radius: 3px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+
+    .tag.muted {
+      background: var(--text-muted);
+    }
+
+    .tag.green {
+      background: var(--box-tip-border);
+    }
+
+    code,
+    .vocab,
+    .placeholder {
+      font-family: var(--font-mono);
+      padding: 0.15em 0.4em;
+      border-radius: 4px;
+      font-size: 0.85em;
+    }
+
+    code,
+    .vocab {
+      background: #ebe8de;
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+    }
+
+    .placeholder {
+      background: #e2e8f0;
+      color: var(--accent-primary);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .chip-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.5rem 0 1.5rem 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+      background: var(--bg-card);
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 0 0 1px var(--border-color);
+    }
+
+    th,
+    td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    th {
+      background: var(--bg-page);
+      font-weight: 600;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .time-badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      background: var(--accent-primary);
+      color: #fff;
+      padding: 0.15em 0.55em;
+      border-radius: 20px;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+    }
+
+    .time-badge.total {
+      background: #1a1a1a;
+    }
+
+    .peel-row {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 0.75rem;
+      margin: 0.6rem 0;
+      align-items: start;
+    }
+
+    .peel-letter {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: var(--accent-primary);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .peel-letter.E2 {
+      background: var(--box-tip-border);
+    }
+
+    .peel-letter.L {
+      background: #8a5a1f;
+    }
+
+    .peel-content strong {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .peel-content span {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      nav.sidebar {
+        position: static;
+        height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--border-color);
+        padding: 1.5rem;
+      }
+
+      main {
+        padding: 2rem 1.5rem 4rem;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+        margin-top: 3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="layout">
+    <nav class="sidebar">
+      <div class="nav-title">Writing Course</div>
+      <div class="nav-sub">Task 2 Planning Guide</div>
+
+      <div class="nav-group-label">The Framework</div>
+      <a href="#tpwc">T.P.W.C Overview</a>
+
+      <div class="nav-group-label">Step by Step</div>
+      <a href="#think">Step 1 — Think</a>
+      <a href="#plan">Step 2 — Plan</a>
+      <a href="#essay-structure">Essay Structure</a>
+      <a href="#write">Step 3 — Write</a>
+      <a href="#check">Step 4 — Check</a>
+
+      <div class="nav-group-label">Quick Reference</div>
+      <a href="#peel">PEEL Structure</a>
+      <a href="#common-mistakes">Common Pitfalls</a>
+    </nav>
+
+    <main>
+      <header>
+        <h1>Writing Task 2 — Essay Planning</h1>
+        <p class="subtitle">A step-by-step guide to the T.P.W.C approach — the thinking and planning framework that
+          turns a blank page into a clear, organised argument.</p>
+      </header>
+
+      <!-- TPWC OVERVIEW -->
+      <section id="tpwc">
+        <h2><span class="type-num">01.</span> The T.P.W.C Framework</h2>
+
+        <p>The whole 40-minute writing process breaks down into four stages. The most important insight is that the
+          first ten minutes of thinking and planning <em>are</em> the writing — skipping them guarantees a weaker essay,
+          not a longer one.</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>What you do</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>T</strong>hink</td>
+              <td>Read the question carefully. Identify the topic, focus, issue, and relevant themes. Decide on your
+                initial position.</td>
+              <td><span class="time-badge">1–2 min</span></td>
+            </tr>
+            <tr>
+              <td><strong>P</strong>lan</td>
+              <td>Brainstorm ideas under your themes. Think critically — connect ideas, delete irrelevant ones, reach
+                conclusions. Draft first and last sentences for each paragraph.</td>
+              <td><span class="time-badge">7–8 min</span></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="font-weight:700; font-size:0.9rem; color:var(--text-muted);">Planning total</td>
+              <td><span class="time-badge total">10 min</span></td>
+            </tr>
+            <tr>
+              <td><strong>W</strong>rite</td>
+              <td>Write the full essay following your plan. Do not invent ideas on the fly — your plan is the map.</td>
+              <td><span class="time-badge">18–20 min</span></td>
+            </tr>
+            <tr>
+              <td><strong>C</strong>heck</td>
+              <td>Review argument clarity and position; fix language and repetition; proofread for slips.</td>
+              <td><span class="time-badge">8–10 min</span></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="font-weight:700; font-size:0.9rem; color:var(--text-muted);">Writing + checking
+                total</td>
+              <td><span class="time-badge total">30 min</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout tip">
+          <div class="callout-label">Key Idea</div>
+          <p style="margin:0;">Planning <em>is</em> writing. Cutting your planning time to write more does not produce a
+            better essay — it produces a longer, weaker one.</p>
+        </div>
+      </section>
+
+      <!-- STEP 1: THINK -->
+      <section id="think">
+        <h2><span class="type-num">02.</span> Step 1 — Think</h2>
+
+        <p>Before writing a single word of your essay, spend one to two minutes dissecting the question. Misreading it
+          at this stage compounds into every paragraph that follows.</p>
+
+        <h3>What to identify in the question</h3>
+        <p>Work through these four elements in order:</p>
+        <ul>
+          <li><strong>General topic</strong> — the broad subject area (e.g. technology, education, the environment)</li>
+          <li><strong>Focus</strong> — who or what is specifically affected</li>
+          <li><strong>Issue</strong> — the precise point you are being asked to discuss</li>
+          <li><strong>Themes</strong> — related concepts that will naturally come up when writing about this topic</li>
+        </ul>
+
+        <p>Identifying themes early is particularly useful: they become the headings on your plan, guide your
+          brainstorming, and reduce the risk of introducing irrelevant ideas later.</p>
+
+        <div class="callout example">
+          <div class="callout-label">Worked Example</div>
+          <p style="margin:0 0 0.6rem 0;"><em>Question: "Many people believe that working from home is more beneficial
+              than working in an office. To what extent do you agree?"</em></p>
+          <ul style="margin:0;">
+            <li><strong>General topic:</strong> work and employment</li>
+            <li><strong>Focus:</strong> employees / workers in general</li>
+            <li><strong>Issue:</strong> whether remote work is more beneficial than office work</li>
+            <li><strong>Themes:</strong> productivity, wellbeing, social interaction, work-life balance, technology</li>
+          </ul>
+        </div>
+
+        <h3>Paraphrasing the question</h3>
+        <p>Your introduction requires you to paraphrase the question. Do this by understanding the <em>overall
+            meaning</em> first, then re-expressing it — not by substituting individual words with synonyms. The two most
+          common problems are unnatural language (from translating word-by-word) and misrepresenting the issue.</p>
+
+        <div class="callout warning">
+          <div class="callout-label">Common Pitfall</div>
+          <p style="margin:0;">Do <strong>not</strong> write your introduction until you have fully planned your
+            argument. Your themes and position may shift during planning, and an introduction written too early will no
+            longer represent your essay accurately.</p>
+        </div>
+      </section>
+
+      <!-- STEP 2: PLAN -->
+      <section id="plan">
+        <h2><span class="type-num">03.</span> Step 2 — Plan</h2>
+
+        <p>This is where the real thinking happens. A plan that just says "BP1: advantages / BP2: disadvantages" is a
+          description of a structure, not a plan. A useful plan shows your actual ideas, how they connect, and what
+          conclusions they support.</p>
+
+        <h3>How to build your plan</h3>
+        <ol>
+          <li><strong>Use your themes as headings</strong> — list them across your planner (e.g. <em>productivity,
+              wellbeing, social interaction</em>)</li>
+          <li><strong>Brainstorm under each heading</strong> — use personal knowledge and experience; ask yourself
+            follow-up questions to develop ideas</li>
+          <li><strong>Think critically</strong> — connect ideas, delete irrelevant ones, and group related ones under an
+            umbrella term</li>
+          <li><strong>Reach conclusions</strong> — your main points should <em>emerge from</em> the evidence you
+            gathered, not be decided in advance</li>
+          <li><strong>Draft first and last sentences</strong> for each paragraph — this frames your argument before you
+            start writing</li>
+        </ol>
+
+        <div class="callout note">
+          <div class="callout-label">Umbrella Terms</div>
+          <p style="margin:0;">An umbrella term groups similar ideas under one concept. For example, "need to pay for
+            equipment" and "higher electricity bills" both fall under <em>financial costs</em>. This keeps your
+            paragraphs tightly focused on one central topic and avoids a scattered argument.</p>
+        </div>
+
+        <div class="callout example">
+          <div class="callout-label">Worked Example — Plan Sketch</div>
+          <p style="margin: 0 0 0.5rem 0;"><em>Question: "To what extent do you agree that working from home is more
+              beneficial?"</em></p>
+          <p style="margin: 0 0 0.4rem 0;"><strong>Advantages (agree side):</strong></p>
+          <ul style="margin: 0 0 0.5rem 0;">
+            <li>No commute → saves time and money → productivity gains</li>
+            <li>Flexible hours → better work-life balance → lower stress</li>
+            <li><em>Umbrella: personal efficiency and wellbeing</em></li>
+          </ul>
+          <p style="margin: 0 0 0.4rem 0;"><strong>Disadvantages (counterargument):</strong></p>
+          <ul style="margin: 0;">
+            <li>Loss of face-to-face collaboration → weaker team cohesion</li>
+            <li>Blurred home/work boundary → risk of overwork → BUT: manageable with discipline</li>
+            <li><em>Umbrella: social and professional drawbacks</em></li>
+          </ul>
+        </div>
+
+        <p>Once your plan is complete, check: does the evidence support your initial position, or do you need to adjust
+          it? Review your plan for balance and logical flow <em>before</em> you begin writing.</p>
+      </section>
+
+      <!-- ESSAY STRUCTURE -->
+      <section id="essay-structure">
+        <h2><span class="type-num">04.</span> Essay Structure</h2>
+
+        <p>A standard Task 2 essay has four paragraphs. Each element does a specific job — understand the function
+          before writing the sentence.</p>
+
+        <h3>Introduction</h3>
+        <p>The introduction needs to answer two questions for the reader: what is the general topic and context, and
+          what is the specific issue being discussed? Keep it concise — this is not the place for your argument.</p>
+
+        <div class="skeleton">
+          <span class="label">Introduction Skeleton</span>
+          <p><span class="placeholder">[Paraphrase of the general topic / context sentence]</span>. <span
+              class="placeholder">[Paraphrase of the specific issue — present the two sides or the question]</span>.
+            <span class="placeholder">[Optional: one-sentence thesis stating your overall position]</span>.
+          </p>
+        </div>
+
+        <div class="callout example">
+          <div class="callout-label">Model Introduction</div>
+          <p style="margin:0;">Remote working has become increasingly common in recent decades, and opinions on its
+            merits vary considerably. While some argue that employees are more productive and content outside the
+            office, others believe the professional and social benefits of office life are irreplaceable. This essay
+            will argue that, on balance, working from home offers significant advantages for most workers.</p>
+        </div>
+
+        <div class="callout note">
+          <div class="callout-label">On Thesis Statements</div>
+          <p style="margin:0;">A thesis statement is optional. Include one only if you are certain of your position
+            <em>after</em> planning, and keep it to one brief, accurate sentence. A thesis that misrepresents your
+            actual argument will lower your score, not raise it. Avoid "scope sentences" such as <em>I will discuss both
+              views and give my opinion</em> — these add no value.
+          </p>
+        </div>
+
+        <h3>Body Paragraphs</h3>
+        <p>Each body paragraph develops one central idea using the <strong>PEEL</strong> structure. The first and last
+          sentences frame the paragraph — think of them as the P and L — and everything between them must be relevant to
+          the central idea introduced in the opening sentence.</p>
+
+        <div class="skeleton">
+          <span class="label">Body Paragraph Skeleton</span>
+          <p><span class="placeholder">[Point: one clear central topic sentence]</span>. <span
+              class="placeholder">[Explain: give the reason or mechanism behind the point]</span>. <span
+              class="placeholder">[Expand: show the effect, give an example, or develop the idea further]</span>. <span
+              class="placeholder">[Link: conclude the paragraph and show how it answers the question]</span>.</p>
+        </div>
+
+        <div class="callout example">
+          <div class="callout-label">Model Body Paragraph</div>
+          <p style="margin:0;"><strong>P —</strong> Working from home can offer considerable gains in personal
+            productivity and wellbeing. <strong>E —</strong> Without a daily commute, employees reclaim several hours
+            each week, time that may be redirected towards focused work or rest. <strong>E —</strong> In addition, the
+            ability to structure one's own day tends to reduce stress and improve work-life balance, which in turn
+            supports sustained performance. <strong>L —</strong> For these reasons, remote work may benefit employees
+            more than the traditional office environment.</p>
+        </div>
+
+        <h3>Conclusion</h3>
+        <p>Write at least two sentences. The first summarises the main ideas in your argument — use the first and last
+          sentences of each body paragraph to help. The second answers the question directly: to what extent you agree,
+          whether one side outweighs the other, or whether the development is positive or negative.</p>
+
+        <div class="callout warning">
+          <div class="callout-label">Common Pitfall</div>
+          <ul style="margin: 0.2rem 0 0 0;">
+            <li>Writing only one sentence — this is the most common conclusion problem.</li>
+            <li>Summarising only one of your body paragraphs.</li>
+            <li>Introducing a new idea not discussed in the essay.</li>
+            <li>Failing to answer the original question.</li>
+          </ul>
+        </div>
+
+        <h4>Useful conclusion starters</h4>
+        <div class="chip-group">
+          <code>In conclusion,</code>
+          <code>To sum up,</code>
+          <code>Therefore,</code>
+          <code>In my view,</code>
+          <code>On balance,</code>
+          <code>I would argue that</code>
+        </div>
+      </section>
+
+      <!-- PEEL REFERENCE -->
+      <section id="peel">
+        <h2><span class="type-num">05.</span> PEEL at a Glance</h2>
+
+        <p>Every sentence in a body paragraph should have a clear purpose. The PEEL structure keeps you accountable.</p>
+
+        <div style="margin: 1.5rem 0;">
+          <div class="peel-row">
+            <div class="peel-letter">P</div>
+            <div class="peel-content">
+              <strong>Point</strong>
+              <span>Introduce the one central topic of the paragraph. The reader should know exactly what this paragraph
+                is about.</span>
+            </div>
+          </div>
+          <div class="peel-row">
+            <div class="peel-letter">E</div>
+            <div class="peel-content">
+              <strong>Explain</strong>
+              <span>Give the reason, cause, or mechanism that supports your point. Why is it true?</span>
+            </div>
+          </div>
+          <div class="peel-row">
+            <div class="peel-letter E2">E</div>
+            <div class="peel-content">
+              <strong>Expand</strong>
+              <span>Develop the idea — show an effect, give a relevant example, or extend the explanation. Avoid
+                inventing statistics.</span>
+            </div>
+          </div>
+          <div class="peel-row">
+            <div class="peel-letter L">L</div>
+            <div class="peel-content">
+              <strong>Link</strong>
+              <span>Conclude the paragraph and show how the central idea answers or relates to the question. This
+                sentence and the Point sentence should act as a frame — they should be closely connected.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-label">Quick Check</div>
+          <p style="margin:0;">Read only the first and last sentences of each body paragraph. They should form a
+            coherent pair that maps out the paragraph's argument. If they could be reversed without losing meaning, they
+            are well-matched. If they feel disconnected, your central topic may be unclear.</p>
+        </div>
+      </section>
+
+      <!-- STEP 3: WRITE -->
+      <section id="write">
+        <h2><span class="type-num">06.</span> Step 3 — Write</h2>
+
+        <p>Your completed plan is essentially a rough first draft. Follow it as closely as possible, and adjust only
+          when a clearer way to express an idea occurs to you naturally.</p>
+
+        <h4>Writing strategies</h4>
+        <ul>
+          <li>Write as if explaining your argument to a knowledgeable colleague — clear and natural, not impressive.
+          </li>
+          <li>Aim for <strong>250–330 words</strong>. Below 250 is penalised; above 330 risks wordiness and poor time
+            management.</li>
+          <li>Vary sentence length. Short sentences land hard. Longer ones build and develop. Uniform medium-length
+            sentences flatten everything.</li>
+          <li>Use hedging language — <code>may</code>, <code>could</code>, <code>might</code>, <code>tends to</code> —
+            to signal your stance accurately without overclaiming.</li>
+          <li>Do not write the introduction first. Write it only after planning, when you know what your argument
+            actually contains.</li>
+        </ul>
+
+        <div class="callout warning">
+          <div class="callout-label">Common Pitfall</div>
+          <p style="margin:0;">Do <strong>not</strong> attempt to "boost" your language by substituting simple, correct
+            words with complex, unnatural ones. Precision matters more than range. A Band 7 essay often reads simpler
+            than a Band 6 essay — and that is precisely why it scores higher.</p>
+        </div>
+      </section>
+
+      <!-- STEP 4: CHECK -->
+      <section id="check">
+        <h2><span class="type-num">07.</span> Step 4 — Check</h2>
+
+        <p>With a solid plan behind you, checking is faster because you are not trying to fix structural problems — only
+          language ones. Work through three passes:</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Pass</th>
+              <th>What to look for</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Argument</strong></td>
+              <td>Re-read the question, then your essay. Is your position clear throughout? Does every paragraph have
+                one central topic? Are any sentences unclear? (Shorter is usually clearer.)</td>
+              <td><span class="time-badge">~5 min</span></td>
+            </tr>
+            <tr>
+              <td><strong>Language</strong></td>
+              <td>Remove or replace repeated words. Use a synonym or pronoun to refer back. Check that hedging language
+                is consistent with your actual position.</td>
+              <td><span class="time-badge">~3 min</span></td>
+            </tr>
+            <tr>
+              <td><strong>Proofread</strong></td>
+              <td>Subject-verb agreement; singular/plural nouns; missing prepositions; common spelling errors. Read with
+                your inner voice "louder."</td>
+              <td><span class="time-badge">~2 min</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout tip">
+          <div class="callout-label">Key Idea</div>
+          <p style="margin:0;">If your essays are consistently too short and you struggle to add content during
+            checking, this is a signal to invest more in planning — not more in writing. A well-planned argument is
+            almost always a full-length one.</p>
+        </div>
+      </section>
+
+      <!-- COMMON MISTAKES -->
+      <section id="common-mistakes">
+        <h2><span class="type-num">08.</span> Common Pitfalls Summary</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>Pitfall</th>
+              <th>Fix</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Think</td>
+              <td>Skim-reading the question and misrepresenting the issue</td>
+              <td>Identify all four elements (topic, focus, issue, themes) before writing anything</td>
+            </tr>
+            <tr>
+              <td>Think</td>
+              <td>Writing a general, rehearsed opening ("This is a controversial topic")</td>
+              <td>Paraphrase the specific issue in the question — not the broad topic</td>
+            </tr>
+            <tr>
+              <td>Plan</td>
+              <td>Planning only structure, not content ("BP1: advantages")</td>
+              <td>Write your actual ideas, connect them, and identify umbrella terms and conclusions</td>
+            </tr>
+            <tr>
+              <td>Write</td>
+              <td>Starting with the introduction before knowing the argument</td>
+              <td>Write the introduction last, or at minimum after the plan is complete</td>
+            </tr>
+            <tr>
+              <td>Write</td>
+              <td>Long, overloaded sentences to demonstrate grammar</td>
+              <td>One idea per sentence; vary length for rhythm, not to impress</td>
+            </tr>
+            <tr>
+              <td>Write</td>
+              <td>Thesis statement that misrepresents the body argument</td>
+              <td>Write the thesis only after planning, and check it against your body paragraphs</td>
+            </tr>
+            <tr>
+              <td>Write</td>
+              <td>One-sentence conclusion that does not answer the question</td>
+              <td>Write at least two sentences: summarise the main ideas, then answer the question directly</td>
+            </tr>
+            <tr>
+              <td>Check</td>
+              <td>Adding more vocabulary or ideas during checking</td>
+              <td>Only fix what is already there — do not introduce new content at this stage</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+
+</html>

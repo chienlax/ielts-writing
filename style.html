@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unified Style Template</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Fonts */
+    --font-display: 'Fraunces', Georgia, serif; /* Exclusively for H1 */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', Consolas, monospace;
+
+    /* Base Colors */
+    --bg-page: #fafaf7;
+    --bg-card: #ffffff;
+    --text-main: #1a1a1a;
+    --text-muted: #555555;
+    --border-color: #d8d4c8;
+    
+    /* UI Accent Colors */
+    --accent-primary: #2a5a78;   /* Deep Blue for primary structural accents */
+    --accent-hover: #1d4056;
+
+    /* Semantic Callout Colors */
+    --box-example-bg: #eef3f7;
+    --box-example-border: #7ca0c0;
+    
+    --box-note-bg: #fdf6e3;
+    --box-note-border: #d4a05d;
+    
+    --box-tip-bg: #e9efe9;
+    --box-tip-border: #3d6e3e;
+    
+    --box-warning-bg: #fcf3e3;
+    --box-warning-border: #b3372a;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  /* Base Typography & Sizing (17px base) */
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.7;
+    font-size: 17px; 
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Structural Layout */
+  .layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* Sidebar Navigation */
+  nav.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 2.5rem 1.75rem;
+    border-right: 1px solid var(--border-color);
+    background: var(--bg-page);
+  }
+
+  .nav-title {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-main);
+    letter-spacing: -0.01em;
+  }
+
+  .nav-sub {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 2rem;
+  }
+
+  .nav-group-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  nav.sidebar a {
+    display: block;
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 0.4rem 0 0.4rem 0.85rem;
+    border-left: 3px solid transparent;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    border-radius: 0 4px 4px 0;
+  }
+
+  nav.sidebar a:hover {
+    border-left-color: var(--accent-primary);
+    background: var(--box-example-bg);
+    color: var(--accent-hover);
+  }
+
+  /* Main Content Area */
+  main {
+    padding: 3.5rem 4rem 6rem;
+    max-width: 900px;
+  }
+
+  /* Headings */
+  h1 {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 3.5rem;
+    max-width: 700px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 4rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: baseline;
+  }
+
+  h2 .type-num {
+    color: var(--accent-primary);
+    margin-right: 0.5rem;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 2.5rem 0 0.75rem 0;
+    color: var(--accent-primary);
+  }
+
+  h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 1.5rem 0 0.5rem 0;
+    color: var(--text-muted);
+  }
+
+  p { margin: 0.8rem 0; }
+
+  ul, ol { 
+    padding-left: 1.5rem; 
+    margin: 0.8rem 0; 
+  }
+  
+  li { 
+    margin-bottom: 0.4rem; 
+  }
+
+  /* Callout Boxes */
+  .callout {
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  }
+
+  .callout-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .callout.example {
+    background: var(--box-example-bg);
+    border-left: 4px solid var(--box-example-border);
+  }
+  .callout.example .callout-label { color: var(--accent-primary); }
+
+  .callout.note {
+    background: var(--box-note-bg);
+    border-left: 4px solid var(--box-note-border);
+  }
+  .callout.note .callout-label { color: #8a5a1f; }
+
+  .callout.tip {
+    background: var(--box-tip-bg);
+    border-left: 4px solid var(--box-tip-border);
+  }
+  .callout.tip .callout-label { color: var(--box-tip-border); }
+
+  .callout.warning {
+    background: var(--box-warning-bg);
+    border-left: 4px solid var(--box-warning-border);
+  }
+  .callout.warning .callout-label { color: var(--box-warning-border); }
+
+  /* Skeletons */
+  .skeleton {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  }
+  
+  .skeleton .label {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-primary);
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+  
+  .skeleton p { margin: 0; line-height: 1.6; }
+  .skeleton p + p { margin-top: 0.75rem; }
+
+  /* Tags */
+  .tag {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--accent-primary);
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    border-radius: 3px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+  .tag.muted { background: var(--text-muted); }
+
+  /* Inline Code & Placeholders */
+  code, .vocab, .placeholder {
+    font-family: var(--font-mono);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    font-size: 0.85em;
+  }
+
+  code, .vocab {
+    background: #ebe8de;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+  }
+
+  .placeholder {
+    background: #e2e8f0;
+    color: var(--accent-primary);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  /* Chip Groups */
+  .chip-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.5rem 0 1.5rem 0;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    background: var(--bg-card);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px var(--border-color);
+  }
+
+  th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  th {
+    background: var(--bg-page);
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; }
+    nav.sidebar {
+      position: static;
+      height: auto;
+      border-right: 0;
+      border-bottom: 1px solid var(--border-color);
+      padding: 1.5rem;
+    }
+    main { padding: 2rem 1.5rem 4rem; }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.4rem; margin-top: 3rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="layout">
+  <nav class="sidebar">
+    <div class="nav-title">Course Material</div>
+    <div class="nav-sub">Style Guide Template</div>
+
+    <div class="nav-group-label">Foundations</div>
+    <a href="#typography">Typography</a>
+    <a href="#callouts">Callout Boxes</a>
+    <a href="#tables">Data Tables</a>
+
+    <div class="nav-group-label">Components</div>
+    <a href="#lists">Lists & Vocab</a>
+    <a href="#skeletons">Skeletons & Tags</a>
+  </nav>
+
+  <main>
+    <header>
+      <h1>Document Style Guide</h1>
+      <p class="subtitle">This master template combines layout, typography rules, and all custom UI components required for the writing course materials.</p>
+    </header>
+
+    <section id="typography">
+      <h2><span class="type-num">01.</span> Typography System</h2>
+      <p>The serif font (Fraunces) is strictly reserved for the H1 title. Everything else, including this H2 heading and its leading number, uses Inter. The base font size is 17px.</p>
+      
+      <h3>This is an H3 Subheading</h3>
+      <p>Subheadings use the primary accent colour to break up heavy walls of text.</p>
+    </section>
+
+    <section id="callouts">
+      <h2><span class="type-num">02.</span> Callout Boxes</h2>
+      <div class="callout example">
+        <div class="callout-label">Model Example</div>
+        <p style="margin: 0;">Use the blue box to showcase sample sentences or templates.</p>
+      </div>
+
+      <div class="callout warning">
+        <div class="callout-label">Common Pitfall</div>
+        <ul style="margin: 0.2rem 0 0 0;">
+          <li>Use the red warning box for traps and absolute rules.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skeletons">
+      <h2><span class="type-num">03.</span> Skeletons & Tags</h2>
+      <p>Used primarily in the templates document, these components map out structural phrasing and logic.</p>
+      
+      <h3>Chart Types <span class="tag">categorical</span> <span class="tag muted">time-based</span></h3>
+
+      <div class="skeleton">
+        <span class="label">Intro Skeleton</span>
+        <p>The chart compares <span class="placeholder">[DATA]</span> across <span class="placeholder">[CATEGORIES]</span> in <span class="placeholder">[PLACE]</span>.</p>
+      </div>
+    </section>
+
+    <section id="lists">
+      <h2><span class="type-num">04.</span> Chip Groups</h2>
+      <p>Replacing the old definition lists, chip groups keep vocabulary banks flexible and responsive on mobile displays.</p>
+      
+      <h4>Direction verbs (up)</h4>
+      <div class="chip-group">
+        <code>rose</code> <code>climbed</code> <code>increased</code> <code>grew</code> <code>surged</code>
+      </div>
+      
+      <h4>Comparison ratios</h4>
+      <div class="chip-group">
+        <code>considerably higher than</code> <code>almost ten times greater than</code> <code>double</code>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+</body>
+</html>
