@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Task 1 — Unified Planning Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', Consolas, monospace;
+    --bg-page: #fafaf7;
+    --bg-card: #ffffff;
+    --text-main: #1a1a1a;
+    --text-muted: #555555;
+    --border-color: #d8d4c8;
+    --accent-primary: #2a5a78;
+    --accent-hover: #1d4056;
+    --box-example-bg: #eef3f7;
+    --box-example-border: #7ca0c0;
+    --box-note-bg: #fdf6e3;
+    --box-note-border: #d4a05d;
+    --box-tip-bg: #e9efe9;
+    --box-tip-border: #3d6e3e;
+    --box-warning-bg: #fcf3e3;
+    --box-warning-border: #b3372a;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.7;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  nav.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 2.5rem 1.75rem;
+    border-right: 1px solid var(--border-color);
+    background: var(--bg-page);
+  }
+
+  .nav-title {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-main);
+    letter-spacing: -0.01em;
+  }
+
+  .nav-sub {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 2rem;
+  }
+
+  .nav-group-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  nav.sidebar a {
+    display: block;
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 0.4rem 0 0.4rem 0.85rem;
+    border-left: 3px solid transparent;
+    font-size: 0.92rem;
+    transition: all 0.2s ease;
+    border-radius: 0 4px 4px 0;
+  }
+
+  nav.sidebar a:hover {
+    border-left-color: var(--accent-primary);
+    background: var(--box-example-bg);
+    color: var(--accent-hover);
+  }
+
+  main {
+    padding: 3.5rem 4rem 6rem;
+    max-width: 920px;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    max-width: 680px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 4rem 0 0.25rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+
+  h2 .type-num {
+    color: var(--accent-primary);
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1.75rem 0 0.5rem 0;
+    color: var(--accent-primary);
+  }
+
+  h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 1.25rem 0 0.4rem 0;
+    color: var(--text-muted);
+  }
+
+  p { margin: 0.7rem 0; }
+  ul, ol { padding-left: 1.5rem; margin: 0.6rem 0; }
+  li { margin-bottom: 0.35rem; }
+
+  .focus-bar {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: var(--box-example-bg);
+    border-left: 4px solid var(--box-example-border);
+    border-radius: 0 6px 6px 0;
+    padding: 0.75rem 1.1rem;
+    margin: 1rem 0 1.5rem 0;
+    font-size: 0.97rem;
+  }
+
+  .focus-bar .focus-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-primary);
+    white-space: nowrap;
+    padding-top: 0.15rem;
+  }
+
+  .callout {
+    padding: 0.9rem 1.1rem;
+    margin: 1.25rem 0;
+    border-radius: 6px;
+    font-size: 0.93rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  }
+
+  .callout-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.35rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .callout.example { background: var(--box-example-bg); border-left: 4px solid var(--box-example-border); }
+  .callout.example .callout-label { color: var(--accent-primary); }
+  .callout.note { background: var(--box-note-bg); border-left: 4px solid var(--box-note-border); }
+  .callout.note .callout-label { color: #8a5a1f; }
+  .callout.tip { background: var(--box-tip-bg); border-left: 4px solid var(--box-tip-border); }
+  .callout.tip .callout-label { color: var(--box-tip-border); }
+  .callout.warning { background: var(--box-warning-bg); border-left: 4px solid var(--box-warning-border); }
+  .callout.warning .callout-label { color: var(--box-warning-border); }
+
+  .skeleton {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin: 0.75rem 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  }
+
+  .skeleton .label {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-primary);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  .skeleton p { margin: 0; line-height: 1.6; font-size: 0.93rem; }
+  .skeleton p + p { margin-top: 0.5rem; }
+
+  .placeholder {
+    font-family: var(--font-mono);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    font-size: 0.82em;
+    background: #e2e8f0;
+    color: var(--accent-primary);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  code, .vocab {
+    font-family: var(--font-mono);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    font-size: 0.83em;
+    background: #ebe8de;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+  }
+
+  .chip-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin: 0.4rem 0 1.1rem 0;
+  }
+
+  .tag {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--accent-primary);
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    border-radius: 3px;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+  }
+
+  .tag.muted { background: var(--text-muted); }
+  .tag.green { background: var(--box-tip-border); }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.25rem 0;
+    font-size: 0.92rem;
+    background: var(--bg-card);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px var(--border-color);
+  }
+
+  th, td {
+    padding: 0.65rem 0.9rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  th {
+    background: var(--bg-page);
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+
+  /* Planning steps grid */
+  .steps-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.75rem;
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  .step-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.9rem 1rem;
+    font-size: 0.91rem;
+  }
+
+  .step-card .step-num {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-primary);
+    margin-bottom: 0.3rem;
+  }
+
+  .step-card .step-title {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+  }
+
+  .step-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+  }
+
+  .step-card li {
+    margin-bottom: 0.25rem;
+    font-size: 0.88rem;
+    color: var(--text-main);
+  }
+
+  /* Divider between task types */
+  .task-divider {
+    margin: 3rem 0 0 0;
+  }
+
+  .time-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: var(--bg-page);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 0.2em 0.8em;
+    color: var(--text-muted);
+    margin-left: 0.6rem;
+    vertical-align: middle;
+  }
+
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; }
+    nav.sidebar { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--border-color); padding: 1.5rem; }
+    main { padding: 2rem 1.5rem 4rem; }
+    h1 { font-size: 2rem; }
+    .steps-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="layout">
+<nav class="sidebar">
+  <div class="nav-title">IELTS Task 1</div>
+  <div class="nav-sub">Planning Guide</div>
+
+  <div class="nav-group-label">Data Charts</div>
+  <a href="#line">Line chart</a>
+  <a href="#bar">Bar chart</a>
+  <a href="#pie">Pie chart</a>
+  <a href="#table">Table</a>
+  <a href="#mixed">Mixed / two charts</a>
+
+  <div class="nav-group-label">Non-Data Tasks</div>
+  <a href="#process">Process diagram</a>
+  <a href="#map">Map / plan</a>
+
+  <div class="nav-group-label">Quick Reference</div>
+  <a href="#overview">Writing the overview</a>
+  <a href="#tense">Tense cheat sheet</a>
+</nav>
+
+<main>
+  <header>
+    <h1>Writing Task 1 Planning</h1>
+    <p class="subtitle">One reference for all seven task types. For each type: what the task is asking for, what to look for in the chart, and the three planning steps.</p>
+  </header>
+
+  <!-- ===================== LINE CHART ===================== -->
+  <section id="line">
+    <h2><span class="type-num">01.</span> Line Chart <span class="tag">time-based</span></h2>
+
+    <div class="focus-bar">
+      <span class="focus-label">Core task</span>
+      <span>Describe how values <strong>change over time</strong>. The examiner wants to see trends, turning points, and comparative behaviour across lines, not just a list of data points.</span>
+    </div>
+
+    <h3>What to notice</h3>
+    <div class="chip-group">
+      <code>overall direction</code>
+      <code>rate of change (steep vs gradual)</code>
+      <code>peaks and troughs</code>
+      <code>rank changes / crossovers</code>
+      <code>convergence or divergence</code>
+      <code>period of stability / plateau</code>
+      <code>start and end values</code>
+    </div>
+
+    <h3>Planning steps</h3>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">Step 1 &mdash; Strip</div>
+        <div class="step-title">Read the basics</div>
+        <ul>
+          <li>Topic</li>
+          <li>X-axis: time range and unit</li>
+          <li>Y-axis: what is measured and unit</li>
+          <li>How many lines; what each represents</li>
+        </ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 2 &mdash; Flag</div>
+        <div class="step-title">Mark key events per line</div>
+        <ul>
+          <li>Start value &rarr; end value</li>
+          <li>Peak (value + year) or trough</li>
+          <li>Any crossover point</li>
+          <li>Periods of sharp change vs stability</li>
+        </ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 3 &mdash; Group</div>
+        <div class="step-title">Decide paragraph structure</div>
+        <ul>
+          <li>Group by trend direction (rising vs falling)</li>
+          <li>Or group by time period (early half / late half)</li>
+          <li>Keep crossovers and shared patterns in one paragraph</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout warning">
+      <div class="callout-label">Key pitfall</div>
+      <p style="margin:0">Listing every data point in order is <em>narrating</em>, not reporting. Select the most significant values and describe the movement between them. Two or three well-chosen figures per line are enough.</p>
+    </div>
+  </section>
+
+  <!-- ===================== BAR CHART ===================== -->
+  <section id="bar">
+    <h2><span class="type-num">02.</span> Bar Chart <span class="tag muted">categorical</span> <span class="tag">comparative</span></h2>
+
+    <div class="focus-bar">
+      <span class="focus-label">Core task</span>
+      <span>Compare values across <strong>categories</strong>, which may be at a single point or across a few time periods. The main job is ranking and gap size, not time trends.</span>
+    </div>
+
+    <h3>What to notice</h3>
+    <div class="chip-group">
+      <code>highest and lowest category</code>
+      <code>ranking order</code>
+      <code>gap between top and bottom</code>
+      <code>similar-performing categories</code>
+      <code>outliers</code>
+      <code>rank shifts across groups or years</code>
+    </div>
+
+    <h3>Planning steps</h3>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">Step 1 &mdash; Strip</div>
+        <div class="step-title">Read the basics</div>
+        <ul>
+          <li>Topic</li>
+          <li>What each bar represents</li>
+          <li>Unit (%, number, etc.)</li>
+          <li>Number of groups or time labels</li>
+        </ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 2 &mdash; Flag</div>
+        <div class="step-title">Rank and note gaps</div>
+        <ul>
+          <li>Rank all bars highest to lowest</li>
+          <li>Identify clear outliers</li>
+          <li>Note categories that are close in value</li>
+          <li>If multiple groups: note any rank reversals</li>
+        </ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 3 &mdash; Group</div>
+        <div class="step-title">Decide paragraph structure</div>
+        <ul>
+          <li>Top tier vs bottom tier</li>
+          <li>Or group by trend if time-series bars</li>
+          <li>One group per paragraph; avoid listing all categories in one sentence</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout warning">
+      <div class="callout-label">Key pitfall</div>
+      <p style="margin:0">Describing every bar in descending order without grouping reads as a list. If three categories are broadly similar in value, name them together with a comparative phrase rather than three separate sentences.</p>
+    </div>
+  </section>
+
+  <!-- ===================== PIE CHART ===================== -->
+  <section id="pie">
+    <h2><span class="type-num">03.</span> Pie Chart <span class="tag muted">proportional</span></h2>
+
+    <div class="focus-bar">
+      <span class="focus-label">Core task</span>
+      <span>Report how a <strong>whole is divided</strong> into proportions. When two pies are given, the task is to compare how those proportions shift between them.</span>
+    </div>
+
+    <h3>What to notice</h3>
+    <div class="chip-group">
+      <code>dominant segment (&gt;50% or much larger)</code>
+      <code>smallest segment</code>
+      <code>segments that are roughly equal</code>
+      <code>combined minor segments vs dominant</code>
+      <code>if two pies: segments that grew / shrank</code>
+    </div>
+
+    <h3>Planning steps</h3>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">Step 1 &mdash; Strip</div>
+        <div class="step-title">Read the basics</div>
+        <ul>
+          <li>Topic; what the whole represents</li>
+          <li>Category labels and % values</li>
+          <li>Year / place if stated</li>
+          <li>Number of pies (one or two)</li>
+        </ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 2 &mdash; Flag</div>
+        <div class="step-title">Rank and tier</div>
+        <ul>
+          <li>Rank segments largest to smallest</li>
+          <li>Group into: dominant / mid-tier / minor</li>
+          <li>If two pies: annotate increase or decrease per segment</li>
+        </ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 3 &mdash; Group</div>
+        <div class="step-title">Decide paragraph structure</div>
+        <ul>
+          <li>Single pie: dominant tier &rarr; mid and minor</li>
+          <li>Two pies: P1 largest segments in both; P2 smaller segments and shifts</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout warning">
+      <div class="callout-label">Key pitfall</div>
+      <p style="margin:0">Reading out every percentage in order is not analysis. Group segments and use comparative language: <em>nearly half</em>, <em>just over a third</em>, <em>combined, these three categories accounted for...</em></p>
+    </div>
+  </section>
+
+  <!-- ===================== TABLE ===================== -->
+  <section id="table">
+    <h2><span class="type-num">04.</span> Table <span class="tag muted">multi-dimensional</span></h2>
+
+    <div class="focus-bar">
+      <span class="focus-label">Core task</span>
+      <span>Compare data across <strong>two dimensions simultaneously</strong> (rows and columns). Select the most significant patterns; you cannot and should not report every cell.</span>
+    </div>
+
+    <h3>What to notice</h3>
+    <div class="chip-group">
+      <code>overall highest and lowest cell</code>
+      <code>pattern along each row</code>
+      <code>pattern down each column</code>
+      <code>outlier cells (unusually high or low)</code>
+      <code>consistent rankings across rows</code>
+      <code>notable exceptions to a general pattern</code>
+    </div>
+
+    <h3>Planning steps</h3>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">Step 1 &mdash; Strip</div>
+        <div class="step-title">Read the basics</div>
+        <ul>
+          <li>What rows represent</li>
+          <li>What columns represent</li>
+          <li>Unit of measurement</li>
+          <li>Any total row or column</li>
+        </ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 2 &mdash; Flag</div>
+        <div class="step-title">Scan for patterns</div>
+        <ul>
+          <li>Circle the highest and lowest cell overall</li>
+          <li>Note any column where one row consistently leads</li>
+          <li>Identify any row that breaks the general column pattern</li>
+        </ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 3 &mdash; Group</div>
+        <div class="step-title">Choose an axis</div>
+        <ul>
+          <li>Organise by row (compare categories at each column value)</li>
+          <li>Or organise by column (describe how each column behaves across rows)</li>
+          <li>Stick to one axis per paragraph</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout warning">
+      <div class="callout-label">Key pitfall</div>
+      <p style="margin:0">Transcribing the table row by row produces a wall of numbers. Pick a clear analytical angle (e.g., "Country A consistently led in all categories except X") and build paragraphs around that argument rather than the table's physical layout.</p>
+    </div>
+  </section>
+
+  <!-- ===================== MIXED ===================== -->
+  <section id="mixed">
+    <h2><span class="type-num">05.</span> Mixed / Two Charts <span class="tag">linked</span></h2>
+
+    <div class="focus-bar">
+      <span class="focus-label">Core task</span>
+      <span>Understand each chart individually, then report the <strong>relationship or contrast</strong> between them. The connection between the two charts is usually the most important point.</span>
+    </div>
+
+    <h3>What to notice</h3>
+    <div class="chip-group">
+      <code>what each chart measures (different metrics?)</code>
+      <code>do the trends agree or contradict?</code>
+      <code>shared categories between the two charts</code>
+      <code>which chart shows quantity; which shows rate or proportion</code>
+      <code>any category that is notable in both</code>
+    </div>
+
+    <h3>Planning steps</h3>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">Step 1 &mdash; Strip</div>
+        <div class="step-title">Analyse each chart separately</div>
+        <ul>
+          <li>Apply the single-chart strip to each one</li>
+          <li>Identify the metric each chart shows</li>
+          <li>Check whether time periods or categories match</li>
+        </ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 2 &mdash; Connect</div>
+        <div class="step-title">Find the link</div>
+        <ul>
+          <li>Does chart 2 explain chart 1 (cause &rarr; effect)?</li>
+          <li>Are they showing the same data at different scales?</li>
+          <li>Which category behaves consistently across both?</li>
+          <li>Is there a surprising mismatch?</li>
+        </ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 3 &mdash; Structure</div>
+        <div class="step-title">One paragraph per chart</div>
+        <ul>
+          <li>Describe chart 1 in P1, chart 2 in P2</li>
+          <li>Cross-reference once per paragraph where the connection is clear</li>
+          <li>Overview covers the link, not just each chart in isolation</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout warning">
+      <div class="callout-label">Key pitfall</div>
+      <p style="margin:0">Treating the two charts as completely independent and writing two separate mini-reports misses the point. The overview must capture how the charts relate. At least one cross-reference per body paragraph keeps the analysis unified.</p>
+    </div>
+  </section>
+
+  <!-- ===================== PROCESS ===================== -->
+  <section id="process">
+    <h2><span class="type-num">06.</span> Process Diagram <span class="tag green">sequential</span></h2>
+
+    <div class="focus-bar">
+      <span class="focus-label">Core task</span>
+      <span>Describe how a <strong>raw input is transformed into an output</strong> through a series of stages. The task rewards grouping stages into logical phases, not listing every step with First/Then/Next.</span>
+    </div>
+
+    <h3>What to notice</h3>
+    <div class="chip-group">
+      <code>raw input and final output</code>
+      <code>total number of stages</code>
+      <code>stages where the material changes form</code>
+      <code>any branch or loop</code>
+      <code>natural phase boundaries (e.g., field &rarr; factory)</code>
+      <code>parallel stages happening simultaneously</code>
+    </div>
+
+    <h3>Planning steps</h3>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">Step 1 &mdash; Strip</div>
+        <div class="step-title">Read the basics</div>
+        <ul>
+          <li>Natural or manufactured process?</li>
+          <li>Count stages</li>
+          <li>Raw material &rarr; final product</li>
+          <li>Any branches or cycles?</li>
+        </ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 2 &mdash; Table</div>
+        <div class="step-title">Inventory each stage</div>
+        <ul>
+          <li>Stage number, label, what happens</li>
+          <li>Flag: form-change &#9733;, branch &#10550;, unusual !</li>
+          <li>Group stages into 2&ndash;3 umbrella phases</li>
+        </ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 3 &mdash; Paragraph plan</div>
+        <div class="step-title">One paragraph per phase</div>
+        <ul>
+          <li>Use umbrella terms: <em>initial preparation</em>, <em>processing</em>, <em>distribution</em></li>
+          <li>Vary cohesive devices: time clauses, reduced relatives, passive</li>
+          <li>Overview: type of process + N stages + raw &rarr; final</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout warning">
+      <div class="callout-label">Key pitfall</div>
+      <p style="margin:0">Chaining <em>First... Then... Next... Finally...</em> through all stages is Band 6 cohesion. Use subordinate time clauses: <em>Once the cane has been harvested...</em>, <em>After being crushed, the juice is...</em>, <em>The dried pellets are then packed, completing the cycle.</em></p>
+    </div>
+
+    <div class="callout example">
+      <div class="callout-label">Dominant verb form</div>
+      <p style="margin:0">Present passive throughout: <em>is heated</em>, <em>is crushed</em>, <em>is transferred</em>. Time clauses with present perfect passive: <em>once the crop has been harvested</em>. Never past tense unless the question explicitly shows a historical process.</p>
+    </div>
+  </section>
+
+  <!-- ===================== MAP ===================== -->
+  <section id="map">
+    <h2><span class="type-num">07.</span> Map / Plan <span class="tag green">spatial</span></h2>
+
+    <div class="focus-bar">
+      <span class="focus-label">Core task</span>
+      <span>Describe how a <strong>place changed</strong> between two points in time (or how a planned development differs from the current state). The task rewards grouping changes into categories, not cataloguing features compass point by compass point.</span>
+    </div>
+
+    <h3>What to notice</h3>
+    <div class="chip-group">
+      <code>what was added (+)</code>
+      <code>what was removed (&minus;)</code>
+      <code>what was relocated (&#8644;)</code>
+      <code>what was expanded (&#8593;) or reduced (&#8595;)</code>
+      <code>what was retained (=)</code>
+      <code>overall dominant transformation</code>
+    </div>
+
+    <h3>Planning steps</h3>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">Step 1 &mdash; Strip</div>
+        <div class="step-title">Read the basics</div>
+        <ul>
+          <li>Place name</li>
+          <li>Time 1 and Time 2 (or present vs planned)</li>
+          <li>Compass orientation</li>
+          <li>Scale / key if present</li>
+        </ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 2 &mdash; Inventory</div>
+        <div class="step-title">List every feature</div>
+        <ul>
+          <li>Feature | Time 1 state | Time 2 state | Change flag</li>
+          <li>Group features: indoor / outdoor / access / amenity</li>
+          <li>Identify which group has the most change</li>
+        </ul>
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 3 &mdash; Paragraph plan</div>
+        <div class="step-title">Before then after</div>
+        <ul>
+          <li>P1: original layout (what existed)</li>
+          <li>P2: all changes (grouped by category, not location)</li>
+          <li>Overview: dominant transformation + what was retained</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout warning">
+      <div class="callout-label">Key pitfall</div>
+      <p style="margin:0">Writing <em>"The first map shows... The second map shows..."</em> produces two disconnected picture descriptions. Structure around what changed: <em>"The most significant changes involved the outdoor facilities, which were relocated..."</em> Forces comparison into the sentence itself.</p>
+    </div>
+
+    <div class="callout example">
+      <div class="callout-label">Tense logic</div>
+      <p style="margin:0">Past-to-present map: P1 in simple past (<em>the building contained</em>); P2 in present perfect (<em>the cafe has been moved</em>). Present-to-future plan: P1 in simple present (<em>there are two meeting rooms</em>); P2 in future passive (<em>a third room will be added</em>). Never <em>"is planned to be"</em> &mdash; use <em>"will be"</em> or <em>"is to be"</em>.</p>
+    </div>
+  </section>
+
+  <!-- ===================== OVERVIEW ===================== -->
+  <section id="overview">
+    <h2><span class="type-num">08.</span> Writing the Overview</h2>
+    <p>The overview is the most important paragraph. It appears after the introduction, before the body, and contains no data figures. It tells the examiner you can see the whole picture, not just individual points.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Task type</th>
+          <th>Overview must contain</th>
+          <th>Overview must NOT contain</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Line</strong></td>
+          <td>General direction of each line; which line was highest overall; any major crossover</td>
+          <td>Specific years, exact values, every data point</td>
+        </tr>
+        <tr>
+          <td><strong>Bar</strong></td>
+          <td>Which category was consistently highest/lowest; whether ranking was consistent or shifted</td>
+          <td>Specific figures; listing every bar</td>
+        </tr>
+        <tr>
+          <td><strong>Pie</strong></td>
+          <td>Which segment dominated; combined share of the largest group; what was negligible</td>
+          <td>Exact percentages; listing all slices</td>
+        </tr>
+        <tr>
+          <td><strong>Table</strong></td>
+          <td>Which row/column had the highest overall values; any consistent pattern or notable exception</td>
+          <td>Cell-by-cell detail; total figures</td>
+        </tr>
+        <tr>
+          <td><strong>Mixed</strong></td>
+          <td>What each chart shows; the key relationship or contrast between them</td>
+          <td>Data figures; treating charts as unrelated</td>
+        </tr>
+        <tr>
+          <td><strong>Process</strong></td>
+          <td>Type of process; total number of stages; raw input and final output</td>
+          <td>Step-by-step detail; copied diagram labels</td>
+        </tr>
+        <tr>
+          <td><strong>Map</strong></td>
+          <td>The dominant transformation; main categories affected; what was retained</td>
+          <td>Compass directions; list of individual buildings; evaluative adjectives</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="skeleton">
+      <span class="label">Overview skeleton (data charts)</span>
+      <p>Overall, <span class="placeholder">[subject A]</span> showed the most significant <span class="placeholder">[increase / variation]</span> over the period, while <span class="placeholder">[subject B]</span> remained comparatively <span class="placeholder">[stable / low]</span>. A notable feature was <span class="placeholder">[crossover / peak / gap]</span> in <span class="placeholder">[approximate period]</span>.</p>
+    </div>
+
+    <div class="skeleton">
+      <span class="label">Overview skeleton (process)</span>
+      <p>Overall, the diagram illustrates a <span class="placeholder">[natural / man-made]</span> process consisting of <span class="placeholder">[N]</span> stages, through which <span class="placeholder">[raw material]</span> is transformed into <span class="placeholder">[final product]</span><span class="placeholder">[, with a recycling loop at stage X]</span>.</p>
+    </div>
+
+    <div class="skeleton">
+      <span class="label">Overview skeleton (map)</span>
+      <p>Overall, the <span class="placeholder">[area / building]</span> underwent considerable development between <span class="placeholder">[time 1]</span> and <span class="placeholder">[time 2]</span>, with the most significant changes affecting <span class="placeholder">[category]</span>. Several features, including <span class="placeholder">[X and Y]</span>, remained largely unchanged.</p>
+    </div>
+  </section>
+
+  <!-- ===================== TENSE ===================== -->
+  <section id="tense">
+    <h2><span class="type-num">09.</span> Tense Cheat Sheet</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Task type</th>
+          <th>Primary tense</th>
+          <th>Watch out for</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Line, bar, pie, table</strong> (historical data)</td>
+          <td>Simple past: <em>rose</em>, <em>fell</em>, <em>accounted for</em></td>
+          <td>Mixing present and past randomly</td>
+        </tr>
+        <tr>
+          <td><strong>Line, bar, pie, table</strong> (no year given)</td>
+          <td>Simple present: <em>shows</em>, <em>represents</em>, <em>is</em></td>
+          <td>Do not assume it is historical</td>
+        </tr>
+        <tr>
+          <td><strong>Process</strong></td>
+          <td>Present passive: <em>is heated</em>, <em>is transported</em></td>
+          <td>Active voice (<em>workers heat</em>) and past tense</td>
+        </tr>
+        <tr>
+          <td><strong>Map: past &rarr; present</strong></td>
+          <td>P1 simple past; P2 present perfect passive: <em>has been added</em></td>
+          <td>Using simple present for both paragraphs</td>
+        </tr>
+        <tr>
+          <td><strong>Map: present &rarr; future</strong></td>
+          <td>P1 simple present; P2 future passive: <em>will be added</em>, <em>is to be removed</em></td>
+          <td><em>Is planned to be</em> (incorrect passive); mixing future forms randomly</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <p style="text-align:center; margin-top:3.5rem; color:var(--text-muted); font-size:0.85rem;">
+    <strong>Time budget per task:</strong> 20 minutes total. ~3 min planning (Step 1: 30s &mdash; Step 2: 90s &mdash; Step 3: 30s), ~15 min writing, ~2 min checking tense and overview.
+  </p>
+
+</main>
+</div>
+
+</body>
+</html>
